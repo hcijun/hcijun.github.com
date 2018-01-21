@@ -662,6 +662,87 @@ function team2_name5_serve_s()
 	document.getElementById("team2_name5_serve_s_info").innerHTML = String(div);
 } 
 
+function team1_name1_hustle()
+{
+	var div = document.getElementById("team1_name1_hustle_info").innerHTML;  
+	div = Number(div);
+	div+=1;
+	document.getElementById("team1_name1_hustle_info").innerHTML = String(div);
+}
+
+function team2_name1_hustle()
+{
+	var div = document.getElementById("team2_name1_hustle_info").innerHTML;  
+	div = Number(div);
+	div+=1;
+	document.getElementById("team2_name1_hustle_info").innerHTML = String(div);
+}
+
+function team1_name2_hustle()
+{
+	var div = document.getElementById("team1_name2_hustle_info").innerHTML;  
+	div = Number(div);
+	div+=1;
+	document.getElementById("team1_name2_hustle_info").innerHTML = String(div);
+}
+
+function team2_name2_hustle()
+{
+	var div = document.getElementById("team2_name2_hustle_info").innerHTML;  
+	div = Number(div);
+	div+=1;
+	document.getElementById("team2_name2_hustle_info").innerHTML = String(div);
+}
+
+
+function team1_name3_hustle()
+{
+	var div = document.getElementById("team1_name3_hustle_info").innerHTML;  
+	div = Number(div);
+	div+=1;
+	document.getElementById("team1_name3_hustle_info").innerHTML = String(div);
+}
+
+function team2_name3_hustle()
+{
+	var div = document.getElementById("team2_name3_hustle_info").innerHTML;  
+	div = Number(div);
+	div+=1;
+	document.getElementById("team2_name3_hustle_info").innerHTML = String(div);
+}
+
+
+function team1_name4_hustle()
+{
+	var div = document.getElementById("team1_name4_hustle_info").innerHTML;  
+	div = Number(div);
+	div+=1;
+	document.getElementById("team1_name4_hustle_info").innerHTML = String(div);
+}
+
+function team2_name4_hustle()
+{
+	var div = document.getElementById("team2_name4_hustle_info").innerHTML;  
+	div = Number(div);
+	div+=1;
+	document.getElementById("team2_name4_hustle_info").innerHTML = String(div);
+}
+
+function team1_name5_hustle()
+{
+	var div = document.getElementById("team1_name5_hustle_info").innerHTML;  
+	div = Number(div);
+	div+=1;
+	document.getElementById("team1_name5_hustle_info").innerHTML = String(div);
+}
+
+function team2_name5_hustle()
+{
+	var div = document.getElementById("team2_name5_hustle_info").innerHTML;  
+	div = Number(div);
+	div+=1;
+	document.getElementById("team2_name5_hustle_info").innerHTML = String(div);
+}
 
 
 
@@ -1044,6 +1125,16 @@ $.ajax({
 	document.getElementById("team2_name5_mistake_info").innerHTML="0";
 
 
+	
+	document.getElementById("team1_score_1").value = "";
+	document.getElementById("team1_score_2").value = "";
+	document.getElementById("team1_score_3").value = "";
+	
+	document.getElementById("team2_score_1").value = "";
+	document.getElementById("team2_score_2").value = "";
+	document.getElementById("team2_score_3").value = "";
+	
+	
 }
 
 
@@ -1254,6 +1345,7 @@ function selectEventTeam2(selectObj)
 		<tr>경기이름:<input type="text" id="game"></tr>
 		<tr>
 			<td>팀이름:<select name="team1" id="team1" onChange="selectEventTeam1(this)">
+					<option value="">팀선택</option>
 					<option value="MJ">MJ</option>
 					<option value="마경민">마경민</option>
 					<option value="조은상">조은상</option>
@@ -1272,6 +1364,7 @@ function selectEventTeam2(selectObj)
 			<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>  
 			
 			<td>팀이름:<select name="team2" id="team2" onChange="selectEventTeam2(this)">
+					<option value="">팀선택</option>
 					<option value="MJ">MJ</option>
 					<option value="마경민">마경민</option>
 					<option value="조은상">조은상</option>
@@ -1298,6 +1391,7 @@ function selectEventTeam2(selectObj)
 						<td>득점<div id="team1_name1_point_info">0</div><input type="button" value="득점+" onclick="team1_name1_point()"></td>
 									
 						
+						<td>허슬<div id="team1_name1_hustle_info">0</div><input type="button" value="허슬" onclick="team1_name1_hustle()"></td>
 						
 						<td>범실<div id="team1_name1_mistake_info">0</div><input type="button" value="범실" onclick="team1_name1_mistake()"></td>
 						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>  
@@ -1308,6 +1402,7 @@ function selectEventTeam2(selectObj)
 						
 						<td>득점<div id="team2_name1_point_info">0</div><input type="button" value="득점+" onclick="team2_name1_point()"></td>
 						
+						<td>허슬<div id="team2_name1_hustle_info">0</div><input type="button" value="허슬" onclick="team2_name1_hustle()"></td>
 						
 						<td>범실<div id="team2_name1_mistake_info">0</div><input type="button" value="범실" onclick="team2_name1_mistake()"></td>
 			
@@ -1320,6 +1415,8 @@ function selectEventTeam2(selectObj)
 						
 						<td>토스<div id="team1_name2_toss_info">0</div><input type="button" value="토스시도" onclick="team1_name2_toss()"></td>
 						
+						<td>허슬<div id="team1_name2_hustle_info">0</div><input type="button" value="허슬" onclick="team1_name2_hustle()"></td>
+						
 						<td>범실<div id="team1_name2_mistake_info">0</div><input type="button" value="범실" onclick="team1_name2_mistake()"></td>
 						
 						<td></td>
@@ -1328,6 +1425,8 @@ function selectEventTeam2(selectObj)
 						
 						
 						<td>토스<div id="team2_name2_toss_info">0</div><input type="button" value="토스시도" onclick="team2_name2_toss()"></td>
+						
+						<td>허슬<div id="team2_name2_hustle_info">0</div><input type="button" value="허슬" onclick="team2_name2_hustle()"></td>
 						
 						<td>범실<div id="team2_name2_mistake_info">0</div><input type="button" value="범실" onclick="team2_name2_mistake()"></td>
 		
@@ -1342,6 +1441,8 @@ function selectEventTeam2(selectObj)
 						
 						<td>리시브<div id="team1_name3_receive_info">0</div><input type="button" value="리시브시도" onclick="team1_name3_receive()"></td>
 						
+						<td>허슬<div id="team1_name3_hustle_info">0</div><input type="button" value="허슬" onclick="team1_name3_hustle()"></td>
+						
 						<td>범실<div id="team1_name3_mistake_info">0</div><input type="button" value="범실" onclick="team1_name3_mistake()"></td>
 						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
 
@@ -1351,6 +1452,8 @@ function selectEventTeam2(selectObj)
 						<td>서브<div id="team2_name3_serve_info">0</div><input type="button" value="서브시도" onclick="team2_name3_serve()"></td>
 						
 						<td>리시브<div id="team2_name3_receive_info">0</div><input type="button" value="리시브시도" onclick="team2_name3_receive()"></td>
+						
+						<td>허슬<div id="team2_name3_hustle_info">0</div><input type="button" value="허슬" onclick="team2_name3_hustle()"></td>
 						
 												
 						<td>범실<div id="team2_name3_mistake_info">0</div><input type="button" value="범실" onclick="team2_name3_mistake()"></td>
@@ -1366,7 +1469,7 @@ function selectEventTeam2(selectObj)
 						
 						<td>리시브<div id="team1_name4_receive_info">0</div><input type="button" value="리시브시도" onclick="team1_name4_receive()"></td>
 						
-						
+						<td>허슬<div id="team1_name4_hustle_info">0</div><input type="button" value="허슬" onclick="team1_name4_hustle()"></td>
 												
 						<td>범실<div id="team1_name4_mistake_info">0</div><input type="button" value="범실" onclick="team1_name4_mistake()"></td>
 						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>  
@@ -1378,7 +1481,7 @@ function selectEventTeam2(selectObj)
 						
 						<td>리시브<div id="team2_name4_receive_info">0</div><input type="button" value="리시브시도" onclick="team2_name4_receive()"></td>
 						
-						
+						<td>허슬<div id="team2_name4_hustle_info">0</div><input type="button" value="허슬" onclick="team2_name4_hustle()"></td>
 						
 						<td>범실<div id="team2_name4_mistake_info">0</div><input type="button" value="범실" onclick="team2_name4_mistake()"></td>
 		</tr>
@@ -1391,7 +1494,7 @@ function selectEventTeam2(selectObj)
 						
 						<td>리시브<div id="team1_name5_receive_info">0</div><input type="button" value="리시브시도" onclick="team1_name5_receive()"></td>
 						
-						
+						<td>허슬<div id="team1_name5_hustle_info">0</div><input type="button" value="허슬" onclick="team1_name5_hustle()"></td>
 												
 						<td>범실<div id="team1_name5_mistake_info">0</div><input type="button" value="범실" onclick="team1_name5_mistake()"></td>
 						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>  
@@ -1403,7 +1506,7 @@ function selectEventTeam2(selectObj)
 						
 						<td>리시브<div id="team2_name5_receive_info">0</div><input type="button" value="리시브시도" onclick="team2_name5_receive()"></td>
 						
-						
+						<td>허슬<div id="team2_name5_hustle_info">0</div><input type="button" value="허슬" onclick="team2_name5_hustle()"></td>
 						
 						<td>범실<div id="team2_name5_mistake_info">0</div><input type="button" value="범실" onclick="team2_name5_mistake()"></td>
 		</tr>
