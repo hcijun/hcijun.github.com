@@ -1446,7 +1446,7 @@ function selectEventTeam2(selectObj)
 					
 				</select> </td>
 				<!--팀이름:<input type="text" id="team1"> --> 
-			<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>  
+			<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>  
 			
 			<td>팀이름:<select name="team2" id="team2" onChange="selectEventTeam2(this)">
 					<option value="">팀선택</option>
@@ -1465,10 +1465,15 @@ function selectEventTeam2(selectObj)
 				</select> </td>
 				 <!-- <input type="text" id="team2"> -->  </td>
 				<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-		<tr><td>1세트<input type="text" id="team1_score_1"></td> <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>  <td>1세트<input type="text" id="team2_score_1"></td> <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-		<tr><td>2세트<input type="text" id="team1_score_2"></td> <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>  <td>2세트<input type="text" id="team2_score_2"></td> <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-		<tr><td>3세트<input type="text" id="team1_score_3"></td> <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>  <td>3세트<input type="text" id="team2_score_3"></td> <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-		<tr><td>공격수:<input type="text" id="team1_name1"></td> 
+		<tr><td>1세트<input type="text" id="team1_score_1"></td> <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>  <td>1세트<input type="text" id="team2_score_1"></td> <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+		<tr><td>2세트<input type="text" id="team1_score_2"></td> <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>  <td>2세트<input type="text" id="team2_score_2"></td> <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+		<tr><td>3세트<input type="text" id="team1_score_3"></td> <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>  <td>3세트<input type="text" id="team2_score_3"></td> <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+		<tr>
+						<td></td>
+						<td></td>
+						<td>범실<div id="team1_name1_mistake_info">0</div><input type="button" value="범실" onclick="team1_name1_mistake()"></td>
+		
+						<td>공격수:<input type="text" id="team1_name1"></td> 
 						
 						
 						<td>공격<div id="team1_name1_attack_info">0</div><input type="button" value="시도+" onclick="team1_name1_attack()"></td>
@@ -1478,11 +1483,14 @@ function selectEventTeam2(selectObj)
 						
 						<td>허슬<div id="team1_name1_hustle_info">0</div><input type="button" value="허슬" onclick="team1_name1_hustle()"></td>
 						
-						<td>범실<div id="team1_name1_mistake_info">0</div><input type="button" value="범실" onclick="team1_name1_mistake()"></td>
+						
 						<td></td>
 						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>  
 						
-			<td>공격수:<input type="text" id="team2_name1"></td>
+						
+						<td>범실<div id="team2_name1_mistake_info">0</div><input type="button" value="범실" onclick="team2_name1_mistake()"></td>
+						
+						<td>공격수:<input type="text" id="team2_name1"></td>
 			
 						<td>공격<div id="team2_name1_attack_info">0</div><input type="button" value="시도+" onclick="team2_name1_attack()"></td>
 						
@@ -1490,109 +1498,145 @@ function selectEventTeam2(selectObj)
 						
 						<td>허슬<div id="team2_name1_hustle_info">0</div><input type="button" value="허슬" onclick="team2_name1_hustle()"></td>
 						
-						<td>범실<div id="team2_name1_mistake_info">0</div><input type="button" value="범실" onclick="team2_name1_mistake()"></td>
+						
 						<td></td>
 			
 			
 		</tr>
 			
 		
-		<tr><td>토서 :<input type="text" id="team1_name2"></td>
+		<tr>
+						<td></td>
+						<td>토스<div id="team1_name2_toss_success">0</div><input type="button" value="실패" onclick="team1_name2_toss_success()"></td>
+						<td>범실<div id="team1_name2_mistake_info">0</div><input type="button" value="범실" onclick="team1_name2_mistake()"></td>
+						
+						<td>토서 :<input type="text" id="team1_name2"></td>
 						
 						<td>토스<div id="team1_name2_toss_info">0</div><input type="button" value="토스" onclick="team1_name2_toss()"></td>
-						<td>토스성공<div id="team1_name2_toss_success">0</div><input type="button" value="성공" onclick="team1_name2_toss_success()"></td>
+						
 						
 						<td>허슬<div id="team1_name2_hustle_info">0</div><input type="button" value="허슬" onclick="team1_name2_hustle()"></td>
 						
-						<td>범실<div id="team1_name2_mistake_info">0</div><input type="button" value="범실" onclick="team1_name2_mistake()"></td>
+						
 						<td></td>
 						
 						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>  
-			<td>토서 :<input type="text" id="team2_name2"></td> 
+						
+						
+						<td>토스<div id="team2_name2_toss_success">0</div><input type="button" value="실패" onclick="team2_name2_toss_success()"></td>
+						<td>범실<div id="team2_name2_mistake_info">0</div><input type="button" value="범실" onclick="team2_name2_mistake()"></td>
+						
+						<td>토서 :<input type="text" id="team2_name2"></td> 
 						
 						
 						<td>토스<div id="team2_name2_toss_info">0</div><input type="button" value="토스" onclick="team2_name2_toss()"></td>
-						<td>토스성공<div id="team2_name2_toss_success">0</div><input type="button" value="성공" onclick="team2_name2_toss_success()"></td>
+						
 						<td>허슬<div id="team2_name2_hustle_info">0</div><input type="button" value="허슬" onclick="team2_name2_hustle()"></td>
 						
-						<td>범실<div id="team2_name2_mistake_info">0</div><input type="button" value="범실" onclick="team2_name2_mistake()"></td>
+
+						
 						<td></td>
 		
 		
 		
 		</tr>
-		<tr><td>수비1:<input type="text" id="team1_name3"></td>
+		<tr>
+						<td></td>
+						<td>리시브<div id="team1_name3_receive_success">0</div><input type="button" value="실패" onclick="team1_name3_receive_success()"></td>
+						<td>범실<div id="team1_name3_mistake_info">0</div><input type="button" value="범실" onclick="team1_name3_mistake()"></td>
+						
+						<td>수비1:<input type="text" id="team1_name3"></td>
 						
 						
 						<td>서브<div id="team1_name3_serve_info">0</div><input type="button" value="서브" onclick="team1_name3_serve()"></td>
 						<td>리시브<div id="team1_name3_receive_info">0</div><input type="button" value="시도" onclick="team1_name3_receive()"></td>
-						<td>리시브성공<div id="team1_name3_receive_success">0</div><input type="button" value="성공" onclick="team1_name3_receive_success()"></td>
+						
 						<td>허슬<div id="team1_name3_hustle_info">0</div><input type="button" value="허슬" onclick="team1_name3_hustle()"></td>
-						<td>범실<div id="team1_name3_mistake_info">0</div><input type="button" value="범실" onclick="team1_name3_mistake()"></td>
+						
 						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
 
-			<td>수비1:<input type="text" id="team2_name3"></td>
+						
+						<td>리시브<div id="team2_name3_receive_success">0</div><input type="button" value="실패" onclick="team2_name3_receive_success()"></td>
+						<td>범실<div id="team2_name3_mistake_info">0</div><input type="button" value="범실" onclick="team2_name3_mistake()"></td>
+						
+						<td>수비1:<input type="text" id="team2_name3"></td>
 						
 						
 						<td>서브<div id="team2_name3_serve_info">0</div><input type="button" value="서브" onclick="team2_name3_serve()"></td>
 						<td>리시브<div id="team2_name3_receive_info">0</div><input type="button" value="시도" onclick="team2_name3_receive()"></td>
-						<td>리시브성공<div id="team2_name3_receive_success">0</div><input type="button" value="성공" onclick="team2_name3_receive_success()"></td>
+						
 						<td>허슬<div id="team2_name3_hustle_info">0</div><input type="button" value="허슬" onclick="team2_name3_hustle()"></td>
 						
 												
-						<td>범실<div id="team2_name3_mistake_info">0</div><input type="button" value="범실" onclick="team2_name3_mistake()"></td>
+						
 	
 
 		
 		</tr>
-		<tr><td>수비2:<input type="text" id="team1_name4"></td> 
+		<tr>
+						<td></td>
+						<td>리시브<div id="team1_name4_receive_success">0</div><input type="button" value="실패" onclick="team1_name4_receive_success()"></td>
+						<td>범실<div id="team1_name4_mistake_info">0</div><input type="button" value="범실" onclick="team1_name4_mistake()"></td>
+						
+						<td>수비2:<input type="text" id="team1_name4"></td> 
 						
 						
 						<td>서브<div id="team1_name4_serve_info">0</div><input type="button" value="시도" onclick="team1_name4_serve()"></td>
 						
 						
 						<td>리시브<div id="team1_name4_receive_info">0</div><input type="button" value="시도" onclick="team1_name4_receive()"></td>
-						<td>리시브성공<div id="team1_name4_receive_success">0</div><input type="button" value="성공" onclick="team1_name4_receive_success()"></td>
+						
 						<td>허슬<div id="team1_name4_hustle_info">0</div><input type="button" value="허슬" onclick="team1_name4_hustle()"></td>
 												
-						<td>범실<div id="team1_name4_mistake_info">0</div><input type="button" value="범실" onclick="team1_name4_mistake()"></td>
+						
 						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>  
 						
-			<td>수비2:<input type="text" id="team2_name4"></td>
+						
+						<td>리시브<div id="team2_name4_receive_success">0</div><input type="button" value="실패" onclick="team2_name4_receive_success()"></td>
+						<td>범실<div id="team2_name4_mistake_info">0</div><input type="button" value="범실" onclick="team2_name4_mistake()"></td>
+						
+						<td>수비2:<input type="text" id="team2_name4"></td>
 						
 						<td>서브<div id="team2_name4_serve_info">0</div><input type="button" value="시도" onclick="team2_name4_serve()"></td>
 						
 						
 						<td>리시브<div id="team2_name4_receive_info">0</div><input type="button" value="시도" onclick="team2_name4_receive()"></td>
-						<td>리시브성공<div id="team2_name4_receive_success">0</div><input type="button" value="성공" onclick="team2_name4_receive_success()"></td>
+						
 						<td>허슬<div id="team2_name4_hustle_info">0</div><input type="button" value="허슬" onclick="team2_name4_hustle()"></td>
 						
-						<td>범실<div id="team2_name4_mistake_info">0</div><input type="button" value="범실" onclick="team2_name4_mistake()"></td>
+						
 		</tr>
 		
-		<tr><td>수비3:<input type="text" id="team1_name5"></td> 
+		<tr>
+						<td></td>
+						<td>리시브<div id="team1_name5_receive_success">0</div><input type="button" value="실패" onclick="team1_name5_receive_success()"></td>
+						<td>범실<div id="team1_name5_mistake_info">0</div><input type="button" value="범실" onclick="team1_name5_mistake()"></td>
+						
+						<td>수비3:<input type="text" id="team1_name5"></td> 
 						
 						
 						<td>서브<div id="team1_name5_serve_info">0</div><input type="button" value="시도" onclick="team1_name5_serve()"></td>
 						
 						
 						<td>리시브<div id="team1_name5_receive_info">0</div><input type="button" value="시도" onclick="team1_name5_receive()"></td>
-						<td>리시브성공<div id="team1_name5_receive_success">0</div><input type="button" value="성공" onclick="team1_name5_receive_success()"></td>
 						<td>허슬<div id="team1_name5_hustle_info">0</div><input type="button" value="허슬" onclick="team1_name5_hustle()"></td>
 												
-						<td>범실<div id="team1_name5_mistake_info">0</div><input type="button" value="범실" onclick="team1_name5_mistake()"></td>
+						
 						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>  
 						
-			<td>수비3:<input type="text" id="team2_name5"></td>
+						<td>리시브<div id="team2_name5_receive_success">0</div><input type="button" value="실패" onclick="team2_name5_receive_success()"></td>
+						<td>범실<div id="team2_name5_mistake_info">0</div><input type="button" value="범실" onclick="team2_name5_mistake()"></td>
+						
+						<td>수비3:<input type="text" id="team2_name5"></td>
 						
 						<td>서브<div id="team2_name5_serve_info">0</div><input type="button" value="시도" onclick="team2_name5_serve()"></td>
 						
 						
 						<td>리시브<div id="team2_name5_receive_info">0</div><input type="button" value="시도" onclick="team2_name5_receive()"></td>
-						<td>리시브성공<div id="team2_name5_receive_success">0</div><input type="button" value="성공" onclick="team2_name5_receive_success()"></td>
+						
 						<td>허슬<div id="team2_name5_hustle_info">0</div><input type="button" value="허슬" onclick="team2_name5_hustle()"></td>
 						
-						<td>범실<div id="team2_name5_mistake_info">0</div><input type="button" value="범실" onclick="team2_name5_mistake()"></td>
+						
 		</tr>
 		
 		<tr>
