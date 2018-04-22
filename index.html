@@ -2516,13 +2516,13 @@ function RadioClick()
 	{
 		// 후반전으로 넘어가는 경우 팀 파울 초기화
 		
-		var divTotalRedFouls = document.getElementById("RedTeamFouls");
+		var divTotalRedFouls = document.getElementById("RedTeamTotalFouls");
 		var divTotal = divTotalRedFouls.innerHTML;
 		divTotal = Number(divTotal);
 		divTotal=0;
 		divTotalRedFouls.innerHTML = String(divTotal);
 	
-		var divTotalGreenPoints = document.getElementById("GreenTeamFouls");
+		var divTotalGreenPoints = document.getElementById("GreenTeamTotalFouls");
 		divTotal = divTotalGreenPoints.innerHTML;
 		divTotal = Number(divTotal);
 		divTotal=0;
