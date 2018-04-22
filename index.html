@@ -919,7 +919,7 @@ function selectTeamPlayer(object)
 	
 	if(object.id == btnTeam1Name1.id)
 	{
-		if(btnTeam1Name1.style.background == '')
+		if(btnTeam1Name1.style.background == 'white')
 		{
 			isSelected = true;
 			btnTeam1Name1.style.background = 'red';
@@ -982,7 +982,7 @@ function selectTeamPlayer(object)
 	}
 	else if(object.id == btnTeam1Name2.id)
 	{
-		if(btnTeam1Name2.style.background == '')
+		if(btnTeam1Name2.style.background == 'white')
 		{
 			isSelected = true;
 			btnTeam1Name1.style.background = 'white';
@@ -1043,7 +1043,7 @@ function selectTeamPlayer(object)
 	}
 	else if(object.id == btnTeam1Name3.id)
 	{
-		if(btnTeam1Name3.style.background == '')
+		if(btnTeam1Name3.style.background == 'white')
 		{
 			isSelected = true;
 			btnTeam1Name1.style.background = 'white';
@@ -1106,7 +1106,7 @@ function selectTeamPlayer(object)
 	}
 	else if(object.id == btnTeam1Name4.id)
 	{
-		if(btnTeam1Name4.style.background == '')
+		if(btnTeam1Name4.style.background == 'white')
 		{
 			isSelected = true;
 			btnTeam1Name1.style.background = 'white';
@@ -1168,7 +1168,7 @@ function selectTeamPlayer(object)
 	}
 	else if(object.id == btnTeam1Name5.id)
 	{
-		if(btnTeam1Name5.style.background == '')
+		if(btnTeam1Name5.style.background == 'white')
 		{
 			isSelected = true;
 			btnTeam1Name1.style.background = 'white';
@@ -1228,7 +1228,7 @@ function selectTeamPlayer(object)
 	}
 	else if(object.id == btnTeam2Name1.id)
 	{
-		if(btnTeam2Name1.style.background == '')
+		if(btnTeam2Name1.style.background == 'white')
 		{
 			isSelected = true;
 			btnTeam2Name1.style.background = 'red';
@@ -1288,7 +1288,7 @@ function selectTeamPlayer(object)
 	}
 	else if(object.id == btnTeam2Name2.id)
 	{
-		if(btnTeam2Name2.style.background == '')
+		if(btnTeam2Name2.style.background == 'white')
 		{
 			isSelected = true;
 			btnTeam2Name1.style.background = 'white';
@@ -1348,7 +1348,7 @@ function selectTeamPlayer(object)
 	}
 	else if(object.id == btnTeam2Name3.id)
 	{
-		if(btnTeam2Name3.style.background == '')
+		if(btnTeam2Name3.style.background == 'white')
 		{
 			isSelected = true;
 			btnTeam2Name1.style.background = 'white';
@@ -1408,7 +1408,7 @@ function selectTeamPlayer(object)
 	}
 	else if(object.id == btnTeam2Name4.id)
 	{
-		if(btnTeam2Name4.style.background == '')
+		if(btnTeam2Name4.style.background == 'white')
 		{
 			isSelected = true;
 			btnTeam2Name1.style.background = 'white';
@@ -1468,7 +1468,7 @@ function selectTeamPlayer(object)
 	}
 	else if(object.id == btnTeam2Name5.id)
 	{
-		if(btnTeam2Name5.style.background == '')
+		if(btnTeam2Name5.style.background == 'white')
 		{
 			isSelected = true;
 			btnTeam2Name1.style.background = 'white';
@@ -1527,7 +1527,17 @@ function selectTeamPlayer(object)
 		}
 	}
 	
-	
+	document.getElementById("btn1PTGet").style.background = 'white';
+	document.getElementById("btn1PTFail").style.background = 'white';
+	document.getElementById("btn2PTGet").style.background = 'white';
+	document.getElementById("btn2PTFail").style.background = 'white';
+	document.getElementById("btn3PTGet").style.background = 'white';
+	document.getElementById("btn3PTFail").style.background = 'white';
+	document.getElementById("btnRebound").style.background = 'white';
+	document.getElementById("btnBlock").style.background = 'white';
+	document.getElementById("btnSteal").style.background = 'white';
+	document.getElementById("btnAssist").style.background = 'white';
+	document.getElementById("btnFoul").style.background = 'white';
 	
 	
 	//btnTeam1Name1.style.background = 'white';
@@ -1545,17 +1555,7 @@ function selectEventRedTeam(selectObj)
 {
 	//alert(selectObj.value + "가 선택 되었습니다.");
 	
-	document.getElementById("btn1PTGet").style.color = 'gray';
-	document.getElementById("btn1PTFail").style.color = 'gray';
-	document.getElementById("btn2PTGet").style.color = 'gray';
-	document.getElementById("btn2PTFail").style.color = 'gray';
-	document.getElementById("btn3PTGet").style.color = 'gray';
-	document.getElementById("btn3PTFail").style.color = 'gray';
-	document.getElementById("btnRebound").style.color = 'gray';
-	document.getElementById("btnBlock").style.color = 'gray';
-	document.getElementById("btnSteal").style.color = 'gray';
-	document.getElementById("btnAssist").style.color = 'gray';
-	document.getElementById("btnFoul").style.color = 'gray';
+	
 	
 	
 	if(selectObj.value == "이병용")
