@@ -1527,17 +1527,19 @@ function selectTeamPlayer(object)
 		}
 	}
 	
-	document.getElementById("btn1PTGet").style.background = 'white';
-	document.getElementById("btn1PTFail").style.background = 'white';
-	document.getElementById("btn2PTGet").style.background = 'white';
-	document.getElementById("btn2PTFail").style.background = 'white';
-	document.getElementById("btn3PTGet").style.background = 'white';
-	document.getElementById("btn3PTFail").style.background = 'white';
-	document.getElementById("btnRebound").style.background = 'white';
-	document.getElementById("btnBlock").style.background = 'white';
-	document.getElementById("btnSteal").style.background = 'white';
-	document.getElementById("btnAssist").style.background = 'white';
-	document.getElementById("btnFoul").style.background = 'white';
+	//document.getElementById("btn1PTGet").style.height = '60px';
+	
+	document.getElementById("btn1PTGet").style.height = '60px';
+	document.getElementById("btn1PTFail").style.height = '60px';
+	document.getElementById("btn2PTGet").style.height = '60px';
+	document.getElementById("btn2PTFail").style.height = '60px';
+	document.getElementById("btn3PTGet").style.height = '60px';
+	document.getElementById("btn3PTFail").style.height = '60px';
+	document.getElementById("btnRebound").style.height = '60px';
+	document.getElementById("btnBlock").style.height = '60px';
+	document.getElementById("btnSteal").style.height = '60px';
+	document.getElementById("btnAssist").style.height = '60px';
+	document.getElementById("btnFoul").style.height = '60px';
 	
 	
 	//btnTeam1Name1.style.background = 'white';
@@ -3242,52 +3244,52 @@ $.ajax({
 			<div align="center">1점득점</div>
 			</div>
 			
-			<div style="position: absolute; top: 400px; left: 60px;">
-			<button type="button" id="btn1PTFail" onclick="run1PTFail()"><img class="btn-img" src="./1point_fail.png" width="40" height="40"></button>
+			<div style="position: absolute; top: 400px; left: 70px;">
+			<button type="button" id="btn1PTFail" onclick="run1PTFail()" ><img class="btn-img" src="./1point_fail.png" width="40" height="40"></button>
 			<div align="center">1점실패</div>
 			</div>
 			
-			<div style="position: absolute; top: 400px; left: 130px;">
+			<div style="position: absolute; top: 400px; left: 140px;">
 			<button type="button" id="btn2PTGet" onclick="run2PTGet()"><img class="btn-img" src="./2point_get.png" width="40" height="40"></button>
 			<div align="center">2점득점</div>
 			</div>
 			
-			<div style="position: absolute; top: 400px; left: 200px;">
+			<div style="position: absolute; top: 400px; left: 210px;">
 			<button type="button" id="btn2PTFail" onclick="run2PTFail()"><img class="btn-img" src="./2point_fail.png" width="40" height="40"></button>
 			<div align="center">2점실패</div>
 			</div>
 		
-			<div style="position: absolute; top: 400px; left: 270px;">
+			<div style="position: absolute; top: 400px; left: 280px;">
 			<button type="button" id="btn3PTGet" onclick="run3PTGet()"><img class="btn-img" src="./3point_get.png" width="40" height="40"></button>
 			<div align="center">3점득점</div>
 			</div>
 			
-			<div style="position: absolute; top: 400px; left: 340px;">
+			<div style="position: absolute; top: 400px; left: 350px;">
 			<button type="button" id="btn3PTFail" onclick="run3PTFail()"><img class="btn-img" src="./3point_fail.png" width="40" height="40"></button>
 			<div align="center">3점실패</div>
 			</div>
 			
-			<div style="position: absolute; top: 400px; left: 410px;">
+			<div style="position: absolute; top: 400px; left: 420px;">
 			<button type="button" id="btnRebound" onclick="runRebound()"><img class="btn-img" src="./rebound.png" width="40" height="40"></button>
 			<div align="center">리바운드</div>
 			</div>
 			
-			<div style="position: absolute; top: 400px; left: 480px;">
+			<div style="position: absolute; top: 400px; left: 490px;">
 			<button type="button" id="btnBlock" onclick="runBlock()"><img class="btn-img" src="./block.png" width="40" height="40"></button>
 			<div align="center">블록킹</div>
 			</div>
 			
-			<div style="position: absolute; top: 400px; left: 550px;">
+			<div style="position: absolute; top: 400px; left: 560px;">
 			<button type="button" id="btnSteal" onclick="runSteal()"><img class="btn-img" src="./steal.png" width="40" height="40"></button>
 			<div align="center">스틸</div>
 			</div>
 			
-			<div style="position: absolute; top: 400px; left: 620px;">
+			<div style="position: absolute; top: 400px; left: 630px;">
 			<button type="button" id="btnAssist" onclick="runAssist()"><img class="btn-img" src="./assist.png" width="40" height="40"></button>
 			<div align="center">어시스트</div>
 			</div>
 			
-			<div style="position: absolute; top: 400px; left: 690px;">
+			<div style="position: absolute; top: 400px; left: 700px;">
 			<button type="button" id="btnFoul" onclick="runFoul()"><img class="btn-img" src="./foul.png" width="40" height="40"></button>
 			<div align="center">파울</div>
 			</div>
