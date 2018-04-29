@@ -1529,7 +1529,7 @@ function selectTeamPlayer(object)
 	
 	//document.getElementById("btn1PTGet").style.height = '60px';
 	
-	document.getElementById("btn1PTGet").style.background = 'white';
+	/*document.getElementById("btn1PTGet").style.background = 'white';
 	document.getElementById("btn1PTFail").style.background = 'white';
 	document.getElementById("btn2PTGet").style.background = 'white';
 	document.getElementById("btn2PTFail").style.background = 'white';
@@ -1552,7 +1552,7 @@ function selectTeamPlayer(object)
 	document.getElementById("btnSteal").style.border = 'border:1 solid #A0DBE4';
 	document.getElementById("btnAssist").style.border = 'border:1 solid #A0DBE4';
 	document.getElementById("btnFoul").style.border = 'border:1 solid #A0DBE4';
-	
+	*/
 	//btnTeam1Name1.style.background = 'white';
 	//alert(btnTeam1Name1.style.background);
 
@@ -2002,6 +2002,87 @@ function run1PTGet()
 	
 }
 
+function run1PTCancel()
+{
+	var divplayer = document.getElementById("player");
+	var divScore1Converted = document.getElementById("score1Converted");
+	var divScore1Attempted = document.getElementById("score1Attempted");
+	var divScore1Percent = document.getElementById("score1Percent");
+	var divScore2Converted = document.getElementById("score2Converted");
+	var divScore2Attempted = document.getElementById("score2Attempted");
+	var divScore2Percent = document.getElementById("score2Percent");
+	var divScore3Converted = document.getElementById("score3Converted");
+	var divScore3Attempted = document.getElementById("score3Attempted");
+	var divScore3Percent = document.getElementById("score3Percent");
+	var divRebound = document.getElementById("rebound");
+	var divFoul = document.getElementById("foul");
+	var divAssist = document.getElementById("assist");
+	var divSteal = document.getElementById("steal");	
+	var divTurnover = document.getElementById("turnover");
+	var divBlock = document.getElementById("block");
+	
+	// 팀 점수 합산
+	var btnTeam1Name1 = document.getElementById("red1");
+	var btnTeam1Name2 = document.getElementById("red2");
+	var btnTeam1Name3 = document.getElementById("red3");
+	var btnTeam1Name4 = document.getElementById("red4");
+	var btnTeam1Name5 = document.getElementById("red5");
+	
+	var btnTeam2Name1 = document.getElementById("green1");
+	var btnTeam2Name2 = document.getElementById("green2");
+	var btnTeam2Name3 = document.getElementById("green3");
+	var btnTeam2Name4 = document.getElementById("green4");
+	var btnTeam2Name5 = document.getElementById("green5");
+
+	var divTotalTeamPoints;
+	
+	if(divplayer.innerHTML == btnTeam1Name1.innerHTML || divplayer.innerHTML == btnTeam1Name2.innerHTML ||
+		divplayer.innerHTML == btnTeam1Name3.innerHTML || divplayer.innerHTML == btnTeam1Name4.innerHTML ||
+		divplayer.innerHTML == btnTeam1Name5.innerHTML)
+	{
+		divTotalTeamPoints = document.getElementById("RedTeamTotalPoints");
+		var divTotal = divTotalTeamPoints.innerHTML;
+		divTotal = Number(divTotal);
+		divTotal-=1;
+		divTotalTeamPoints.innerHTML = String(divTotal);
+	}
+	else if(divplayer.innerHTML == btnTeam2Name1.innerHTML || divplayer.innerHTML == btnTeam2Name2.innerHTML ||
+		divplayer.innerHTML == btnTeam2Name3.innerHTML || divplayer.innerHTML == btnTeam2Name4.innerHTML || 
+		divplayer.innerHTML == btnTeam2Name5.innerHTML)
+	{
+		divTotalTeamPoints = document.getElementById("GreenTeamTotalPoints");
+		var divTotal = divTotalTeamPoints.innerHTML;
+		divTotal = Number(divTotal);
+		divTotal-=1;
+		divTotalTeamPoints.innerHTML = String(divTotal);
+	}
+	
+	
+	
+	
+	
+	var divS1C = divScore1Converted.innerHTML;  
+	var divS1A = divScore1Attempted.innerHTML;  
+	var divS1P = divScore1Percent.innerHTML;
+	
+	divS1C = Number(divS1C);
+	divS1C-=1;
+	
+	divS1A = Number(divS1A);
+	divS1A-=1;
+	
+	divS1P = Number(divS1A);
+	divS1P = divS1C/divS1A * 100;
+	divS1P = divS1P.toFixed(2);
+	
+	divScore1Attempted.innerHTML = String(divS1A);
+	divScore1Converted.innerHTML = String(divS1C);
+	divScore1Percent.innerHTML = String(divS1P)+"%";
+	
+	saveTeamPlayer();
+	
+}
+
 	
 function run1PTFail()
 {
@@ -2108,6 +2189,85 @@ function run2PTGet()
 	
 	divS2A = Number(divS2A);
 	divS2A+=2;
+	
+	divS2P = Number(divS2A);
+	divS2P = divS2C/divS2A * 100;
+	divS2P = divS2P.toFixed(2);
+	
+	divScore2Attempted.innerHTML = String(divS2A);
+	divScore2Converted.innerHTML = String(divS2C);
+	divScore2Percent.innerHTML = String(divS2P)+"%";
+	
+	saveTeamPlayer();
+	
+}
+
+
+function run2PTCancel()
+{
+	var divplayer = document.getElementById("player");
+	var divScore1Converted = document.getElementById("score1Converted");
+	var divScore1Attempted = document.getElementById("score1Attempted");
+	var divScore1Percent = document.getElementById("score1Percent");
+	var divScore2Converted = document.getElementById("score2Converted");
+	var divScore2Attempted = document.getElementById("score2Attempted");
+	var divScore2Percent = document.getElementById("score2Percent");
+	var divScore3Converted = document.getElementById("score3Converted");
+	var divScore3Attempted = document.getElementById("score3Attempted");
+	var divScore3Percent = document.getElementById("score3Percent");
+	var divRebound = document.getElementById("rebound");
+	var divFoul = document.getElementById("foul");
+	var divAssist = document.getElementById("assist");
+	var divSteal = document.getElementById("steal");	
+	var divTurnover = document.getElementById("turnover");
+	var divBlock = document.getElementById("block");
+	
+	// 팀 점수 합산
+	var btnTeam1Name1 = document.getElementById("red1");
+	var btnTeam1Name2 = document.getElementById("red2");
+	var btnTeam1Name3 = document.getElementById("red3");
+	var btnTeam1Name4 = document.getElementById("red4");
+	var btnTeam1Name5 = document.getElementById("red5");
+	
+	var btnTeam2Name1 = document.getElementById("green1");
+	var btnTeam2Name2 = document.getElementById("green2");
+	var btnTeam2Name3 = document.getElementById("green3");
+	var btnTeam2Name4 = document.getElementById("green4");
+	var btnTeam2Name5 = document.getElementById("green5");
+
+	var divTotalTeamPoints;
+	
+	if(divplayer.innerHTML == btnTeam1Name1.innerHTML || divplayer.innerHTML == btnTeam1Name2.innerHTML ||
+		divplayer.innerHTML == btnTeam1Name3.innerHTML || divplayer.innerHTML == btnTeam1Name4.innerHTML ||
+		divplayer.innerHTML == btnTeam1Name5.innerHTML)
+	{
+		divTotalTeamPoints = document.getElementById("RedTeamTotalPoints");
+		var divTotal = divTotalTeamPoints.innerHTML;
+		divTotal = Number(divTotal);
+		divTotal-=2;
+		divTotalTeamPoints.innerHTML = String(divTotal);
+	}
+	else if(divplayer.innerHTML == btnTeam2Name1.innerHTML || divplayer.innerHTML == btnTeam2Name2.innerHTML ||
+		divplayer.innerHTML == btnTeam2Name3.innerHTML || divplayer.innerHTML == btnTeam2Name4.innerHTML ||
+		divplayer.innerHTML == btnTeam2Name5.innerHTML)
+	{
+		divTotalTeamPoints = document.getElementById("GreenTeamTotalPoints");
+		var divTotal = divTotalTeamPoints.innerHTML;
+		divTotal = Number(divTotal);
+		divTotal-=2;
+		divTotalTeamPoints.innerHTML = String(divTotal);
+	}
+		
+	
+	var divS2C = divScore2Converted.innerHTML;  
+	var divS2A = divScore2Attempted.innerHTML;  
+	var divS2P = divScore2Percent.innerHTML;
+	
+	divS2C = Number(divS2C);
+	divS2C-=2;
+	
+	divS2A = Number(divS2A);
+	divS2A-=2;
 	
 	divS2P = Number(divS2A);
 	divS2P = divS2C/divS2A * 100;
@@ -2232,6 +2392,89 @@ function run3PTGet()
 	
 	divS3A = Number(divS3A);
 	divS3A+=3;
+	
+	divS3P = Number(divS3A);
+	divS3P = divS3C/divS3A * 100;
+	divS3P = divS3P.toFixed(2);
+	
+	divScore3Attempted.innerHTML = String(divS3A);
+	divScore3Converted.innerHTML = String(divS3C);
+	divScore3Percent.innerHTML = String(divS3P)+"%";
+	
+	saveTeamPlayer();
+	
+}
+
+
+function run3PTCancel()
+{
+	var divplayer = document.getElementById("player");
+	var divScore1Converted = document.getElementById("score1Converted");
+	var divScore1Attempted = document.getElementById("score1Attempted");
+	var divScore1Percent = document.getElementById("score1Percent");
+	var divScore2Converted = document.getElementById("score2Converted");
+	var divScore2Attempted = document.getElementById("score2Attempted");
+	var divScore2Percent = document.getElementById("score2Percent");
+	var divScore3Converted = document.getElementById("score3Converted");
+	var divScore3Attempted = document.getElementById("score3Attempted");
+	var divScore3Percent = document.getElementById("score3Percent");
+	var divRebound = document.getElementById("rebound");
+	var divFoul = document.getElementById("foul");
+	var divAssist = document.getElementById("assist");
+	var divSteal = document.getElementById("steal");	
+	var divTurnover = document.getElementById("turnover");
+	var divBlock = document.getElementById("block");
+	
+	// 팀 점수 합산
+	var btnTeam1Name1 = document.getElementById("red1");
+	var btnTeam1Name2 = document.getElementById("red2");
+	var btnTeam1Name3 = document.getElementById("red3");
+	var btnTeam1Name4 = document.getElementById("red4");
+	var btnTeam1Name5 = document.getElementById("red5");
+	
+	var btnTeam2Name1 = document.getElementById("green1");
+	var btnTeam2Name2 = document.getElementById("green2");
+	var btnTeam2Name3 = document.getElementById("green3");
+	var btnTeam2Name4 = document.getElementById("green4");
+	var btnTeam2Name5 = document.getElementById("green5");
+
+	//var divTotalTeamPoints;
+
+	
+	if(divplayer.innerHTML == btnTeam1Name1.innerHTML || divplayer.innerHTML == btnTeam1Name2.innerHTML ||
+		divplayer.innerHTML == btnTeam1Name3.innerHTML || divplayer.innerHTML == btnTeam1Name4.innerHTML ||
+		divplayer.innerHTML == btnTeam1Name5.innerHTML)
+	{
+		var divTotalTeamPoints = document.getElementById("RedTeamTotalPoints");
+		var divTotal = divTotalTeamPoints.innerHTML;
+		divTotal = Number(divTotal);
+		divTotal-=3;
+		divTotalTeamPoints.innerHTML = String(divTotal);
+	}
+	else if(divplayer.innerHTML == btnTeam2Name1.innerHTML || divplayer.innerHTML == btnTeam2Name2.innerHTML ||
+		divplayer.innerHTML == btnTeam2Name3.innerHTML || divplayer.innerHTML == btnTeam2Name4.innerHTML ||
+		divplayer.innerHTML == btnTeam2Name5.innerHTML)
+	{
+		var divTotalTeamPoints = document.getElementById("GreenTeamTotalPoints");
+		var divTotal = divTotalTeamPoints.innerHTML;
+		divTotal = Number(divTotal);
+		divTotal-=3;
+		divTotalTeamPoints.innerHTML = String(divTotal);
+	}
+	
+	
+	
+
+	
+	var divS3C = divScore3Converted.innerHTML;  
+	var divS3A = divScore3Attempted.innerHTML;  
+	var divS3P = divScore3Percent.innerHTML;
+	
+	divS3C = Number(divS3C);
+	divS3C-=3;
+	
+	divS3A = Number(divS3A);
+	divS3A-=3;
 	
 	divS3P = Number(divS3A);
 	divS3P = divS3C/divS3A * 100;
@@ -2377,6 +2620,75 @@ function runFoul()
 		var divTotal = divTotalTeamPoints.innerHTML;
 		divTotal = Number(divTotal);
 		divTotal+=1;
+		divTotalTeamPoints.innerHTML = String(divTotal);
+	}
+		
+		
+	saveTeamPlayer();
+}
+
+
+function runFoulCancel()
+{
+	var divplayer = document.getElementById("player");
+	var divScore1Converted = document.getElementById("score1Converted");
+	var divScore1Attempted = document.getElementById("score1Attempted");
+	var divScore1Percent = document.getElementById("score1Percent");
+	var divScore2Converted = document.getElementById("score2Converted");
+	var divScore2Attempted = document.getElementById("score2Attempted");
+	var divScore2Percent = document.getElementById("score2Percent");
+	var divScore3Converted = document.getElementById("score3Converted");
+	var divScore3Attempted = document.getElementById("score3Attempted");
+	var divScore3Percent = document.getElementById("score3Percent");
+	var divRebound = document.getElementById("rebound");
+	var divFoul = document.getElementById("foul");
+	var divAssist = document.getElementById("assist");
+	var divSteal = document.getElementById("steal");	
+	var divTurnover = document.getElementById("turnover");
+	var divBlock = document.getElementById("block");
+	
+	var divF = divFoul.innerHTML;  
+	
+	
+	divF = Number(divF);
+	divF-=1;
+	
+	divFoul.innerHTML = String(divF);
+		
+		
+	// 팀 파울 합산
+	var btnTeam1Name1 = document.getElementById("red1");
+	var btnTeam1Name2 = document.getElementById("red2");
+	var btnTeam1Name3 = document.getElementById("red3");
+	var btnTeam1Name4 = document.getElementById("red4");
+	var btnTeam1Name5 = document.getElementById("red5");
+	
+	var btnTeam2Name1 = document.getElementById("green1");
+	var btnTeam2Name2 = document.getElementById("green2");
+	var btnTeam2Name3 = document.getElementById("green3");
+	var btnTeam2Name4 = document.getElementById("green4");
+	var btnTeam2Name5 = document.getElementById("green5");
+
+	var divTotalTeamPoints;
+	
+	if(divplayer.innerHTML == btnTeam1Name1.innerHTML || divplayer.innerHTML == btnTeam1Name2.innerHTML ||
+		divplayer.innerHTML == btnTeam1Name3.innerHTML || divplayer.innerHTML == btnTeam1Name4.innerHTML ||
+		divplayer.innerHTML == btnTeam1Name5.innerHTML)
+	{
+		divTotalTeamPoints = document.getElementById("RedTeamTotalFouls");
+		var divTotal = divTotalTeamPoints.innerHTML;
+		divTotal = Number(divTotal);
+		divTotal-=1;
+		divTotalTeamPoints.innerHTML = String(divTotal);
+	}
+	else if(divplayer.innerHTML == btnTeam2Name1.innerHTML || divplayer.innerHTML == btnTeam2Name2.innerHTML ||
+		divplayer.innerHTML == btnTeam2Name3.innerHTML || divplayer.innerHTML == btnTeam2Name4.innerHTML ||
+		divplayer.innerHTML == btnTeam2Name5.innerHTML)
+	{
+		divTotalTeamPoints = document.getElementById("GreenTeamTotalFouls");
+		var divTotal = divTotalTeamPoints.innerHTML;
+		divTotal = Number(divTotal);
+		divTotal-=1;
 		divTotalTeamPoints.innerHTML = String(divTotal);
 	}
 		
@@ -2732,7 +3044,7 @@ function saveData()
 	var greenSelectedTeam = document.getElementById("GreenTeamName").innerHTML;
 	var gameTeamName = redSelectedTeam + " VS " + greenSelectedTeam;
 	
-	var gameResults = divRedTeamTotalPoints + " : " + divGreenTeamTotalPoints;
+	var gameResults = divRedTeamTotalPoints + " VS " + divGreenTeamTotalPoints;
 	
 $.ajax({
 
@@ -3250,59 +3562,119 @@ $.ajax({
 		
 		<div style="position: absolute;">
 		
-			<div style="position: absolute; top: 400px; left: 0px;">
-			<button type="button" id="btn1PTGet" onclick="run1PTGet()"><img class="btn-img" src="./1point_get.png" width="40" height="40"></button>
-			<div align="center">1점득점</div>
+			<div style="position: absolute; top: 370px; left: 0px;">
+			<button type="button" id="btn1PTCancel" onclick="run1PTCancel()" style="width:50pt; height:20pt">- 1점</button>
 			</div>
 			
-			<div style="position: absolute; top: 400px; left: 70px;">
-			<button type="button" id="btn1PTFail" onclick="run1PTFail()" ><img class="btn-img" src="./1point_fail.png" width="40" height="40"></button>
-			<div align="center">1점실패</div>
+			<div style="position: absolute; top: 400px; left: 15px;">
+			<img class="btn-img" src="./1point_get.png" width="40" height="40"></button>
+			<!--<div align="center">1점득점</div>-->
 			</div>
 			
-			<div style="position: absolute; top: 400px; left: 140px;">
-			<button type="button" id="btn2PTGet" onclick="run2PTGet()"><img class="btn-img" src="./2point_get.png" width="40" height="40"></button>
-			<div align="center">2점득점</div>
+			<div style="position: absolute; top: 445px; left: 0px;">
+			<button type="button" id="btn1PTGet" onclick="run1PTGet()" style="width:50pt; height:20pt">+ 1점</button>
 			</div>
 			
-			<div style="position: absolute; top: 400px; left: 210px;">
-			<button type="button" id="btn2PTFail" onclick="run2PTFail()"><img class="btn-img" src="./2point_fail.png" width="40" height="40"></button>
-			<div align="center">2점실패</div>
+			
+			<div style="position: absolute; top: 400px; left: 85px;">
+			<img class="btn-img" src="./1point_fail.png" width="40" height="40">
+			</div>
+			
+			<div style="position: absolute; top: 445px; left: 70px;">
+			<button type="button" id="btn1PTFail" onclick="run1PTFail()" style="width:50pt; height:20pt">1점실패</button>
+			</div>
+			
+			
+			<div style="position: absolute; top: 370px; left: 140px;">
+			<button type="button" id="btn2PTCancel" onclick="run2PTCancel()" style="width:50pt; height:20pt">- 2점</button>
+			</div>
+			
+			<div style="position: absolute; top: 400px; left: 155px;">
+			<img class="btn-img" src="./2point_get.png" width="40" height="40"></button>
+			</div>
+			
+			<div style="position: absolute; top: 445px; left: 140px;">
+			<button type="button" id="btn2PTGet" onclick="run2PTGet()" style="width:50pt; height:20pt">+ 2점</button>
+			</div>
+			
+			
+			<div style="position: absolute; top: 400px; left: 225px;">
+			<img class="btn-img" src="./2point_fail.png" width="40" height="40"></button>
+			</div>
+			
+			<div style="position: absolute; top: 445px; left: 210px;">
+			<button type="button" id="btn2PTFail" onclick="run2PTFail()" style="width:50pt; height:20pt">2점실패</button>
+			</div>
+			
+			
+			<div style="position: absolute; top: 370px; left: 280px;">
+			<button type="button" id="btn3PTCancel" onclick="run3PTCancel()" style="width:50pt; height:20pt">- 3점</button>
 			</div>
 		
-			<div style="position: absolute; top: 400px; left: 280px;">
-			<button type="button" id="btn3PTGet" onclick="run3PTGet()"><img class="btn-img" src="./3point_get.png" width="40" height="40"></button>
-			<div align="center">3점득점</div>
+			<div style="position: absolute; top: 400px; left: 295px;">
+			<img class="btn-img" src="./3point_get.png" width="40" height="40">
 			</div>
 			
-			<div style="position: absolute; top: 400px; left: 350px;">
-			<button type="button" id="btn3PTFail" onclick="run3PTFail()"><img class="btn-img" src="./3point_fail.png" width="40" height="40"></button>
-			<div align="center">3점실패</div>
+			<div style="position: absolute; top: 445px; left: 280px;">
+			<button type="button" id="btn3PTGet" onclick="run3PTGet()" style="width:50pt; height:20pt">+ 3점</button>
+			</div>
+		
+	
+			<div style="position: absolute; top: 400px; left: 365px;">
+			<img class="btn-img" src="./3point_fail.png" width="40" height="40">
 			</div>
 			
-			<div style="position: absolute; top: 400px; left: 420px;">
-			<button type="button" id="btnRebound" onclick="runRebound()"><img class="btn-img" src="./rebound.png" width="40" height="40"></button>
-			<div align="center">리바운드</div>
+			<div style="position: absolute; top: 445px; left: 350px;">
+			<button type="button" id="btn3PTFail" onclick="run3PTFail()" style="width:50pt; height:20pt">3점실패</button>
 			</div>
 			
-			<div style="position: absolute; top: 400px; left: 490px;">
-			<button type="button" id="btnBlock" onclick="runBlock()"><img class="btn-img" src="./block.png" width="40" height="40"></button>
-			<div align="center">블록킹</div>
+			
+			<div style="position: absolute; top: 400px; left: 435px;">
+			<img class="btn-img" src="./rebound.png" width="40" height="40">
+			</div>
+
+			<div style="position: absolute; top: 445px; left: 420px;">
+			<button type="button" id="btnRebound" onclick="runRebound()" style="width:50pt; height:20pt">리바</button>
+			</div>			
+			
+			
+			<div style="position: absolute; top: 400px; left: 505px;">
+			<img class="btn-img" src="./block.png" width="40" height="40">
+			</div>
+
+			<div style="position: absolute; top: 445px; left: 490px;">
+			<button type="button" id="btnBlock" onclick="runBlock()" style="width:50pt; height:20pt">블록킹</button>
+			</div>			
+			
+			
+			<div style="position: absolute; top: 400px; left: 575px;">
+			<img class="btn-img" src="./steal.png" width="40" height="40">
 			</div>
 			
-			<div style="position: absolute; top: 400px; left: 560px;">
-			<button type="button" id="btnSteal" onclick="runSteal()"><img class="btn-img" src="./steal.png" width="40" height="40"></button>
-			<div align="center">스틸</div>
+			<div style="position: absolute; top: 445px; left: 560px;">
+			<button type="button" id="btnSteal" onclick="runSteal()" style="width:50pt; height:20pt">스틸</button>
 			</div>
 			
-			<div style="position: absolute; top: 400px; left: 630px;">
-			<button type="button" id="btnAssist" onclick="runAssist()"><img class="btn-img" src="./assist.png" width="40" height="40"></button>
-			<div align="center">어시스트</div>
+			
+			<div style="position: absolute; top: 400px; left: 645px;">
+			<img class="btn-img" src="./assist.png" width="40" height="40">
 			</div>
 			
-			<div style="position: absolute; top: 400px; left: 700px;">
-			<button type="button" id="btnFoul" onclick="runFoul()"><img class="btn-img" src="./foul.png" width="40" height="40"></button>
-			<div align="center">파울</div>
+			<div style="position: absolute; top: 445px; left: 630px;">
+			<button type="button" id="btnAssist" onclick="runAssist()" style="width:50pt; height:20pt">어시</button>
+			</div>
+			
+			<div style="position: absolute; top: 370px; left: 700px;">
+			<button type="button" id="btnFoulCancel" onclick="runFoulCancel()" style="width:50pt; height:20pt">- 파울</button>
+			</div>
+			
+			
+			<div style="position: absolute; top: 400px; left: 715px;">
+			<img class="btn-img" src="./foul.png" width="40" height="40">
+			</div>
+			
+			<div style="position: absolute; top: 445px; left: 700px;">
+			<button type="button" id="btnFoul" onclick="runFoul()" style="width:50pt; height:20pt">+ 파울</button>
 			</div>
 		
 		</div>
