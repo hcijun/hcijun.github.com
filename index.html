@@ -672,6 +672,46 @@ function saveTeamPlayer()
 		divTempTurnover.innerHTML = divTurnover.innerHTML;
 		divTempBlock.innerHTML = divBlock.innerHTML;
 	}
+	else if(document.getElementById("Red6Player").innerHTML == divplayer.innerHTML)
+	{
+		//btnTeam1Name5.style.background = 'white';
+		
+		//메인 정보를 플레이어 정보에 저장
+		var divTempPlayer = document.getElementById("Red6Player");
+		var divTempScore1Converted = document.getElementById("Red6Score1Converted");
+		var divTempScore1Attempted = document.getElementById("Red6Score1Attempted");
+		var divTempScore1Percent = document.getElementById("Red6Score1Percent");
+		var divTempScore2Converted = document.getElementById("Red6Score2Converted");
+		var divTempScore2Attempted = document.getElementById("Red6Score2Attempted");
+		var divTempScore2Percent = document.getElementById("Red6Score2Percent");
+		var divTempScore3Converted = document.getElementById("Red6Score3Converted");
+		var divTempScore3Attempted = document.getElementById("Red6Score3Attempted");
+		var divTempScore3Percent = document.getElementById("Red6Score3Percent");
+		var divTempRebound = document.getElementById("Red6Rebound");
+		var divTempFoul = document.getElementById("Red6Foul");
+		var divTempAssist = document.getElementById("Red6Assist");
+		var divTempSteal = document.getElementById("Red6Steal");	
+		var divTempTurnover = document.getElementById("Red6Turnover");
+		var divTempBlock = document.getElementById("Red6Block");
+		
+		
+		divTempPlayer.innerHTML = divplayer.innerHTML;
+		divTempScore1Converted.innerHTML = divScore1Converted.innerHTML;
+		divTempScore1Attempted.innerHTML = divScore1Attempted.innerHTML;
+		divTempScore1Percent.innerHTML = divScore1Percent.innerHTML;
+		divTempScore2Converted.innerHTML = divScore2Converted.innerHTML;
+		divTempScore2Attempted.innerHTML = divScore2Attempted.innerHTML;
+		divTempScore2Percent.innerHTML = divScore2Percent.innerHTML;
+		divTempScore3Converted.innerHTML = divScore3Converted.innerHTML;
+		divTempScore3Attempted.innerHTML = divScore3Attempted.innerHTML;
+		divTempScore3Percent.innerHTML = divScore3Percent.innerHTML;
+		divTempRebound.innerHTML = divRebound.innerHTML;
+		divTempFoul.innerHTML = divFoul.innerHTML;
+		divTempAssist.innerHTML = divAssist.innerHTML;
+		divTempSteal.innerHTML = divSteal.innerHTML;	
+		divTempTurnover.innerHTML = divTurnover.innerHTML;
+		divTempBlock.innerHTML = divBlock.innerHTML;
+	}
 	else if(document.getElementById("Green1Player").innerHTML == divplayer.innerHTML)
 	{
 		//btnTeam2Name1.style.background = 'white';
@@ -853,6 +893,46 @@ function saveTeamPlayer()
 		var divTempSteal = document.getElementById("Green5Steal");	
 		var divTempTurnover = document.getElementById("Green5Turnover");
 		var divTempBlock = document.getElementById("Green5Block");
+		
+		
+		divTempPlayer.innerHTML = divplayer.innerHTML;
+		divTempScore1Converted.innerHTML = divScore1Converted.innerHTML;
+		divTempScore1Attempted.innerHTML = divScore1Attempted.innerHTML;
+		divTempScore1Percent.innerHTML = divScore1Percent.innerHTML;
+		divTempScore2Converted.innerHTML = divScore2Converted.innerHTML;
+		divTempScore2Attempted.innerHTML = divScore2Attempted.innerHTML;
+		divTempScore2Percent.innerHTML = divScore2Percent.innerHTML;
+		divTempScore3Converted.innerHTML = divScore3Converted.innerHTML;
+		divTempScore3Attempted.innerHTML = divScore3Attempted.innerHTML;
+		divTempScore3Percent.innerHTML = divScore3Percent.innerHTML;
+		divTempRebound.innerHTML = divRebound.innerHTML;
+		divTempFoul.innerHTML = divFoul.innerHTML;
+		divTempAssist.innerHTML = divAssist.innerHTML;
+		divTempSteal.innerHTML = divSteal.innerHTML;	
+		divTempTurnover.innerHTML = divTurnover.innerHTML;
+		divTempBlock.innerHTML = divBlock.innerHTML;
+	}
+	else if(document.getElementById("Green6Player").innerHTML == divplayer.innerHTML)
+	{
+		//btnTeam2Name5.style.background = 'white';
+		
+		//메인 정보를 플레이어 정보에 저장
+		var divTempPlayer = document.getElementById("Green6Player");
+		var divTempScore1Converted = document.getElementById("Green6Score1Converted");
+		var divTempScore1Attempted = document.getElementById("Green6Score1Attempted");
+		var divTempScore1Percent = document.getElementById("Green6Score1Percent");
+		var divTempScore2Converted = document.getElementById("Green6Score2Converted");
+		var divTempScore2Attempted = document.getElementById("Green6Score2Attempted");
+		var divTempScore2Percent = document.getElementById("Green6Score2Percent");
+		var divTempScore3Converted = document.getElementById("Green6Score3Converted");
+		var divTempScore3Attempted = document.getElementById("Green6Score3Attempted");
+		var divTempScore3Percent = document.getElementById("Green6Score3Percent");
+		var divTempRebound = document.getElementById("Green6Rebound");
+		var divTempFoul = document.getElementById("Green6Foul");
+		var divTempAssist = document.getElementById("Green6Assist");
+		var divTempSteal = document.getElementById("Green6Steal");	
+		var divTempTurnover = document.getElementById("Green6Turnover");
+		var divTempBlock = document.getElementById("Green6Block");
 		
 		
 		divTempPlayer.innerHTML = divplayer.innerHTML;
@@ -1578,12 +1658,14 @@ function selectEventRedTeam(selectObj)
 		document.getElementById("Red3Player").innerHTML="이도형";
 		document.getElementById("Red4Player").innerHTML="정종영";
 		document.getElementById("Red5Player").innerHTML="임근우";
+		document.getElementById("Red6Player").innerHTML="";
 		
 		document.getElementById("red1").innerHTML="박정배";
 		document.getElementById("red2").innerHTML="정해준";
 		document.getElementById("red3").innerHTML="이도형";
 		document.getElementById("red4").innerHTML="정종영";
 		document.getElementById("red5").innerHTML="임근우";
+		//document.getElementById("red6").innerHTML="";
 	}
 	else if(selectObj.value == "마경민")
 	{
@@ -1592,12 +1674,14 @@ function selectEventRedTeam(selectObj)
 		document.getElementById("Red3Player").innerHTML="마경민";
 		document.getElementById("Red4Player").innerHTML="박상혁";
 		document.getElementById("Red5Player").innerHTML="윤재선";
+		document.getElementById("Red6Player").innerHTML="";
 		
 		document.getElementById("red1").innerHTML="송슬기";
 		document.getElementById("red2").innerHTML="박인준";
 		document.getElementById("red3").innerHTML="마경민";
 		document.getElementById("red4").innerHTML="박상혁";
 		document.getElementById("red5").innerHTML="윤재선";
+		//document.getElementById("red6").innerHTML="";
 	}
 	else if(selectObj.value == "조준상")
 	{
@@ -1606,12 +1690,14 @@ function selectEventRedTeam(selectObj)
 		document.getElementById("Red3Player").innerHTML="조준상";
 		document.getElementById("Red4Player").innerHTML="이임표";
 		document.getElementById("Red5Player").innerHTML="MJ";
+		document.getElementById("Red6Player").innerHTML="";
 		
 		document.getElementById("red1").innerHTML="김형준";
 		document.getElementById("red2").innerHTML="이현";
 		document.getElementById("red3").innerHTML="조준상";
 		document.getElementById("red4").innerHTML="이임표";
 		document.getElementById("red5").innerHTML="MJ";
+		//document.getElementById("red6").innerHTML="";
 	}
 	else if(selectObj.value == "유의정")
 	{
@@ -1620,12 +1706,14 @@ function selectEventRedTeam(selectObj)
 		document.getElementById("Red3Player").innerHTML="유의정";
 		document.getElementById("Red4Player").innerHTML="민득수";
 		document.getElementById("Red5Player").innerHTML="조준성";
+		document.getElementById("Red6Player").innerHTML="김종훈";
 		
 		document.getElementById("red1").innerHTML="주영술";
 		document.getElementById("red2").innerHTML="박유준";
 		document.getElementById("red3").innerHTML="유의정";
 		document.getElementById("red4").innerHTML="민득수";
 		document.getElementById("red5").innerHTML="조준성";
+		//document.getElementById("red6").innerHTML="김종훈";
 	}
 	else if(selectObj.value == "조은상")
 	{
@@ -1634,12 +1722,14 @@ function selectEventRedTeam(selectObj)
 		document.getElementById("Red3Player").innerHTML="조은상";
 		document.getElementById("Red4Player").innerHTML="라상현";
 		document.getElementById("Red5Player").innerHTML="전주용";
+		document.getElementById("Red6Player").innerHTML="";
 		
 		document.getElementById("red1").innerHTML="오용택";
 		document.getElementById("red2").innerHTML="이명훈";
 		document.getElementById("red3").innerHTML="조은상";
 		document.getElementById("red4").innerHTML="라상현";
 		document.getElementById("red5").innerHTML="전주용";
+		//document.getElementById("red6").innerHTML="";
 	}
 	else if(selectObj.value == "이준표")
 	{
@@ -1648,12 +1738,14 @@ function selectEventRedTeam(selectObj)
 		document.getElementById("Red3Player").innerHTML="이준표";
 		document.getElementById("Red4Player").innerHTML="박상학";
 		document.getElementById("Red5Player").innerHTML="정호상";
+		document.getElementById("Red6Player").innerHTML="박동훈";
 		
 		document.getElementById("red1").innerHTML="박상우";
 		document.getElementById("red2").innerHTML="킴성환";
 		document.getElementById("red3").innerHTML="이준표";
 		document.getElementById("red4").innerHTML="박상학";
 		document.getElementById("red5").innerHTML="정호상";
+		//document.getElementById("red6").innerHTML="박동훈";
 	}
 	else if(selectObj.value == "박민수")
 	{
@@ -1662,12 +1754,14 @@ function selectEventRedTeam(selectObj)
 		document.getElementById("Red3Player").innerHTML="박민수";
 		document.getElementById("Red4Player").innerHTML="장용진";
 		document.getElementById("Red5Player").innerHTML="조명희";
+		document.getElementById("Red6Player").innerHTML="";
 		
 		document.getElementById("red1").innerHTML="정성";
 		document.getElementById("red2").innerHTML="신민섭";
 		document.getElementById("red3").innerHTML="박민수";
 		document.getElementById("red4").innerHTML="장용진";
 		document.getElementById("red5").innerHTML="조명희";
+		//document.getElementById("red6").innerHTML="";
 	}	
 	else if(selectObj.value == "황희준")
 	{
@@ -1676,12 +1770,14 @@ function selectEventRedTeam(selectObj)
 		document.getElementById("Red3Player").innerHTML="서아론";
 		document.getElementById("Red4Player").innerHTML="황희준";
 		document.getElementById("Red5Player").innerHTML="황덕찬";
+		document.getElementById("Red6Player").innerHTML="";
 		
 		document.getElementById("red1").innerHTML="사무엘";
 		document.getElementById("red2").innerHTML="유혁준";
 		document.getElementById("red3").innerHTML="서아론";
 		document.getElementById("red4").innerHTML="황희준";
 		document.getElementById("red5").innerHTML="황덕찬";
+		//document.getElementById("red6").innerHTML="";
 	}
 	else if(selectObj.value == "이성찬")
 	{
@@ -1690,26 +1786,30 @@ function selectEventRedTeam(selectObj)
 		document.getElementById("Red3Player").innerHTML="정건환";
 		document.getElementById("Red4Player").innerHTML="이성찬";
 		document.getElementById("Red5Player").innerHTML="심정민";
+		document.getElementById("Red6Player").innerHTML="박찬웅";
 		
 		document.getElementById("red1").innerHTML="이용찬";
 		document.getElementById("red2").innerHTML="박세존";
 		document.getElementById("red3").innerHTML="정건환";
 		document.getElementById("red4").innerHTML="이성찬";
 		document.getElementById("red5").innerHTML="심정민";
+		//document.getElementById("red6").innerHTML="박찬웅";
 	}
-	else if(selectObj.value == "이병용")
+	else if(selectObj.value == "김창식")
 	{
 		document.getElementById("Red1Player").innerHTML="김원규";
 		document.getElementById("Red2Player").innerHTML="정규순";
 		document.getElementById("Red3Player").innerHTML="김낙원";
 		document.getElementById("Red4Player").innerHTML="허정석";
 		document.getElementById("Red5Player").innerHTML="김창식";
+		document.getElementById("Red6Player").innerHTML="";
 		
 		document.getElementById("red1").innerHTML="김원규";
 		document.getElementById("red2").innerHTML="정규순";
 		document.getElementById("red3").innerHTML="김낙원";
 		document.getElementById("red4").innerHTML="허정석";
 		document.getElementById("red5").innerHTML="김창식";
+		//document.getElementById("red6").innerHTML="박찬웅";
 	}
 	else if(selectObj.value == "이병용")
 	{
@@ -1718,12 +1818,14 @@ function selectEventRedTeam(selectObj)
 		document.getElementById("Red3Player").innerHTML="권혁원";
 		document.getElementById("Red4Player").innerHTML="신상준";
 		document.getElementById("Red5Player").innerHTML="이병용";
-		
+		document.getElementById("Red6Player").innerHTML="";
+			
 		document.getElementById("red1").innerHTML="박규열";
 		document.getElementById("red2").innerHTML="조인선";
 		document.getElementById("red3").innerHTML="권혁원";
 		document.getElementById("red4").innerHTML="신상준";
 		document.getElementById("red5").innerHTML="이병용";
+		//document.getElementById("red6").innerHTML="";
 	}
 	else if(selectObj.value == "임기천")
 	{
@@ -1732,12 +1834,14 @@ function selectEventRedTeam(selectObj)
 		document.getElementById("Red3Player").innerHTML="박상현";
 		document.getElementById("Red4Player").innerHTML="신정용";
 		document.getElementById("Red5Player").innerHTML="임기천";
+		document.getElementById("Red6Player").innerHTML="";
 		
 		document.getElementById("red1").innerHTML="강현국";
 		document.getElementById("red2").innerHTML="안찬용";
 		document.getElementById("red3").innerHTML="박상현";
 		document.getElementById("red4").innerHTML="신정용";
 		document.getElementById("red5").innerHTML="임기천";
+		//document.getElementById("red6").innerHTML="임기천";
 	}
 	
 	document.getElementById("RedTeamName").innerHTML = selectObj.value;
@@ -1748,19 +1852,21 @@ function selectEventGreenTeam(selectObj)
 {
 	//alert(selectObj.value + "가 선택 되었습니다.");
 	
-		if(selectObj.value == "정해준")
+	if(selectObj.value == "정해준")
 	{
 		document.getElementById("Green1Player").innerHTML="박정배";
 		document.getElementById("Green2Player").innerHTML="정해준";
 		document.getElementById("Green3Player").innerHTML="이도형";
 		document.getElementById("Green4Player").innerHTML="정종영";
 		document.getElementById("Green5Player").innerHTML="임근우";
+		document.getElementById("Green6Player").innerHTML="";
 		
 		document.getElementById("green1").innerHTML="박정배";
 		document.getElementById("green2").innerHTML="정해준";
 		document.getElementById("green3").innerHTML="이도형";
 		document.getElementById("green4").innerHTML="정종영";
 		document.getElementById("green5").innerHTML="임근우";
+		//document.getElementById("green6").innerHTML="";
 	}
 	else if(selectObj.value == "마경민")
 	{
@@ -1769,12 +1875,14 @@ function selectEventGreenTeam(selectObj)
 		document.getElementById("Green3Player").innerHTML="마경민";
 		document.getElementById("Green4Player").innerHTML="박상혁";
 		document.getElementById("Green5Player").innerHTML="윤재선";
+		document.getElementById("Green6Player").innerHTML="";
 		
 		document.getElementById("green1").innerHTML="송슬기";
 		document.getElementById("green2").innerHTML="박인준";
 		document.getElementById("green3").innerHTML="마경민";
 		document.getElementById("green4").innerHTML="박상혁";
 		document.getElementById("green5").innerHTML="윤재선";
+		//document.getElementById("green6").innerHTML="";
 	}
 	else if(selectObj.value == "조준상")
 	{
@@ -1783,12 +1891,14 @@ function selectEventGreenTeam(selectObj)
 		document.getElementById("Green3Player").innerHTML="조준상";
 		document.getElementById("Green4Player").innerHTML="이임표";
 		document.getElementById("Green5Player").innerHTML="MJ";
+		document.getElementById("Green6Player").innerHTML="";
 		
 		document.getElementById("green1").innerHTML="김형준";
 		document.getElementById("green2").innerHTML="이현";
 		document.getElementById("green3").innerHTML="조준상";
 		document.getElementById("green4").innerHTML="이임표";
 		document.getElementById("green5").innerHTML="MJ";
+		//document.getElementById("green6").innerHTML="";
 	}
 	else if(selectObj.value == "유의정")
 	{
@@ -1797,12 +1907,14 @@ function selectEventGreenTeam(selectObj)
 		document.getElementById("Green3Player").innerHTML="유의정";
 		document.getElementById("Green4Player").innerHTML="민득수";
 		document.getElementById("Green5Player").innerHTML="조준성";
+		document.getElementById("Green6Player").innerHTML="김종훈";
 		
 		document.getElementById("green1").innerHTML="주영술";
 		document.getElementById("green2").innerHTML="박유준";
 		document.getElementById("green3").innerHTML="유의정";
 		document.getElementById("green4").innerHTML="민득수";
 		document.getElementById("green5").innerHTML="조준성";
+		//document.getElementById("green6").innerHTML="김종훈";
 	}
 	else if(selectObj.value == "조은상")
 	{
@@ -1811,12 +1923,14 @@ function selectEventGreenTeam(selectObj)
 		document.getElementById("Green3Player").innerHTML="조은상";
 		document.getElementById("Green4Player").innerHTML="라상현";
 		document.getElementById("Green5Player").innerHTML="전주용";
+		document.getElementById("Green6Player").innerHTML="";
 		
 		document.getElementById("green1").innerHTML="오용택";
 		document.getElementById("green2").innerHTML="이명훈";
 		document.getElementById("green3").innerHTML="조은상";
 		document.getElementById("green4").innerHTML="라상현";
 		document.getElementById("green5").innerHTML="전주용";
+		//document.getElementById("green6").innerHTML="";
 	}
 	else if(selectObj.value == "이준표")
 	{
@@ -1825,12 +1939,14 @@ function selectEventGreenTeam(selectObj)
 		document.getElementById("Green3Player").innerHTML="이준표";
 		document.getElementById("Green4Player").innerHTML="박상학";
 		document.getElementById("Green5Player").innerHTML="정호상";
+		document.getElementById("Green6Player").innerHTML="박동훈";
 		
 		document.getElementById("green1").innerHTML="박상우";
 		document.getElementById("green2").innerHTML="킴성환";
 		document.getElementById("green3").innerHTML="이준표";
 		document.getElementById("green4").innerHTML="박상학";
 		document.getElementById("green5").innerHTML="정호상";
+		//document.getElementById("green6").innerHTML="박동훈";
 	}
 	else if(selectObj.value == "박민수")
 	{
@@ -1839,12 +1955,14 @@ function selectEventGreenTeam(selectObj)
 		document.getElementById("Green3Player").innerHTML="박민수";
 		document.getElementById("Green4Player").innerHTML="장용진";
 		document.getElementById("Green5Player").innerHTML="조명희";
+		document.getElementById("Green6Player").innerHTML="";
 		
 		document.getElementById("green1").innerHTML="정성";
 		document.getElementById("green2").innerHTML="신민섭";
 		document.getElementById("green3").innerHTML="박민수";
 		document.getElementById("green4").innerHTML="장용진";
 		document.getElementById("green5").innerHTML="조명희";
+		//document.getElementById("green6").innerHTML="";
 	}	
 	else if(selectObj.value == "황희준")
 	{
@@ -1853,12 +1971,14 @@ function selectEventGreenTeam(selectObj)
 		document.getElementById("Green3Player").innerHTML="서아론";
 		document.getElementById("Green4Player").innerHTML="황희준";
 		document.getElementById("Green5Player").innerHTML="황덕찬";
+		document.getElementById("Green6Player").innerHTML="";
 		
 		document.getElementById("green1").innerHTML="사무엘";
 		document.getElementById("green2").innerHTML="유혁준";
 		document.getElementById("green3").innerHTML="서아론";
 		document.getElementById("green4").innerHTML="황희준";
 		document.getElementById("green5").innerHTML="황덕찬";
+		//document.getElementById("green6").innerHTML="";
 	}
 	else if(selectObj.value == "이성찬")
 	{
@@ -1867,26 +1987,30 @@ function selectEventGreenTeam(selectObj)
 		document.getElementById("Green3Player").innerHTML="정건환";
 		document.getElementById("Green4Player").innerHTML="이성찬";
 		document.getElementById("Green5Player").innerHTML="심정민";
+		document.getElementById("Green6Player").innerHTML="박찬웅";
 		
 		document.getElementById("green1").innerHTML="이용찬";
 		document.getElementById("green2").innerHTML="박세존";
 		document.getElementById("green3").innerHTML="정건환";
 		document.getElementById("green4").innerHTML="이성찬";
 		document.getElementById("green5").innerHTML="심정민";
+		//document.getElementById("green6").innerHTML="박찬웅";
 	}
-	else if(selectObj.value == "이병용")
+	else if(selectObj.value == "김창식")
 	{
 		document.getElementById("Green1Player").innerHTML="김원규";
 		document.getElementById("Green2Player").innerHTML="정규순";
 		document.getElementById("Green3Player").innerHTML="김낙원";
 		document.getElementById("Green4Player").innerHTML="허정석";
 		document.getElementById("Green5Player").innerHTML="김창식";
+		document.getElementById("Green6Player").innerHTML="";
 		
 		document.getElementById("green1").innerHTML="김원규";
 		document.getElementById("green2").innerHTML="정규순";
 		document.getElementById("green3").innerHTML="김낙원";
 		document.getElementById("green4").innerHTML="허정석";
 		document.getElementById("green5").innerHTML="김창식";
+		//document.getElementById("green6").innerHTML="박찬웅";
 	}
 	else if(selectObj.value == "이병용")
 	{
@@ -1895,12 +2019,14 @@ function selectEventGreenTeam(selectObj)
 		document.getElementById("Green3Player").innerHTML="권혁원";
 		document.getElementById("Green4Player").innerHTML="신상준";
 		document.getElementById("Green5Player").innerHTML="이병용";
-		
+		document.getElementById("Green6Player").innerHTML="";
+			
 		document.getElementById("green1").innerHTML="박규열";
 		document.getElementById("green2").innerHTML="조인선";
 		document.getElementById("green3").innerHTML="권혁원";
 		document.getElementById("green4").innerHTML="신상준";
 		document.getElementById("green5").innerHTML="이병용";
+		//document.getElementById("green6").innerHTML="";
 	}
 	else if(selectObj.value == "임기천")
 	{
@@ -1909,12 +2035,14 @@ function selectEventGreenTeam(selectObj)
 		document.getElementById("Green3Player").innerHTML="박상현";
 		document.getElementById("Green4Player").innerHTML="신정용";
 		document.getElementById("Green5Player").innerHTML="임기천";
+		document.getElementById("Green6Player").innerHTML="";
 		
 		document.getElementById("green1").innerHTML="강현국";
 		document.getElementById("green2").innerHTML="안찬용";
 		document.getElementById("green3").innerHTML="박상현";
 		document.getElementById("green4").innerHTML="신정용";
 		document.getElementById("green5").innerHTML="임기천";
+		//document.getElementById("green6").innerHTML="임기천";
 	}
 	
 	document.getElementById("GreenTeamName").innerHTML = selectObj.value;
@@ -2816,6 +2944,422 @@ function runBlock()
 		
 	saveTeamPlayer();
 }
+
+function Green5RadioClick()
+{
+	var radios = document.getElementsByName("green5_radio");
+
+	var btnTeam2Name5 = document.getElementById("btnGreenTeamName5");
+	var isSelected = false;
+	
+	if(btnTeam2Name5.style.background != 'red')
+	{
+		alert('5번째 칸이 선택 되어야 5-6맨 교체 가능 합니다!');
+	
+		return;
+	}
+	
+	// 메인 정보는 여기에 얻어옴
+	var divPlayer = document.getElementById("player");
+	var divScore1Converted = document.getElementById("score1Converted");
+	var divScore1Attempted = document.getElementById("score1Attempted");
+	var divScore1Percent = document.getElementById("score1Percent");
+	var divScore2Converted = document.getElementById("score2Converted");
+	var divScore2Attempted = document.getElementById("score2Attempted");
+	var divScore2Percent = document.getElementById("score2Percent");
+	var divScore3Converted = document.getElementById("score3Converted");
+	var divScore3Attempted = document.getElementById("score3Attempted");
+	var divScore3Percent = document.getElementById("score3Percent");
+	var divRebound = document.getElementById("rebound");
+	var divFoul = document.getElementById("foul");
+	var divAssist = document.getElementById("assist");
+	var divSteal = document.getElementById("steal");	
+	var divTurnover = document.getElementById("turnover");
+	var divBlock = document.getElementById("block");
+	
+	var divgreen5 = document.getElementById("green5");
+	var divGreen5or6 = document.getElementById("Green5or6");
+	
+	if(divGreen5or6.innerHTML == "5" && radios[0].checked)
+	{
+		// 이경우는 바뀌지 않았으므로 그냥 넘어간다.
+	}
+	else if (divGreen5or6.innerHTML == "6" && radios[1].checked)
+	{
+		// 이경우는 바뀌지 않았으므로 그냥 넘어간다.
+	}
+	else if(divGreen5or6.innerHTML == "5" && radios[1].checked)
+	{
+		// 5맨으로 선택 되었다가 6맨으로 넘어가는 경우
+		
+		// 1. 메인 정보 ->5맨 데이터에 백업
+		
+		var divTempPlayer = document.getElementById("Green5Player");
+		var divTempScore1Converted = document.getElementById("Green5Score1Converted");
+		var divTempScore1Attempted = document.getElementById("Green5Score1Attempted");
+		var divTempScore1Percent = document.getElementById("Green5Score1Percent");
+		var divTempScore2Converted = document.getElementById("Green5Score2Converted");
+		var divTempScore2Attempted = document.getElementById("Green5Score2Attempted");
+		var divTempScore2Percent = document.getElementById("Green5Score2Percent");
+		var divTempScore3Converted = document.getElementById("Green5Score3Converted");
+		var divTempScore3Attempted = document.getElementById("Green5Score3Attempted");
+		var divTempScore3Percent = document.getElementById("Green5Score3Percent");
+		var divTempRebound = document.getElementById("Green5Rebound");
+		var divTempFoul = document.getElementById("Green5Foul");
+		var divTempAssist = document.getElementById("Green5Assist");
+		var divTempSteal = document.getElementById("Green5Steal");	
+		var divTempTurnover = document.getElementById("Green5Turnover");
+		var divTempBlock = document.getElementById("Green5Block");
+		
+		
+		divTempPlayer.innerHTML = divPlayer.innerHTML;
+		divTempScore1Converted.innerHTML = divScore1Converted.innerHTML;
+		divTempScore1Attempted.innerHTML = divScore1Attempted.innerHTML;
+		divTempScore1Percent.innerHTML = divScore1Percent.innerHTML;
+		divTempScore2Converted.innerHTML = divScore2Converted.innerHTML;
+		divTempScore2Attempted.innerHTML = divScore2Attempted.innerHTML;
+		divTempScore2Percent.innerHTML = divScore2Percent.innerHTML;
+		divTempScore3Converted.innerHTML = divScore3Converted.innerHTML;
+		divTempScore3Attempted.innerHTML = divScore3Attempted.innerHTML;
+		divTempScore3Percent.innerHTML = divScore3Percent.innerHTML;
+		divTempRebound.innerHTML = divRebound.innerHTML;
+		divTempFoul.innerHTML = divFoul.innerHTML;
+		divTempAssist.innerHTML = divAssist.innerHTML;
+		divTempSteal.innerHTML = divSteal.innerHTML;	
+		divTempTurnover.innerHTML = divTurnover.innerHTML;
+		divTempBlock.innerHTML = divBlock.innerHTML;
+		
+		// 2. 6맨 데이터 -> 메인 정보로 보이기
+		divTempPlayer = document.getElementById("Green6Player");
+		divTempScore1Converted = document.getElementById("Green6Score1Converted");
+		divTempScore1Attempted = document.getElementById("Green6Score1Attempted");
+		divTempScore1Percent = document.getElementById("Green6Score1Percent");
+		divTempScore2Converted = document.getElementById("Green6Score2Converted");
+		divTempScore2Attempted = document.getElementById("Green6Score2Attempted");
+		divTempScore2Percent = document.getElementById("Green6Score2Percent");
+		divTempScore3Converted = document.getElementById("Green6Score3Converted");
+		divTempScore3Attempted = document.getElementById("Green6Score3Attempted");
+		divTempScore3Percent = document.getElementById("Green6Score3Percent");
+		divTempRebound = document.getElementById("Green6Rebound");
+		divTempFoul = document.getElementById("Green6Foul");
+		divTempAssist = document.getElementById("Green6Assist");
+		divTempSteal = document.getElementById("Green6Steal");	
+		divTempTurnover = document.getElementById("Green6Turnover");
+		divTempBlock = document.getElementById("Green6Block");	
+		
+		divPlayer.innerHTML = divTempPlayer.innerHTML;
+		divgreen5.innerHTML = divTempPlayer.innerHTML;
+		divScore1Converted.innerHTML = divTempScore1Converted.innerHTML;
+		divScore1Attempted.innerHTML = divTempScore1Attempted.innerHTML;
+		divScore1Percent.innerHTML = divTempScore1Percent.innerHTML;
+		divScore2Converted.innerHTML = divTempScore2Converted.innerHTML;
+		divScore2Attempted.innerHTML = divTempScore2Attempted.innerHTML;
+		divScore2Percent.innerHTML = divTempScore2Percent.innerHTML;
+		divScore3Converted.innerHTML = divTempScore3Converted.innerHTML;
+		divScore3Attempted.innerHTML = divTempScore3Attempted.innerHTML;
+		divScore3Percent.innerHTML = divTempScore3Percent.innerHTML;
+		divRebound.innerHTML = divTempRebound.innerHTML;
+		divFoul.innerHTML = divTempFoul.innerHTML;
+		divAssist.innerHTML = divTempAssist.innerHTML;
+		divSteal.innerHTML = divTempSteal.innerHTML;	
+		divTurnover.innerHTML = divTempTurnover.innerHTML;
+		divBlock.innerHTML = divTempBlock.innerHTML;
+		
+		// 6번 정보로 할당
+		divGreen5or6.innerHTML = "6";
+		
+		
+	}
+	else if(divGreen5or6.innerHTML == "6" && radios[0].checked)
+	{
+			// 1. 메인 정보 ->6맨 데이터에 백업
+		
+		var divTempPlayer = document.getElementById("Green6Player");
+		var divTempScore1Converted = document.getElementById("Green6Score1Converted");
+		var divTempScore1Attempted = document.getElementById("Green6Score1Attempted");
+		var divTempScore1Percent = document.getElementById("Green6Score1Percent");
+		var divTempScore2Converted = document.getElementById("Green6Score2Converted");
+		var divTempScore2Attempted = document.getElementById("Green6Score2Attempted");
+		var divTempScore2Percent = document.getElementById("Green6Score2Percent");
+		var divTempScore3Converted = document.getElementById("Green6Score3Converted");
+		var divTempScore3Attempted = document.getElementById("Green6Score3Attempted");
+		var divTempScore3Percent = document.getElementById("Green6Score3Percent");
+		var divTempRebound = document.getElementById("Green6Rebound");
+		var divTempFoul = document.getElementById("Green6Foul");
+		var divTempAssist = document.getElementById("Green6Assist");
+		var divTempSteal = document.getElementById("Green6Steal");	
+		var divTempTurnover = document.getElementById("Green6Turnover");
+		var divTempBlock = document.getElementById("Green6Block");
+		
+		
+		divTempPlayer.innerHTML = divPlayer.innerHTML;
+		divTempScore1Converted.innerHTML = divScore1Converted.innerHTML;
+		divTempScore1Attempted.innerHTML = divScore1Attempted.innerHTML;
+		divTempScore1Percent.innerHTML = divScore1Percent.innerHTML;
+		divTempScore2Converted.innerHTML = divScore2Converted.innerHTML;
+		divTempScore2Attempted.innerHTML = divScore2Attempted.innerHTML;
+		divTempScore2Percent.innerHTML = divScore2Percent.innerHTML;
+		divTempScore3Converted.innerHTML = divScore3Converted.innerHTML;
+		divTempScore3Attempted.innerHTML = divScore3Attempted.innerHTML;
+		divTempScore3Percent.innerHTML = divScore3Percent.innerHTML;
+		divTempRebound.innerHTML = divRebound.innerHTML;
+		divTempFoul.innerHTML = divFoul.innerHTML;
+		divTempAssist.innerHTML = divAssist.innerHTML;
+		divTempSteal.innerHTML = divSteal.innerHTML;	
+		divTempTurnover.innerHTML = divTurnover.innerHTML;
+		divTempBlock.innerHTML = divBlock.innerHTML;
+		
+		// 2. 6맨 데이터 -> 메인 정보로 보이기
+		divTempPlayer = document.getElementById("Green5Player");
+		divTempScore1Converted = document.getElementById("Green5Score1Converted");
+		divTempScore1Attempted = document.getElementById("Green5Score1Attempted");
+		divTempScore1Percent = document.getElementById("Green5Score1Percent");
+		divTempScore2Converted = document.getElementById("Green5Score2Converted");
+		divTempScore2Attempted = document.getElementById("Green5Score2Attempted");
+		divTempScore2Percent = document.getElementById("Green5Score2Percent");
+		divTempScore3Converted = document.getElementById("Green5Score3Converted");
+		divTempScore3Attempted = document.getElementById("Green5Score3Attempted");
+		divTempScore3Percent = document.getElementById("Green5Score3Percent");
+		divTempRebound = document.getElementById("Green5Rebound");
+		divTempFoul = document.getElementById("Green5Foul");
+		divTempAssist = document.getElementById("Green5Assist");
+		divTempSteal = document.getElementById("Green5Steal");	
+		divTempTurnover = document.getElementById("Green5Turnover");
+		divTempBlock = document.getElementById("Green5Block");	
+		
+		divPlayer.innerHTML = divTempPlayer.innerHTML;
+		divgreen5.innerHTML = divTempPlayer.innerHTML;
+		divScore1Converted.innerHTML = divTempScore1Converted.innerHTML;
+		divScore1Attempted.innerHTML = divTempScore1Attempted.innerHTML;
+		divScore1Percent.innerHTML = divTempScore1Percent.innerHTML;
+		divScore2Converted.innerHTML = divTempScore2Converted.innerHTML;
+		divScore2Attempted.innerHTML = divTempScore2Attempted.innerHTML;
+		divScore2Percent.innerHTML = divTempScore2Percent.innerHTML;
+		divScore3Converted.innerHTML = divTempScore3Converted.innerHTML;
+		divScore3Attempted.innerHTML = divTempScore3Attempted.innerHTML;
+		divScore3Percent.innerHTML = divTempScore3Percent.innerHTML;
+		divRebound.innerHTML = divTempRebound.innerHTML;
+		divFoul.innerHTML = divTempFoul.innerHTML;
+		divAssist.innerHTML = divTempAssist.innerHTML;
+		divSteal.innerHTML = divTempSteal.innerHTML;	
+		divTurnover.innerHTML = divTempTurnover.innerHTML;
+		divBlock.innerHTML = divTempBlock.innerHTML;
+		
+		// 5번 정보로 할당
+		divGreen5or6.innerHTML = "5";
+	}
+
+	
+	//alert("Second");
+	//alert(radioValue.value);
+}
+
+function Red5RadioClick()
+{
+	var radios = document.getElementsByName("red5_radio");
+
+	var btnTeam2Name5 = document.getElementById("btnRedTeamName5");
+	var isSelected = false;
+	
+	if(btnTeam2Name5.style.background != 'red')
+	{
+		alert('5번째 칸이 선택 되어야 5-6맨 교체 가능 합니다!');
+	
+		return;
+	}
+	
+	// 메인 정보는 여기에 얻어옴
+	var divPlayer = document.getElementById("player");
+	var divScore1Converted = document.getElementById("score1Converted");
+	var divScore1Attempted = document.getElementById("score1Attempted");
+	var divScore1Percent = document.getElementById("score1Percent");
+	var divScore2Converted = document.getElementById("score2Converted");
+	var divScore2Attempted = document.getElementById("score2Attempted");
+	var divScore2Percent = document.getElementById("score2Percent");
+	var divScore3Converted = document.getElementById("score3Converted");
+	var divScore3Attempted = document.getElementById("score3Attempted");
+	var divScore3Percent = document.getElementById("score3Percent");
+	var divRebound = document.getElementById("rebound");
+	var divFoul = document.getElementById("foul");
+	var divAssist = document.getElementById("assist");
+	var divSteal = document.getElementById("steal");	
+	var divTurnover = document.getElementById("turnover");
+	var divBlock = document.getElementById("block");
+	
+	var divred5 = document.getElementById("red5");
+	var divRed5or6 = document.getElementById("Red5or6");
+	
+	if(divRed5or6.innerHTML == "5" && radios[0].checked)
+	{
+		// 이경우는 바뀌지 않았으므로 그냥 넘어간다.
+	}
+	else if (divRed5or6.innerHTML == "6" && radios[1].checked)
+	{
+		// 이경우는 바뀌지 않았으므로 그냥 넘어간다.
+	}
+	else if(divRed5or6.innerHTML == "5" && radios[1].checked)
+	{
+		// 5맨으로 선택 되었다가 6맨으로 넘어가는 경우
+		
+		// 1. 메인 정보 ->5맨 데이터에 백업
+		
+		var divTempPlayer = document.getElementById("Red5Player");
+		var divTempScore1Converted = document.getElementById("Red5Score1Converted");
+		var divTempScore1Attempted = document.getElementById("Red5Score1Attempted");
+		var divTempScore1Percent = document.getElementById("Red5Score1Percent");
+		var divTempScore2Converted = document.getElementById("Red5Score2Converted");
+		var divTempScore2Attempted = document.getElementById("Red5Score2Attempted");
+		var divTempScore2Percent = document.getElementById("Red5Score2Percent");
+		var divTempScore3Converted = document.getElementById("Red5Score3Converted");
+		var divTempScore3Attempted = document.getElementById("Red5Score3Attempted");
+		var divTempScore3Percent = document.getElementById("Red5Score3Percent");
+		var divTempRebound = document.getElementById("Red5Rebound");
+		var divTempFoul = document.getElementById("Red5Foul");
+		var divTempAssist = document.getElementById("Red5Assist");
+		var divTempSteal = document.getElementById("Red5Steal");	
+		var divTempTurnover = document.getElementById("Red5Turnover");
+		var divTempBlock = document.getElementById("Red5Block");
+		
+		
+		divTempPlayer.innerHTML = divPlayer.innerHTML;
+		divTempScore1Converted.innerHTML = divScore1Converted.innerHTML;
+		divTempScore1Attempted.innerHTML = divScore1Attempted.innerHTML;
+		divTempScore1Percent.innerHTML = divScore1Percent.innerHTML;
+		divTempScore2Converted.innerHTML = divScore2Converted.innerHTML;
+		divTempScore2Attempted.innerHTML = divScore2Attempted.innerHTML;
+		divTempScore2Percent.innerHTML = divScore2Percent.innerHTML;
+		divTempScore3Converted.innerHTML = divScore3Converted.innerHTML;
+		divTempScore3Attempted.innerHTML = divScore3Attempted.innerHTML;
+		divTempScore3Percent.innerHTML = divScore3Percent.innerHTML;
+		divTempRebound.innerHTML = divRebound.innerHTML;
+		divTempFoul.innerHTML = divFoul.innerHTML;
+		divTempAssist.innerHTML = divAssist.innerHTML;
+		divTempSteal.innerHTML = divSteal.innerHTML;	
+		divTempTurnover.innerHTML = divTurnover.innerHTML;
+		divTempBlock.innerHTML = divBlock.innerHTML;
+		
+		// 2. 6맨 데이터 -> 메인 정보로 보이기
+		divTempPlayer = document.getElementById("Red6Player");
+		divTempScore1Converted = document.getElementById("Red6Score1Converted");
+		divTempScore1Attempted = document.getElementById("Red6Score1Attempted");
+		divTempScore1Percent = document.getElementById("Red6Score1Percent");
+		divTempScore2Converted = document.getElementById("Red6Score2Converted");
+		divTempScore2Attempted = document.getElementById("Red6Score2Attempted");
+		divTempScore2Percent = document.getElementById("Red6Score2Percent");
+		divTempScore3Converted = document.getElementById("Red6Score3Converted");
+		divTempScore3Attempted = document.getElementById("Red6Score3Attempted");
+		divTempScore3Percent = document.getElementById("Red6Score3Percent");
+		divTempRebound = document.getElementById("Red6Rebound");
+		divTempFoul = document.getElementById("Red6Foul");
+		divTempAssist = document.getElementById("Red6Assist");
+		divTempSteal = document.getElementById("Red6Steal");	
+		divTempTurnover = document.getElementById("Red6Turnover");
+		divTempBlock = document.getElementById("Red6Block");	
+		
+		divPlayer.innerHTML = divTempPlayer.innerHTML;
+		divred5.innerHTML = divTempPlayer.innerHTML;
+		divScore1Converted.innerHTML = divTempScore1Converted.innerHTML;
+		divScore1Attempted.innerHTML = divTempScore1Attempted.innerHTML;
+		divScore1Percent.innerHTML = divTempScore1Percent.innerHTML;
+		divScore2Converted.innerHTML = divTempScore2Converted.innerHTML;
+		divScore2Attempted.innerHTML = divTempScore2Attempted.innerHTML;
+		divScore2Percent.innerHTML = divTempScore2Percent.innerHTML;
+		divScore3Converted.innerHTML = divTempScore3Converted.innerHTML;
+		divScore3Attempted.innerHTML = divTempScore3Attempted.innerHTML;
+		divScore3Percent.innerHTML = divTempScore3Percent.innerHTML;
+		divRebound.innerHTML = divTempRebound.innerHTML;
+		divFoul.innerHTML = divTempFoul.innerHTML;
+		divAssist.innerHTML = divTempAssist.innerHTML;
+		divSteal.innerHTML = divTempSteal.innerHTML;	
+		divTurnover.innerHTML = divTempTurnover.innerHTML;
+		divBlock.innerHTML = divTempBlock.innerHTML;
+		
+		// 6번 정보로 할당
+		divRed5or6.innerHTML = "6";
+		
+		
+	}
+	else if(divRed5or6.innerHTML == "6" && radios[0].checked)
+	{
+			// 1. 메인 정보 ->6맨 데이터에 백업
+		
+		var divTempPlayer = document.getElementById("Red6Player");
+		var divTempScore1Converted = document.getElementById("Red6Score1Converted");
+		var divTempScore1Attempted = document.getElementById("Red6Score1Attempted");
+		var divTempScore1Percent = document.getElementById("Red6Score1Percent");
+		var divTempScore2Converted = document.getElementById("Red6Score2Converted");
+		var divTempScore2Attempted = document.getElementById("Red6Score2Attempted");
+		var divTempScore2Percent = document.getElementById("Red6Score2Percent");
+		var divTempScore3Converted = document.getElementById("Red6Score3Converted");
+		var divTempScore3Attempted = document.getElementById("Red6Score3Attempted");
+		var divTempScore3Percent = document.getElementById("Red6Score3Percent");
+		var divTempRebound = document.getElementById("Red6Rebound");
+		var divTempFoul = document.getElementById("Red6Foul");
+		var divTempAssist = document.getElementById("Red6Assist");
+		var divTempSteal = document.getElementById("Red6Steal");	
+		var divTempTurnover = document.getElementById("Red6Turnover");
+		var divTempBlock = document.getElementById("Red6Block");
+		
+		
+		divTempPlayer.innerHTML = divPlayer.innerHTML;
+		divTempScore1Converted.innerHTML = divScore1Converted.innerHTML;
+		divTempScore1Attempted.innerHTML = divScore1Attempted.innerHTML;
+		divTempScore1Percent.innerHTML = divScore1Percent.innerHTML;
+		divTempScore2Converted.innerHTML = divScore2Converted.innerHTML;
+		divTempScore2Attempted.innerHTML = divScore2Attempted.innerHTML;
+		divTempScore2Percent.innerHTML = divScore2Percent.innerHTML;
+		divTempScore3Converted.innerHTML = divScore3Converted.innerHTML;
+		divTempScore3Attempted.innerHTML = divScore3Attempted.innerHTML;
+		divTempScore3Percent.innerHTML = divScore3Percent.innerHTML;
+		divTempRebound.innerHTML = divRebound.innerHTML;
+		divTempFoul.innerHTML = divFoul.innerHTML;
+		divTempAssist.innerHTML = divAssist.innerHTML;
+		divTempSteal.innerHTML = divSteal.innerHTML;	
+		divTempTurnover.innerHTML = divTurnover.innerHTML;
+		divTempBlock.innerHTML = divBlock.innerHTML;
+		
+		// 2. 6맨 데이터 -> 메인 정보로 보이기
+		divTempPlayer = document.getElementById("Red5Player");
+		divTempScore1Converted = document.getElementById("Red5Score1Converted");
+		divTempScore1Attempted = document.getElementById("Red5Score1Attempted");
+		divTempScore1Percent = document.getElementById("Red5Score1Percent");
+		divTempScore2Converted = document.getElementById("Red5Score2Converted");
+		divTempScore2Attempted = document.getElementById("Red5Score2Attempted");
+		divTempScore2Percent = document.getElementById("Red5Score2Percent");
+		divTempScore3Converted = document.getElementById("Red5Score3Converted");
+		divTempScore3Attempted = document.getElementById("Red5Score3Attempted");
+		divTempScore3Percent = document.getElementById("Red5Score3Percent");
+		divTempRebound = document.getElementById("Red5Rebound");
+		divTempFoul = document.getElementById("Red5Foul");
+		divTempAssist = document.getElementById("Red5Assist");
+		divTempSteal = document.getElementById("Red5Steal");	
+		divTempTurnover = document.getElementById("Red5Turnover");
+		divTempBlock = document.getElementById("Red5Block");	
+		
+		divPlayer.innerHTML = divTempPlayer.innerHTML;
+		divred5.innerHTML = divTempPlayer.innerHTML;
+		divScore1Converted.innerHTML = divTempScore1Converted.innerHTML;
+		divScore1Attempted.innerHTML = divTempScore1Attempted.innerHTML;
+		divScore1Percent.innerHTML = divTempScore1Percent.innerHTML;
+		divScore2Converted.innerHTML = divTempScore2Converted.innerHTML;
+		divScore2Attempted.innerHTML = divTempScore2Attempted.innerHTML;
+		divScore2Percent.innerHTML = divTempScore2Percent.innerHTML;
+		divScore3Converted.innerHTML = divTempScore3Converted.innerHTML;
+		divScore3Attempted.innerHTML = divTempScore3Attempted.innerHTML;
+		divScore3Percent.innerHTML = divTempScore3Percent.innerHTML;
+		divRebound.innerHTML = divTempRebound.innerHTML;
+		divFoul.innerHTML = divTempFoul.innerHTML;
+		divAssist.innerHTML = divTempAssist.innerHTML;
+		divSteal.innerHTML = divTempSteal.innerHTML;	
+		divTurnover.innerHTML = divTempTurnover.innerHTML;
+		divBlock.innerHTML = divTempBlock.innerHTML;
+		
+		// 5번 정보로 할당
+		divRed5or6.innerHTML = "5";
+	}
+}
+
+
 	
 function RadioClick()
 {
@@ -2938,6 +3482,23 @@ function saveData()
 	var divRed5Steal = document.getElementById("Red5Steal").innerHTML;	
 	var divRed5Turnover = document.getElementById("Red5Turnover").innerHTML;
 	var divRed5Block = document.getElementById("Red5Block").innerHTML;
+	
+	var divRed6Player = document.getElementById("Red6Player").innerHTML;
+	var divRed6Score1Converted = document.getElementById("Red6Score1Converted").innerHTML;
+	var divRed6Score1Attempted = document.getElementById("Red6Score1Attempted").innerHTML;
+	var divRed6Score1Percent = document.getElementById("Red6Score1Percent").innerHTML;
+	var divRed6Score2Converted = document.getElementById("Red6Score2Converted").innerHTML;
+	var divRed6Score2Attempted = document.getElementById("Red6Score2Attempted").innerHTML;
+	var divRed6Score2Percent = document.getElementById("Red6Score2Percent").innerHTML;
+	var divRed6Score3Converted = document.getElementById("Red6Score3Converted").innerHTML;
+	var divRed6Score3Attempted = document.getElementById("Red6Score3Attempted").innerHTML;
+	var divRed6Score3Percent = document.getElementById("Red6Score3Percent").innerHTML;
+	var divRed6Rebound = document.getElementById("Red6Rebound").innerHTML;
+	var divRed6Foul = document.getElementById("Red6Foul").innerHTML;
+	var divRed6Assist = document.getElementById("Red6Assist").innerHTML;
+	var divRed6Steal = document.getElementById("Red6Steal").innerHTML;	
+	var divRed6Turnover = document.getElementById("Red6Turnover").innerHTML;
+	var divRed6Block = document.getElementById("Red6Block").innerHTML;
 
 	// Green 팀
 	var divGreenTeamTotalPoints = document.getElementById("GreenTeamTotalPoints").innerHTML;
@@ -3026,6 +3587,23 @@ function saveData()
 	var divGreen5Steal = document.getElementById("Green5Steal").innerHTML;	
 	var divGreen5Turnover = document.getElementById("Green5Turnover").innerHTML;
 	var divGreen5Block = document.getElementById("Green5Block").innerHTML;
+	
+	var divGreen6Player = document.getElementById("Green6Player").innerHTML;
+	var divGreen6Score1Converted = document.getElementById("Green6Score1Converted").innerHTML;
+	var divGreen6Score1Attempted = document.getElementById("Green6Score1Attempted").innerHTML;
+	var divGreen6Score1Percent = document.getElementById("Green6Score1Percent").innerHTML;
+	var divGreen6Score2Converted = document.getElementById("Green6Score2Converted").innerHTML;
+	var divGreen6Score2Attempted = document.getElementById("Green6Score2Attempted").innerHTML;
+	var divGreen6Score2Percent = document.getElementById("Green6Score2Percent").innerHTML;
+	var divGreen6Score3Converted = document.getElementById("Green6Score3Converted").innerHTML;
+	var divGreen6Score3Attempted = document.getElementById("Green6Score3Attempted").innerHTML;
+	var divGreen6Score3Percent = document.getElementById("Green6Score3Percent").innerHTML;
+	var divGreen6Rebound = document.getElementById("Green6Rebound").innerHTML;
+	var divGreen6Foul = document.getElementById("Green6Foul").innerHTML;
+	var divGreen6Assist = document.getElementById("Green6Assist").innerHTML;
+	var divGreen6Steal = document.getElementById("Green6Steal").innerHTML;	
+	var divGreen6Turnover = document.getElementById("Green6Turnover").innerHTML;
+	var divGreen6Block = document.getElementById("Green6Block").innerHTML;
 	
 
 	var date = new Date();
@@ -3139,6 +3717,25 @@ $.ajax({
 		GreenOne이름:divGreen5Player, GreenOne1득점:divGreen5Score1Converted, GreenOne1득점성공율:divGreen5Score1Percent, GreenOne2득점:divGreen5Score2Converted,
 					GreenOne2득점성공율:divGreen5Score2Percent, GreenOne3득점:divGreen5Score3Converted, GreenOne3득점성공율:divGreen5Score3Percent , GreenOne파울:divGreen5Foul,  
 					GreenOne리바운드:divGreen5Rebound, GreenOne어시스트:divGreen5Assist, GreenOne스틸:divGreen5Steal, GreenOne블록:divGreen5Block
+					},
+  type: "POST"
+  
+});
+
+$.ajax({
+
+  url: "https://script.google.com/macros/s/AKfycbz2YTHMW9UCByXkBDI8tPEyPvrT12a_ZzAXEQTD-rqaps2I04wV/exec",
+  
+  data: {경기날짜:today, 경기이름:gameTeamName, 경기결과:gameResults,
+		
+		RedOne이름:divRed6Player, RedOne1득점:divRed6Score1Converted, RedOne1득점성공율:divRed6Score1Percent, RedOne2득점:divRed6Score2Converted,
+					RedOne2득점성공율:divRed6Score2Percent, RedOne3득점:divRed6Score3Converted, RedOne3득점성공율:divRed6Score3Percent , RedOne파울:divRed6Foul,  
+					RedOne리바운드:divRed6Rebound, RedOne어시스트:divRed6Assist, RedOne스틸:divRed6Steal, RedOne블록:divRed6Block,
+					
+					
+		GreenOne이름:divGreen6Player, GreenOne1득점:divGreen6Score1Converted, GreenOne1득점성공율:divGreen6Score1Percent, GreenOne2득점:divGreen6Score2Converted,
+					GreenOne2득점성공율:divGreen6Score2Percent, GreenOne3득점:divGreen6Score3Converted, GreenOne3득점성공율:divGreen6Score3Percent , GreenOne파울:divGreen6Foul,  
+					GreenOne리바운드:divGreen6Rebound, GreenOne어시스트:divGreen6Assist, GreenOne스틸:divGreen6Steal, GreenOne블록:divGreen6Block
 					},
   type: "POST"
   
@@ -3471,7 +4068,11 @@ $.ajax({
 			
 			<div style="position: absolute; top: 160px; left: 90px;">
 			<button type="button" id="btnRedTeamName5" onclick="selectTeamPlayer(this)"><img class="btn-img" src="./redteam.jpg" width="50" height="80"></button>
-			<div id="red5" align="center">조던</div>
+			<div id="red5" align="center">조던</div> 
+			<div>
+				<input type="radio" name="red5_radio" value="Five" checked="checked" onclick="Red5RadioClick()">5맨
+				<input type="radio" name="red5_radio" value="Six" onclick="Red5RadioClick()">6맨
+			</div>
 			</div>
 			
 			
@@ -3555,7 +4156,12 @@ $.ajax({
 			
 			<div style="position: absolute; top: 160px; left: -90px;">
 			<button type="button" id="btnGreenTeamName5" onclick="selectTeamPlayer(this)"><img class="btn-img" src="./greenteam.jpg" width="50" height="80"></button>
-			<div id="green5" align="center">조던</div>
+			<div id="green5" align="center">조던</div> 
+			
+			<div>
+				<input type="radio" name="green5_radio" value="Five" checked="checked" onclick="Green5RadioClick()">5맨
+				<input type="radio" name="green5_radio" value="Six" onclick="Green5RadioClick()">6맨
+			</div>
 			</div>
 			
 		</div>
@@ -3754,6 +4360,8 @@ $.ajax({
 		<div id="Red4Turnover" align="center">0</div>
 		<div id="Red4Block" align="center">0</div>
 		
+		<div id="Red5or6" align="center">5</div>
+		
 		<div id="Red5Player" align="center">조던</div>
 		<div id="Red5Score1Converted" align="center">0</div>
 		<div id="Red5Score1Attempted" align="center">0</div>
@@ -3770,6 +4378,23 @@ $.ajax({
 		<div id="Red5Steal" align="center">0</div>
 		<div id="Red5Turnover" align="center">0</div>
 		<div id="Red5Block" align="center">0</div>
+		
+		<div id="Red6Player" align="center">조던</div>
+		<div id="Red6Score1Converted" align="center">0</div>
+		<div id="Red6Score1Attempted" align="center">0</div>
+		<div id="Red6Score1Percent" align="center">0%</div>
+		<div id="Red6Score2Converted" align="center">0</div>
+		<div id="Red6Score2Attempted" align="center">0</div>
+		<div id="Red6Score2Percent" align="center">0%</div>
+		<div id="Red6Score3Converted" align="center">0</div>
+		<div id="Red6Score3Attempted" align="center">0</div>
+		<div id="Red6Score3Percent" align="center">0%</div>
+		<div id="Red6Rebound" align="center">0</div>
+		<div id="Red6Foul" align="center">0</div>
+		<div id="Red6Assist" align="center">0</div>
+		<div id="Red6Steal" align="center">0</div>
+		<div id="Red6Turnover" align="center">0</div>
+		<div id="Red6Block" align="center">0</div>
 		
 		
 		
@@ -3843,6 +4468,8 @@ $.ajax({
 		<div id="Green4Turnover" align="center">0</div>
 		<div id="Green4Block" align="center">0</div>
 		
+		<div id="Green5or6" align="center">5</div>
+		
 		<div id="Green5Player" align="center">조던</div>
 		<div id="Green5Score1Converted" align="center">0</div>
 		<div id="Green5Score1Attempted" align="center">0</div>
@@ -3859,6 +4486,23 @@ $.ajax({
 		<div id="Green5Steal" align="center">0</div>
 		<div id="Green5Turnover" align="center">0</div>
 		<div id="Green5Block" align="center">0</div>
+		
+		<div id="Green6Player" align="center">조던</div>
+		<div id="Green6Score1Converted" align="center">0</div>
+		<div id="Green6Score1Attempted" align="center">0</div>
+		<div id="Green6Score1Percent" align="center">0%</div>
+		<div id="Green6Score2Converted" align="center">0</div>
+		<div id="Green6Score2Attempted" align="center">0</div>
+		<div id="Green6Score2Percent" align="center">0%</div>
+		<div id="Green6Score3Converted" align="center">0</div>
+		<div id="Green6Score3Attempted" align="center">0</div>
+		<div id="Green6Score3Percent" align="center">0%</div>
+		<div id="Green6Rebound" align="center">0</div>
+		<div id="Green6Foul" align="center">0</div>
+		<div id="Green6Assist" align="center">0</div>
+		<div id="Green6Steal" align="center">0</div>
+		<div id="Green6Turnover" align="center">0</div>
+		<div id="Green6Block" align="center">0</div>
 		
 		
 		</div>
