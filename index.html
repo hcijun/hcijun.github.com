@@ -18,12 +18,14 @@ function deselectTeamPlayer()
 	var btnTeam1Name3 = document.getElementById("btnRedTeamName3");
 	var btnTeam1Name4 = document.getElementById("btnRedTeamName4");
 	var btnTeam1Name5 = document.getElementById("btnRedTeamName5");
+	var btnTeam1Name6 = document.getElementById("btnRedTeamName6");
 	
 	var btnTeam2Name1 = document.getElementById("btnGreenTeamName1");
 	var btnTeam2Name2 = document.getElementById("btnGreenTeamName2");
 	var btnTeam2Name3 = document.getElementById("btnGreenTeamName3");
 	var btnTeam2Name4 = document.getElementById("btnGreenTeamName4");
 	var btnTeam2Name5 = document.getElementById("btnGreenTeamName5");
+	var btnTeam2Name6 = document.getElementById("btnGreenTeamName6");
 	var isSelected = false;
 	
 	// 메인 정보는 여기에 얻어옴
@@ -245,6 +247,46 @@ function deselectTeamPlayer()
 		divTempTurnover.innerHTML = divTurnover.innerHTML;
 		divTempBlock.innerHTML = divBlock.innerHTML;
 	}
+	else if(btnTeam1Name6.style.background == 'red')
+	{
+		//btnTeam1Name5.style.background = 'white';
+		
+		//메인 정보를 플레이어 정보에 저장
+		var divTempPlayer = document.getElementById("Red6Player");
+		var divTempScore1Converted = document.getElementById("Red6Score1Converted");
+		var divTempScore1Attempted = document.getElementById("Red6Score1Attempted");
+		var divTempScore1Percent = document.getElementById("Red6Score1Percent");
+		var divTempScore2Converted = document.getElementById("Red6Score2Converted");
+		var divTempScore2Attempted = document.getElementById("Red6Score2Attempted");
+		var divTempScore2Percent = document.getElementById("Red6Score2Percent");
+		var divTempScore3Converted = document.getElementById("Red6Score3Converted");
+		var divTempScore3Attempted = document.getElementById("Red6Score3Attempted");
+		var divTempScore3Percent = document.getElementById("Red6Score3Percent");
+		var divTempRebound = document.getElementById("Red6Rebound");
+		var divTempFoul = document.getElementById("Red6Foul");
+		var divTempAssist = document.getElementById("Red6Assist");
+		var divTempSteal = document.getElementById("Red6Steal");	
+		var divTempTurnover = document.getElementById("Red6Turnover");
+		var divTempBlock = document.getElementById("Red6Block");
+		
+		
+		divTempPlayer.innerHTML = divplayer.innerHTML;
+		divTempScore1Converted.innerHTML = divScore1Converted.innerHTML;
+		divTempScore1Attempted.innerHTML = divScore1Attempted.innerHTML;
+		divTempScore1Percent.innerHTML = divScore1Percent.innerHTML;
+		divTempScore2Converted.innerHTML = divScore2Converted.innerHTML;
+		divTempScore2Attempted.innerHTML = divScore2Attempted.innerHTML;
+		divTempScore2Percent.innerHTML = divScore2Percent.innerHTML;
+		divTempScore3Converted.innerHTML = divScore3Converted.innerHTML;
+		divTempScore3Attempted.innerHTML = divScore3Attempted.innerHTML;
+		divTempScore3Percent.innerHTML = divScore3Percent.innerHTML;
+		divTempRebound.innerHTML = divRebound.innerHTML;
+		divTempFoul.innerHTML = divFoul.innerHTML;
+		divTempAssist.innerHTML = divAssist.innerHTML;
+		divTempSteal.innerHTML = divSteal.innerHTML;	
+		divTempTurnover.innerHTML = divTurnover.innerHTML;
+		divTempBlock.innerHTML = divBlock.innerHTML;
+	}
 	else if(btnTeam2Name1.style.background == 'red')
 	{
 		//btnTeam2Name1.style.background = 'white';
@@ -426,6 +468,46 @@ function deselectTeamPlayer()
 		var divTempSteal = document.getElementById("Green5Steal");	
 		var divTempTurnover = document.getElementById("Green5Turnover");
 		var divTempBlock = document.getElementById("Green5Block");
+		
+		
+		divTempPlayer.innerHTML = divplayer.innerHTML;
+		divTempScore1Converted.innerHTML = divScore1Converted.innerHTML;
+		divTempScore1Attempted.innerHTML = divScore1Attempted.innerHTML;
+		divTempScore1Percent.innerHTML = divScore1Percent.innerHTML;
+		divTempScore2Converted.innerHTML = divScore2Converted.innerHTML;
+		divTempScore2Attempted.innerHTML = divScore2Attempted.innerHTML;
+		divTempScore2Percent.innerHTML = divScore2Percent.innerHTML;
+		divTempScore3Converted.innerHTML = divScore3Converted.innerHTML;
+		divTempScore3Attempted.innerHTML = divScore3Attempted.innerHTML;
+		divTempScore3Percent.innerHTML = divScore3Percent.innerHTML;
+		divTempRebound.innerHTML = divRebound.innerHTML;
+		divTempFoul.innerHTML = divFoul.innerHTML;
+		divTempAssist.innerHTML = divAssist.innerHTML;
+		divTempSteal.innerHTML = divSteal.innerHTML;	
+		divTempTurnover.innerHTML = divTurnover.innerHTML;
+		divTempBlock.innerHTML = divBlock.innerHTML;
+	}
+	else if(btnTeam2Name6.style.background == 'red')
+	{
+		//btnTeam2Name5.style.background = 'white';
+		
+		//메인 정보를 플레이어 정보에 저장
+		var divTempPlayer = document.getElementById("Green6Player");
+		var divTempScore1Converted = document.getElementById("Green6Score1Converted");
+		var divTempScore1Attempted = document.getElementById("Green6Score1Attempted");
+		var divTempScore1Percent = document.getElementById("Green6Score1Percent");
+		var divTempScore2Converted = document.getElementById("Green6Score2Converted");
+		var divTempScore2Attempted = document.getElementById("Green6Score2Attempted");
+		var divTempScore2Percent = document.getElementById("Green6Score2Percent");
+		var divTempScore3Converted = document.getElementById("Green6Score3Converted");
+		var divTempScore3Attempted = document.getElementById("Green6Score3Attempted");
+		var divTempScore3Percent = document.getElementById("Green6Score3Percent");
+		var divTempRebound = document.getElementById("Green6Rebound");
+		var divTempFoul = document.getElementById("Green6Foul");
+		var divTempAssist = document.getElementById("Green6Assist");
+		var divTempSteal = document.getElementById("Green6Steal");	
+		var divTempTurnover = document.getElementById("Green6Turnover");
+		var divTempBlock = document.getElementById("Green6Block");
 		
 		
 		divTempPlayer.innerHTML = divplayer.innerHTML;
@@ -964,13 +1046,15 @@ function selectTeamPlayer(object)
 	var btnTeam1Name3 = document.getElementById("btnRedTeamName3");
 	var btnTeam1Name4 = document.getElementById("btnRedTeamName4");
 	var btnTeam1Name5 = document.getElementById("btnRedTeamName5");
+	var btnTeam1Name6 = document.getElementById("btnRedTeamName6");
 	
 	var btnTeam2Name1 = document.getElementById("btnGreenTeamName1");
 	var btnTeam2Name2 = document.getElementById("btnGreenTeamName2");
 	var btnTeam2Name3 = document.getElementById("btnGreenTeamName3");
 	var btnTeam2Name4 = document.getElementById("btnGreenTeamName4");
 	var btnTeam2Name5 = document.getElementById("btnGreenTeamName5");
-
+	var btnTeam2Name6 = document.getElementById("btnGreenTeamName6");
+	
 	var isSelected = false;
 	
 	
@@ -1008,12 +1092,14 @@ function selectTeamPlayer(object)
 			btnTeam1Name3.style.background = 'white';
 			btnTeam1Name4.style.background = 'white';
 			btnTeam1Name5.style.background = 'white';
+			btnTeam1Name6.style.background = 'white';
 			
 			btnTeam2Name1.style.background = 'white';
 			btnTeam2Name2.style.background = 'white';
 			btnTeam2Name3.style.background = 'white';
 			btnTeam2Name4.style.background = 'white';
 			btnTeam2Name5.style.background = 'white';
+			btnTeam2Name6.style.background = 'white';
 			
 			//해당 사용자의 정보를 읽어와서 메인 정보에 할당
 			var divTempPlayer = document.getElementById("Red1Player");
@@ -1071,12 +1157,15 @@ function selectTeamPlayer(object)
 			btnTeam1Name3.style.background = 'white';
 			btnTeam1Name4.style.background = 'white';
 			btnTeam1Name5.style.background = 'white';
-			
+			btnTeam1Name6.style.background = 'white';
+
 			btnTeam2Name1.style.background = 'white';
 			btnTeam2Name2.style.background = 'white';
 			btnTeam2Name3.style.background = 'white';
 			btnTeam2Name4.style.background = 'white';
 			btnTeam2Name5.style.background = 'white';
+			btnTeam2Name5.style.background = 'white';
+
 			
 			//해당 사용자의 정보를 읽어와서 메인 정보에 할당
 			var divTempPlayer = document.getElementById("Red2Player");
@@ -1132,14 +1221,15 @@ function selectTeamPlayer(object)
 			btnTeam1Name3.style.background = 'red';
 			btnTeam1Name4.style.background = 'white';
 			btnTeam1Name5.style.background = 'white';
+			btnTeam1Name6.style.background = 'white';
 			
 			btnTeam2Name1.style.background = 'white';
 			btnTeam2Name2.style.background = 'white';
 			btnTeam2Name3.style.background = 'white';
 			btnTeam2Name4.style.background = 'white';
 			btnTeam2Name5.style.background = 'white';
-			
-			
+			btnTeam2Name6.style.background = 'white';
+						
 			//해당 사용자의 정보를 읽어와서 메인 정보에 할당
 			var divTempPlayer = document.getElementById("Red3Player");
 			var divTempScore1Converted = document.getElementById("Red3Score1Converted");
@@ -1195,12 +1285,14 @@ function selectTeamPlayer(object)
 			btnTeam1Name3.style.background = 'white';
 			btnTeam1Name4.style.background = 'red';
 			btnTeam1Name5.style.background = 'white';
+			btnTeam1Name6.style.background = 'white';
 			
 			btnTeam2Name1.style.background = 'white';
 			btnTeam2Name2.style.background = 'white';
 			btnTeam2Name3.style.background = 'white';
 			btnTeam2Name4.style.background = 'white';
 			btnTeam2Name5.style.background = 'white';
+			btnTeam2Name6.style.background = 'white';
 			
 			
 			//해당 사용자의 정보를 읽어와서 메인 정보에 할당
@@ -1257,12 +1349,14 @@ function selectTeamPlayer(object)
 			btnTeam1Name3.style.background = 'white';
 			btnTeam1Name4.style.background = 'white';
 			btnTeam1Name5.style.background = 'red';
+			btnTeam1Name6.style.background = 'white';
 			
 			btnTeam2Name1.style.background = 'white';
 			btnTeam2Name2.style.background = 'white';
 			btnTeam2Name3.style.background = 'white';
 			btnTeam2Name4.style.background = 'white';
 			btnTeam2Name5.style.background = 'white';
+			btnTeam2Name6.style.background = 'white';
 			
 			//해당 사용자의 정보를 읽어와서 메인 정보에 할당
 			var divTempPlayer = document.getElementById("Red5Player");
@@ -1306,6 +1400,68 @@ function selectTeamPlayer(object)
 			btnTeam1Name5.style.background = 'white';
 		}
 	}
+	else if(object.id == btnTeam1Name6.id)
+	{
+		if(btnTeam1Name6.style.background == 'white')
+		{
+			isSelected = true;
+			btnTeam1Name1.style.background = 'white';
+			
+			btnTeam1Name2.style.background = 'white';
+			btnTeam1Name3.style.background = 'white';
+			btnTeam1Name4.style.background = 'white';
+			btnTeam1Name5.style.background = 'white';
+			btnTeam1Name6.style.background = 'red';
+			
+			btnTeam2Name1.style.background = 'white';
+			btnTeam2Name2.style.background = 'white';
+			btnTeam2Name3.style.background = 'white';
+			btnTeam2Name4.style.background = 'white';
+			btnTeam2Name5.style.background = 'white';
+			btnTeam2Name6.style.background = 'white';
+			
+			//해당 사용자의 정보를 읽어와서 메인 정보에 할당
+			var divTempPlayer = document.getElementById("Red6Player");
+			var divTempScore1Converted = document.getElementById("Red6Score1Converted");
+			var divTempScore1Attempted = document.getElementById("Red6Score1Attempted");
+			var divTempScore1Percent = document.getElementById("Red6Score1Percent");
+			var divTempScore2Converted = document.getElementById("Red6Score2Converted");
+			var divTempScore2Attempted = document.getElementById("Red6Score2Attempted");
+			var divTempScore2Percent = document.getElementById("Red6Score2Percent");
+			var divTempScore3Converted = document.getElementById("Red6Score3Converted");
+			var divTempScore3Attempted = document.getElementById("Red6Score3Attempted");
+			var divTempScore3Percent = document.getElementById("Red6Score3Percent");
+			var divTempRebound = document.getElementById("Red6Rebound");
+			var divTempFoul = document.getElementById("Red6Foul");
+			var divTempAssist = document.getElementById("Red6Assist");
+			var divTempSteal = document.getElementById("Red6Steal");	
+			var divTempTurnover = document.getElementById("Red6Turnover");
+			var divTempBlock = document.getElementById("Red6Block");
+			
+			
+			divplayer.innerHTML = divTempPlayer.innerHTML;
+			divScore1Converted.innerHTML = divTempScore1Converted.innerHTML;
+			divScore1Attempted.innerHTML = divTempScore1Attempted.innerHTML;
+			divScore1Percent.innerHTML = divTempScore1Percent.innerHTML;
+			divScore2Converted.innerHTML = divTempScore2Converted.innerHTML;
+			divScore2Attempted.innerHTML = divTempScore2Attempted.innerHTML;
+			divScore2Percent.innerHTML = divTempScore2Percent.innerHTML;
+			divScore3Converted.innerHTML = divTempScore3Converted.innerHTML;
+			divScore3Attempted.innerHTML = divTempScore3Attempted.innerHTML;
+			divScore3Percent.innerHTML = divTempScore3Percent.innerHTML;
+			divRebound.innerHTML = divTempRebound.innerHTML;
+			divFoul.innerHTML = divTempFoul.innerHTML;
+			divAssist.innerHTML = divTempAssist.innerHTML;
+			divSteal.innerHTML = divTempSteal.innerHTML;	
+			divTurnover.innerHTML = divTempTurnover.innerHTML;
+			divBlock.innerHTML = divTempBlock.innerHTML;
+		}
+		else
+		{
+			isSelected = false;
+			btnTeam1Name6.style.background = 'white';
+		}
+	}
 	else if(object.id == btnTeam2Name1.id)
 	{
 		if(btnTeam2Name1.style.background == 'white')
@@ -1317,12 +1473,14 @@ function selectTeamPlayer(object)
 			btnTeam2Name3.style.background = 'white';
 			btnTeam2Name4.style.background = 'white';
 			btnTeam2Name5.style.background = 'white';
+			btnTeam2Name6.style.background = 'white';
 			
 			btnTeam1Name1.style.background = 'white';
 			btnTeam1Name2.style.background = 'white';
 			btnTeam1Name3.style.background = 'white';
 			btnTeam1Name4.style.background = 'white';
 			btnTeam1Name5.style.background = 'white';
+			btnTeam1Name6.style.background = 'white';
 			
 			//해당 사용자의 정보를 읽어와서 메인 정보에 할당
 			var divTempPlayer = document.getElementById("Green1Player");
@@ -1377,12 +1535,14 @@ function selectTeamPlayer(object)
 			btnTeam2Name3.style.background = 'white';
 			btnTeam2Name4.style.background = 'white';
 			btnTeam2Name5.style.background = 'white';
+			btnTeam2Name6.style.background = 'white';
 			
 			btnTeam1Name1.style.background = 'white';
 			btnTeam1Name2.style.background = 'white';
 			btnTeam1Name3.style.background = 'white';
 			btnTeam1Name4.style.background = 'white';
 			btnTeam1Name5.style.background = 'white';
+			btnTeam1Name6.style.background = 'white';
 			
 			//해당 사용자의 정보를 읽어와서 메인 정보에 할당
 			var divTempPlayer = document.getElementById("Green2Player");
@@ -1437,12 +1597,14 @@ function selectTeamPlayer(object)
 			btnTeam2Name3.style.background = 'red';
 			btnTeam2Name4.style.background = 'white';
 			btnTeam2Name5.style.background = 'white';
+			btnTeam2Name6.style.background = 'white';
 			
 			btnTeam1Name1.style.background = 'white';
 			btnTeam1Name2.style.background = 'white';
 			btnTeam1Name3.style.background = 'white';
 			btnTeam1Name4.style.background = 'white';
 			btnTeam1Name5.style.background = 'white';
+			btnTeam1Name6.style.background = 'white';
 			
 			//해당 사용자의 정보를 읽어와서 메인 정보에 할당
 			var divTempPlayer = document.getElementById("Green3Player");
@@ -1497,12 +1659,14 @@ function selectTeamPlayer(object)
 			btnTeam2Name3.style.background = 'white';
 			btnTeam2Name4.style.background = 'red';
 			btnTeam2Name5.style.background = 'white';
+			btnTeam2Name6.style.background = 'white';
 			
 			btnTeam1Name1.style.background = 'white';
 			btnTeam1Name2.style.background = 'white';
 			btnTeam1Name3.style.background = 'white';
 			btnTeam1Name4.style.background = 'white';
 			btnTeam1Name5.style.background = 'white';
+			btnTeam1Name6.style.background = 'white';
 			
 			//해당 사용자의 정보를 읽어와서 메인 정보에 할당
 			var divTempPlayer = document.getElementById("Green4Player");
@@ -1557,12 +1721,14 @@ function selectTeamPlayer(object)
 			btnTeam2Name3.style.background = 'white';
 			btnTeam2Name4.style.background = 'white';
 			btnTeam2Name5.style.background = 'red';
+			btnTeam2Name6.style.background = 'white';
 			
 			btnTeam1Name1.style.background = 'white';
 			btnTeam1Name2.style.background = 'white';
 			btnTeam1Name3.style.background = 'white';
 			btnTeam1Name4.style.background = 'white';
 			btnTeam1Name5.style.background = 'white';
+			btnTeam1Name6.style.background = 'white';
 			
 			//해당 사용자의 정보를 읽어와서 메인 정보에 할당
 			var divTempPlayer = document.getElementById("Green5Player");
@@ -1604,6 +1770,68 @@ function selectTeamPlayer(object)
 		{
 			isSelected = false;
 			btnTeam2Name5.style.background = 'white';
+		}
+	}
+	else if(object.id == btnTeam2Name6.id)
+	{
+		if(btnTeam2Name6.style.background == 'white')
+		{
+			isSelected = true;
+			btnTeam2Name1.style.background = 'white';
+			
+			btnTeam2Name2.style.background = 'white';
+			btnTeam2Name3.style.background = 'white';
+			btnTeam2Name4.style.background = 'white';
+			btnTeam2Name5.style.background = 'white';
+			btnTeam2Name6.style.background = 'red';
+			
+			btnTeam1Name1.style.background = 'white';
+			btnTeam1Name2.style.background = 'white';
+			btnTeam1Name3.style.background = 'white';
+			btnTeam1Name4.style.background = 'white';
+			btnTeam1Name5.style.background = 'white';
+			btnTeam1Name6.style.background = 'white';
+			
+			//해당 사용자의 정보를 읽어와서 메인 정보에 할당
+			var divTempPlayer = document.getElementById("Green6Player");
+			var divTempScore1Converted = document.getElementById("Green6Score1Converted");
+			var divTempScore1Attempted = document.getElementById("Green6Score1Attempted");
+			var divTempScore1Percent = document.getElementById("Green6Score1Percent");
+			var divTempScore2Converted = document.getElementById("Green6Score2Converted");
+			var divTempScore2Attempted = document.getElementById("Green6Score2Attempted");
+			var divTempScore2Percent = document.getElementById("Green6Score2Percent");
+			var divTempScore3Converted = document.getElementById("Green6Score3Converted");
+			var divTempScore3Attempted = document.getElementById("Green6Score3Attempted");
+			var divTempScore3Percent = document.getElementById("Green6Score3Percent");
+			var divTempRebound = document.getElementById("Green6Rebound");
+			var divTempFoul = document.getElementById("Green6Foul");
+			var divTempAssist = document.getElementById("Green6Assist");
+			var divTempSteal = document.getElementById("Green6Steal");	
+			var divTempTurnover = document.getElementById("Green6Turnover");
+			var divTempBlock = document.getElementById("Green6Block");
+			
+			
+			divplayer.innerHTML = divTempPlayer.innerHTML;
+			divScore1Converted.innerHTML = divTempScore1Converted.innerHTML;
+			divScore1Attempted.innerHTML = divTempScore1Attempted.innerHTML;
+			divScore1Percent.innerHTML = divTempScore1Percent.innerHTML;
+			divScore2Converted.innerHTML = divTempScore2Converted.innerHTML;
+			divScore2Attempted.innerHTML = divTempScore2Attempted.innerHTML;
+			divScore2Percent.innerHTML = divTempScore2Percent.innerHTML;
+			divScore3Converted.innerHTML = divTempScore3Converted.innerHTML;
+			divScore3Attempted.innerHTML = divTempScore3Attempted.innerHTML;
+			divScore3Percent.innerHTML = divTempScore3Percent.innerHTML;
+			divRebound.innerHTML = divTempRebound.innerHTML;
+			divFoul.innerHTML = divTempFoul.innerHTML;
+			divAssist.innerHTML = divTempAssist.innerHTML;
+			divSteal.innerHTML = divTempSteal.innerHTML;	
+			divTurnover.innerHTML = divTempTurnover.innerHTML;
+			divBlock.innerHTML = divTempBlock.innerHTML;
+		}
+		else
+		{
+			isSelected = false;
+			btnTeam2Name6.style.background = 'white';
 		}
 	}
 	
@@ -1658,14 +1886,14 @@ function selectEventRedTeam(selectObj)
 		document.getElementById("Red3Player").innerHTML="이도형";
 		document.getElementById("Red4Player").innerHTML="정종영";
 		document.getElementById("Red5Player").innerHTML="임근우";
-		document.getElementById("Red6Player").innerHTML="";
+		document.getElementById("Red6Player").innerHTML="없음";
 		
 		document.getElementById("red1").innerHTML="박정배";
 		document.getElementById("red2").innerHTML="정해준";
 		document.getElementById("red3").innerHTML="이도형";
 		document.getElementById("red4").innerHTML="정종영";
 		document.getElementById("red5").innerHTML="임근우";
-		//document.getElementById("red6").innerHTML="";
+		document.getElementById("red6").innerHTML="없음";
 	}
 	else if(selectObj.value == "마경민")
 	{
@@ -1674,14 +1902,14 @@ function selectEventRedTeam(selectObj)
 		document.getElementById("Red3Player").innerHTML="마경민";
 		document.getElementById("Red4Player").innerHTML="박상혁";
 		document.getElementById("Red5Player").innerHTML="윤재선";
-		document.getElementById("Red6Player").innerHTML="";
+		document.getElementById("Red6Player").innerHTML="없음";
 		
 		document.getElementById("red1").innerHTML="송슬기";
 		document.getElementById("red2").innerHTML="박인준";
 		document.getElementById("red3").innerHTML="마경민";
 		document.getElementById("red4").innerHTML="박상혁";
 		document.getElementById("red5").innerHTML="윤재선";
-		//document.getElementById("red6").innerHTML="";
+		document.getElementById("red6").innerHTML="없음";
 	}
 	else if(selectObj.value == "조준상")
 	{
@@ -1690,14 +1918,14 @@ function selectEventRedTeam(selectObj)
 		document.getElementById("Red3Player").innerHTML="조준상";
 		document.getElementById("Red4Player").innerHTML="이임표";
 		document.getElementById("Red5Player").innerHTML="MJ";
-		document.getElementById("Red6Player").innerHTML="";
+		document.getElementById("Red6Player").innerHTML="없음";
 		
 		document.getElementById("red1").innerHTML="김형준";
 		document.getElementById("red2").innerHTML="이현";
 		document.getElementById("red3").innerHTML="조준상";
 		document.getElementById("red4").innerHTML="이임표";
 		document.getElementById("red5").innerHTML="MJ";
-		//document.getElementById("red6").innerHTML="";
+		document.getElementById("red6").innerHTML="없음";
 	}
 	else if(selectObj.value == "유의정")
 	{
@@ -1713,7 +1941,7 @@ function selectEventRedTeam(selectObj)
 		document.getElementById("red3").innerHTML="유의정";
 		document.getElementById("red4").innerHTML="민득수";
 		document.getElementById("red5").innerHTML="조준성";
-		//document.getElementById("red6").innerHTML="김종훈";
+		document.getElementById("red6").innerHTML="김종훈";
 	}
 	else if(selectObj.value == "조은상")
 	{
@@ -1722,14 +1950,14 @@ function selectEventRedTeam(selectObj)
 		document.getElementById("Red3Player").innerHTML="조은상";
 		document.getElementById("Red4Player").innerHTML="라상현";
 		document.getElementById("Red5Player").innerHTML="전주용";
-		document.getElementById("Red6Player").innerHTML="";
+		document.getElementById("Red6Player").innerHTML="없음";
 		
 		document.getElementById("red1").innerHTML="오용택";
 		document.getElementById("red2").innerHTML="이명훈";
 		document.getElementById("red3").innerHTML="조은상";
 		document.getElementById("red4").innerHTML="라상현";
 		document.getElementById("red5").innerHTML="전주용";
-		//document.getElementById("red6").innerHTML="";
+		document.getElementById("red6").innerHTML="없음";
 	}
 	else if(selectObj.value == "이준표")
 	{
@@ -1745,7 +1973,7 @@ function selectEventRedTeam(selectObj)
 		document.getElementById("red3").innerHTML="이준표";
 		document.getElementById("red4").innerHTML="박상학";
 		document.getElementById("red5").innerHTML="정호상";
-		//document.getElementById("red6").innerHTML="박동훈";
+		document.getElementById("red6").innerHTML="박동훈";
 	}
 	else if(selectObj.value == "박민수")
 	{
@@ -1754,14 +1982,14 @@ function selectEventRedTeam(selectObj)
 		document.getElementById("Red3Player").innerHTML="박민수";
 		document.getElementById("Red4Player").innerHTML="장용진";
 		document.getElementById("Red5Player").innerHTML="조명희";
-		document.getElementById("Red6Player").innerHTML="";
+		document.getElementById("Red6Player").innerHTML="없음";
 		
 		document.getElementById("red1").innerHTML="정성";
 		document.getElementById("red2").innerHTML="신민섭";
 		document.getElementById("red3").innerHTML="박민수";
 		document.getElementById("red4").innerHTML="장용진";
 		document.getElementById("red5").innerHTML="조명희";
-		//document.getElementById("red6").innerHTML="";
+		document.getElementById("red6").innerHTML="없음";
 	}	
 	else if(selectObj.value == "황희준")
 	{
@@ -1770,14 +1998,14 @@ function selectEventRedTeam(selectObj)
 		document.getElementById("Red3Player").innerHTML="서아론";
 		document.getElementById("Red4Player").innerHTML="황희준";
 		document.getElementById("Red5Player").innerHTML="황덕찬";
-		document.getElementById("Red6Player").innerHTML="";
+		document.getElementById("Red6Player").innerHTML="없음";
 		
 		document.getElementById("red1").innerHTML="사무엘";
 		document.getElementById("red2").innerHTML="유혁준";
 		document.getElementById("red3").innerHTML="서아론";
 		document.getElementById("red4").innerHTML="황희준";
 		document.getElementById("red5").innerHTML="황덕찬";
-		//document.getElementById("red6").innerHTML="";
+		document.getElementById("red6").innerHTML="없음";
 	}
 	else if(selectObj.value == "이성찬")
 	{
@@ -1793,7 +2021,7 @@ function selectEventRedTeam(selectObj)
 		document.getElementById("red3").innerHTML="정건환";
 		document.getElementById("red4").innerHTML="이성찬";
 		document.getElementById("red5").innerHTML="심정민";
-		//document.getElementById("red6").innerHTML="박찬웅";
+		document.getElementById("red6").innerHTML="박찬웅";
 	}
 	else if(selectObj.value == "김창식")
 	{
@@ -1802,14 +2030,14 @@ function selectEventRedTeam(selectObj)
 		document.getElementById("Red3Player").innerHTML="김낙원";
 		document.getElementById("Red4Player").innerHTML="허정석";
 		document.getElementById("Red5Player").innerHTML="김창식";
-		document.getElementById("Red6Player").innerHTML="";
+		document.getElementById("Red6Player").innerHTML="없음";
 		
 		document.getElementById("red1").innerHTML="김원규";
 		document.getElementById("red2").innerHTML="정규순";
 		document.getElementById("red3").innerHTML="김낙원";
 		document.getElementById("red4").innerHTML="허정석";
 		document.getElementById("red5").innerHTML="김창식";
-		//document.getElementById("red6").innerHTML="박찬웅";
+		document.getElementById("red6").innerHTML="없음";
 	}
 	else if(selectObj.value == "이병용")
 	{
@@ -1818,14 +2046,14 @@ function selectEventRedTeam(selectObj)
 		document.getElementById("Red3Player").innerHTML="권혁원";
 		document.getElementById("Red4Player").innerHTML="신상준";
 		document.getElementById("Red5Player").innerHTML="이병용";
-		document.getElementById("Red6Player").innerHTML="";
+		document.getElementById("Red6Player").innerHTML="없음";
 			
 		document.getElementById("red1").innerHTML="박규열";
 		document.getElementById("red2").innerHTML="조인선";
 		document.getElementById("red3").innerHTML="권혁원";
 		document.getElementById("red4").innerHTML="신상준";
 		document.getElementById("red5").innerHTML="이병용";
-		//document.getElementById("red6").innerHTML="";
+		document.getElementById("red6").innerHTML="없음";
 	}
 	else if(selectObj.value == "임기천")
 	{
@@ -1834,14 +2062,14 @@ function selectEventRedTeam(selectObj)
 		document.getElementById("Red3Player").innerHTML="박상현";
 		document.getElementById("Red4Player").innerHTML="신정용";
 		document.getElementById("Red5Player").innerHTML="임기천";
-		document.getElementById("Red6Player").innerHTML="";
+		document.getElementById("Red6Player").innerHTML="없음";
 		
 		document.getElementById("red1").innerHTML="강현국";
 		document.getElementById("red2").innerHTML="안찬용";
 		document.getElementById("red3").innerHTML="박상현";
 		document.getElementById("red4").innerHTML="신정용";
 		document.getElementById("red5").innerHTML="임기천";
-		//document.getElementById("red6").innerHTML="임기천";
+		document.getElementById("red6").innerHTML="없음";
 	}
 	
 	document.getElementById("RedTeamName").innerHTML = selectObj.value;
@@ -1859,14 +2087,14 @@ function selectEventGreenTeam(selectObj)
 		document.getElementById("Green3Player").innerHTML="이도형";
 		document.getElementById("Green4Player").innerHTML="정종영";
 		document.getElementById("Green5Player").innerHTML="임근우";
-		document.getElementById("Green6Player").innerHTML="";
+		document.getElementById("Green6Player").innerHTML="없음";
 		
 		document.getElementById("green1").innerHTML="박정배";
 		document.getElementById("green2").innerHTML="정해준";
 		document.getElementById("green3").innerHTML="이도형";
 		document.getElementById("green4").innerHTML="정종영";
 		document.getElementById("green5").innerHTML="임근우";
-		//document.getElementById("green6").innerHTML="";
+		document.getElementById("green6").innerHTML="없음";
 	}
 	else if(selectObj.value == "마경민")
 	{
@@ -1875,14 +2103,14 @@ function selectEventGreenTeam(selectObj)
 		document.getElementById("Green3Player").innerHTML="마경민";
 		document.getElementById("Green4Player").innerHTML="박상혁";
 		document.getElementById("Green5Player").innerHTML="윤재선";
-		document.getElementById("Green6Player").innerHTML="";
+		document.getElementById("Green6Player").innerHTML="없음";
 		
 		document.getElementById("green1").innerHTML="송슬기";
 		document.getElementById("green2").innerHTML="박인준";
 		document.getElementById("green3").innerHTML="마경민";
 		document.getElementById("green4").innerHTML="박상혁";
 		document.getElementById("green5").innerHTML="윤재선";
-		//document.getElementById("green6").innerHTML="";
+		document.getElementById("green6").innerHTML="없음";
 	}
 	else if(selectObj.value == "조준상")
 	{
@@ -1891,14 +2119,14 @@ function selectEventGreenTeam(selectObj)
 		document.getElementById("Green3Player").innerHTML="조준상";
 		document.getElementById("Green4Player").innerHTML="이임표";
 		document.getElementById("Green5Player").innerHTML="MJ";
-		document.getElementById("Green6Player").innerHTML="";
+		document.getElementById("Green6Player").innerHTML="없음";
 		
 		document.getElementById("green1").innerHTML="김형준";
 		document.getElementById("green2").innerHTML="이현";
 		document.getElementById("green3").innerHTML="조준상";
 		document.getElementById("green4").innerHTML="이임표";
 		document.getElementById("green5").innerHTML="MJ";
-		//document.getElementById("green6").innerHTML="";
+		document.getElementById("green6").innerHTML="없음";
 	}
 	else if(selectObj.value == "유의정")
 	{
@@ -1914,7 +2142,7 @@ function selectEventGreenTeam(selectObj)
 		document.getElementById("green3").innerHTML="유의정";
 		document.getElementById("green4").innerHTML="민득수";
 		document.getElementById("green5").innerHTML="조준성";
-		//document.getElementById("green6").innerHTML="김종훈";
+		document.getElementById("green6").innerHTML="김종훈";
 	}
 	else if(selectObj.value == "조은상")
 	{
@@ -1923,14 +2151,14 @@ function selectEventGreenTeam(selectObj)
 		document.getElementById("Green3Player").innerHTML="조은상";
 		document.getElementById("Green4Player").innerHTML="라상현";
 		document.getElementById("Green5Player").innerHTML="전주용";
-		document.getElementById("Green6Player").innerHTML="";
+		document.getElementById("Green6Player").innerHTML="없음";
 		
 		document.getElementById("green1").innerHTML="오용택";
 		document.getElementById("green2").innerHTML="이명훈";
 		document.getElementById("green3").innerHTML="조은상";
 		document.getElementById("green4").innerHTML="라상현";
 		document.getElementById("green5").innerHTML="전주용";
-		//document.getElementById("green6").innerHTML="";
+		document.getElementById("green6").innerHTML="없음";
 	}
 	else if(selectObj.value == "이준표")
 	{
@@ -1946,7 +2174,7 @@ function selectEventGreenTeam(selectObj)
 		document.getElementById("green3").innerHTML="이준표";
 		document.getElementById("green4").innerHTML="박상학";
 		document.getElementById("green5").innerHTML="정호상";
-		//document.getElementById("green6").innerHTML="박동훈";
+		document.getElementById("green6").innerHTML="박동훈";
 	}
 	else if(selectObj.value == "박민수")
 	{
@@ -1955,14 +2183,14 @@ function selectEventGreenTeam(selectObj)
 		document.getElementById("Green3Player").innerHTML="박민수";
 		document.getElementById("Green4Player").innerHTML="장용진";
 		document.getElementById("Green5Player").innerHTML="조명희";
-		document.getElementById("Green6Player").innerHTML="";
+		document.getElementById("Green6Player").innerHTML="없음";
 		
 		document.getElementById("green1").innerHTML="정성";
 		document.getElementById("green2").innerHTML="신민섭";
 		document.getElementById("green3").innerHTML="박민수";
 		document.getElementById("green4").innerHTML="장용진";
 		document.getElementById("green5").innerHTML="조명희";
-		//document.getElementById("green6").innerHTML="";
+		document.getElementById("green6").innerHTML="없음";
 	}	
 	else if(selectObj.value == "황희준")
 	{
@@ -1971,14 +2199,14 @@ function selectEventGreenTeam(selectObj)
 		document.getElementById("Green3Player").innerHTML="서아론";
 		document.getElementById("Green4Player").innerHTML="황희준";
 		document.getElementById("Green5Player").innerHTML="황덕찬";
-		document.getElementById("Green6Player").innerHTML="";
+		document.getElementById("Green6Player").innerHTML="없음";
 		
 		document.getElementById("green1").innerHTML="사무엘";
 		document.getElementById("green2").innerHTML="유혁준";
 		document.getElementById("green3").innerHTML="서아론";
 		document.getElementById("green4").innerHTML="황희준";
 		document.getElementById("green5").innerHTML="황덕찬";
-		//document.getElementById("green6").innerHTML="";
+		document.getElementById("green6").innerHTML="없음";
 	}
 	else if(selectObj.value == "이성찬")
 	{
@@ -1994,7 +2222,7 @@ function selectEventGreenTeam(selectObj)
 		document.getElementById("green3").innerHTML="정건환";
 		document.getElementById("green4").innerHTML="이성찬";
 		document.getElementById("green5").innerHTML="심정민";
-		//document.getElementById("green6").innerHTML="박찬웅";
+		document.getElementById("green6").innerHTML="박찬웅";
 	}
 	else if(selectObj.value == "김창식")
 	{
@@ -2003,14 +2231,14 @@ function selectEventGreenTeam(selectObj)
 		document.getElementById("Green3Player").innerHTML="김낙원";
 		document.getElementById("Green4Player").innerHTML="허정석";
 		document.getElementById("Green5Player").innerHTML="김창식";
-		document.getElementById("Green6Player").innerHTML="";
+		document.getElementById("Green6Player").innerHTML="없음";
 		
 		document.getElementById("green1").innerHTML="김원규";
 		document.getElementById("green2").innerHTML="정규순";
 		document.getElementById("green3").innerHTML="김낙원";
 		document.getElementById("green4").innerHTML="허정석";
 		document.getElementById("green5").innerHTML="김창식";
-		//document.getElementById("green6").innerHTML="박찬웅";
+		document.getElementById("green6").innerHTML="없음";
 	}
 	else if(selectObj.value == "이병용")
 	{
@@ -2019,14 +2247,14 @@ function selectEventGreenTeam(selectObj)
 		document.getElementById("Green3Player").innerHTML="권혁원";
 		document.getElementById("Green4Player").innerHTML="신상준";
 		document.getElementById("Green5Player").innerHTML="이병용";
-		document.getElementById("Green6Player").innerHTML="";
+		document.getElementById("Green6Player").innerHTML="없음";
 			
 		document.getElementById("green1").innerHTML="박규열";
 		document.getElementById("green2").innerHTML="조인선";
 		document.getElementById("green3").innerHTML="권혁원";
 		document.getElementById("green4").innerHTML="신상준";
 		document.getElementById("green5").innerHTML="이병용";
-		//document.getElementById("green6").innerHTML="";
+		document.getElementById("green6").innerHTML="없음";
 	}
 	else if(selectObj.value == "임기천")
 	{
@@ -2035,14 +2263,14 @@ function selectEventGreenTeam(selectObj)
 		document.getElementById("Green3Player").innerHTML="박상현";
 		document.getElementById("Green4Player").innerHTML="신정용";
 		document.getElementById("Green5Player").innerHTML="임기천";
-		document.getElementById("Green6Player").innerHTML="";
+		document.getElementById("Green6Player").innerHTML="없음";
 		
 		document.getElementById("green1").innerHTML="강현국";
 		document.getElementById("green2").innerHTML="안찬용";
 		document.getElementById("green3").innerHTML="박상현";
 		document.getElementById("green4").innerHTML="신정용";
 		document.getElementById("green5").innerHTML="임기천";
-		//document.getElementById("green6").innerHTML="임기천";
+		document.getElementById("green6").innerHTML="없음";
 	}
 	
 	document.getElementById("GreenTeamName").innerHTML = selectObj.value;
@@ -2074,19 +2302,22 @@ function run1PTGet()
 	var btnTeam1Name3 = document.getElementById("red3");
 	var btnTeam1Name4 = document.getElementById("red4");
 	var btnTeam1Name5 = document.getElementById("red5");
+	var btnTeam1Name6 = document.getElementById("red6");
 	
 	var btnTeam2Name1 = document.getElementById("green1");
 	var btnTeam2Name2 = document.getElementById("green2");
 	var btnTeam2Name3 = document.getElementById("green3");
 	var btnTeam2Name4 = document.getElementById("green4");
 	var btnTeam2Name5 = document.getElementById("green5");
+	var btnTeam2Name6 = document.getElementById("green6");
 
 	var divTotalTeamPoints;
 	
 	if(divplayer.innerHTML == btnTeam1Name1.innerHTML || divplayer.innerHTML == btnTeam1Name2.innerHTML ||
 		divplayer.innerHTML == btnTeam1Name3.innerHTML || divplayer.innerHTML == btnTeam1Name4.innerHTML ||
-		divplayer.innerHTML == btnTeam1Name5.innerHTML)
+		divplayer.innerHTML == btnTeam1Name5.innerHTML || divplayer.innerHTML == btnTeam1Name6.innerHTML)
 	{
+	//alert('red');
 		divTotalTeamPoints = document.getElementById("RedTeamTotalPoints");
 		var divTotal = divTotalTeamPoints.innerHTML;
 		divTotal = Number(divTotal);
@@ -2095,8 +2326,9 @@ function run1PTGet()
 	}
 	else if(divplayer.innerHTML == btnTeam2Name1.innerHTML || divplayer.innerHTML == btnTeam2Name2.innerHTML ||
 		divplayer.innerHTML == btnTeam2Name3.innerHTML || divplayer.innerHTML == btnTeam2Name4.innerHTML || 
-		divplayer.innerHTML == btnTeam2Name5.innerHTML)
+		divplayer.innerHTML == btnTeam2Name5.innerHTML || divplayer.innerHTML == btnTeam2Name6.innerHTML)
 	{
+	//alert('green');
 		divTotalTeamPoints = document.getElementById("GreenTeamTotalPoints");
 		var divTotal = divTotalTeamPoints.innerHTML;
 		divTotal = Number(divTotal);
@@ -2155,18 +2387,20 @@ function run1PTCancel()
 	var btnTeam1Name3 = document.getElementById("red3");
 	var btnTeam1Name4 = document.getElementById("red4");
 	var btnTeam1Name5 = document.getElementById("red5");
+	var btnTeam1Name6 = document.getElementById("red6");
 	
 	var btnTeam2Name1 = document.getElementById("green1");
 	var btnTeam2Name2 = document.getElementById("green2");
 	var btnTeam2Name3 = document.getElementById("green3");
 	var btnTeam2Name4 = document.getElementById("green4");
 	var btnTeam2Name5 = document.getElementById("green5");
+	var btnTeam2Name6 = document.getElementById("green6");
 
 	var divTotalTeamPoints;
 	
 	if(divplayer.innerHTML == btnTeam1Name1.innerHTML || divplayer.innerHTML == btnTeam1Name2.innerHTML ||
 		divplayer.innerHTML == btnTeam1Name3.innerHTML || divplayer.innerHTML == btnTeam1Name4.innerHTML ||
-		divplayer.innerHTML == btnTeam1Name5.innerHTML)
+		divplayer.innerHTML == btnTeam1Name5.innerHTML || divplayer.innerHTML == btnTeam1Name6.innerHTML)
 	{
 		divTotalTeamPoints = document.getElementById("RedTeamTotalPoints");
 		var divTotal = divTotalTeamPoints.innerHTML;
@@ -2176,7 +2410,7 @@ function run1PTCancel()
 	}
 	else if(divplayer.innerHTML == btnTeam2Name1.innerHTML || divplayer.innerHTML == btnTeam2Name2.innerHTML ||
 		divplayer.innerHTML == btnTeam2Name3.innerHTML || divplayer.innerHTML == btnTeam2Name4.innerHTML || 
-		divplayer.innerHTML == btnTeam2Name5.innerHTML)
+		divplayer.innerHTML == btnTeam2Name5.innerHTML || divplayer.innerHTML == btnTeam2Name6.innerHTML)
 	{
 		divTotalTeamPoints = document.getElementById("GreenTeamTotalPoints");
 		var divTotal = divTotalTeamPoints.innerHTML;
@@ -2277,18 +2511,20 @@ function run2PTGet()
 	var btnTeam1Name3 = document.getElementById("red3");
 	var btnTeam1Name4 = document.getElementById("red4");
 	var btnTeam1Name5 = document.getElementById("red5");
+	var btnTeam1Name5 = document.getElementById("red6");
 	
 	var btnTeam2Name1 = document.getElementById("green1");
 	var btnTeam2Name2 = document.getElementById("green2");
 	var btnTeam2Name3 = document.getElementById("green3");
 	var btnTeam2Name4 = document.getElementById("green4");
 	var btnTeam2Name5 = document.getElementById("green5");
+	var btnTeam2Name5 = document.getElementById("green6");
 
 	var divTotalTeamPoints;
 	
 	if(divplayer.innerHTML == btnTeam1Name1.innerHTML || divplayer.innerHTML == btnTeam1Name2.innerHTML ||
 		divplayer.innerHTML == btnTeam1Name3.innerHTML || divplayer.innerHTML == btnTeam1Name4.innerHTML ||
-		divplayer.innerHTML == btnTeam1Name5.innerHTML)
+		divplayer.innerHTML == btnTeam1Name5.innerHTML || divplayer.innerHTML == btnTeam1Name6.innerHTML)
 	{
 		divTotalTeamPoints = document.getElementById("RedTeamTotalPoints");
 		var divTotal = divTotalTeamPoints.innerHTML;
@@ -2298,7 +2534,7 @@ function run2PTGet()
 	}
 	else if(divplayer.innerHTML == btnTeam2Name1.innerHTML || divplayer.innerHTML == btnTeam2Name2.innerHTML ||
 		divplayer.innerHTML == btnTeam2Name3.innerHTML || divplayer.innerHTML == btnTeam2Name4.innerHTML ||
-		divplayer.innerHTML == btnTeam2Name5.innerHTML)
+		divplayer.innerHTML == btnTeam2Name5.innerHTML || divplayer.innerHTML == btnTeam2Name6.innerHTML)
 	{
 		divTotalTeamPoints = document.getElementById("GreenTeamTotalPoints");
 		var divTotal = divTotalTeamPoints.innerHTML;
@@ -2356,18 +2592,20 @@ function run2PTCancel()
 	var btnTeam1Name3 = document.getElementById("red3");
 	var btnTeam1Name4 = document.getElementById("red4");
 	var btnTeam1Name5 = document.getElementById("red5");
+	var btnTeam1Name5 = document.getElementById("red6");
 	
 	var btnTeam2Name1 = document.getElementById("green1");
 	var btnTeam2Name2 = document.getElementById("green2");
 	var btnTeam2Name3 = document.getElementById("green3");
 	var btnTeam2Name4 = document.getElementById("green4");
 	var btnTeam2Name5 = document.getElementById("green5");
+	var btnTeam2Name5 = document.getElementById("green6");
 
 	var divTotalTeamPoints;
 	
 	if(divplayer.innerHTML == btnTeam1Name1.innerHTML || divplayer.innerHTML == btnTeam1Name2.innerHTML ||
 		divplayer.innerHTML == btnTeam1Name3.innerHTML || divplayer.innerHTML == btnTeam1Name4.innerHTML ||
-		divplayer.innerHTML == btnTeam1Name5.innerHTML)
+		divplayer.innerHTML == btnTeam1Name5.innerHTML || divplayer.innerHTML == btnTeam1Name6.innerHTML)
 	{
 		divTotalTeamPoints = document.getElementById("RedTeamTotalPoints");
 		var divTotal = divTotalTeamPoints.innerHTML;
@@ -2377,7 +2615,7 @@ function run2PTCancel()
 	}
 	else if(divplayer.innerHTML == btnTeam2Name1.innerHTML || divplayer.innerHTML == btnTeam2Name2.innerHTML ||
 		divplayer.innerHTML == btnTeam2Name3.innerHTML || divplayer.innerHTML == btnTeam2Name4.innerHTML ||
-		divplayer.innerHTML == btnTeam2Name5.innerHTML)
+		divplayer.innerHTML == btnTeam2Name5.innerHTML || divplayer.innerHTML == btnTeam2Name6.innerHTML)
 	{
 		divTotalTeamPoints = document.getElementById("GreenTeamTotalPoints");
 		var divTotal = divTotalTeamPoints.innerHTML;
@@ -2476,19 +2714,21 @@ function run3PTGet()
 	var btnTeam1Name3 = document.getElementById("red3");
 	var btnTeam1Name4 = document.getElementById("red4");
 	var btnTeam1Name5 = document.getElementById("red5");
+	var btnTeam1Name6 = document.getElementById("red6");
 	
 	var btnTeam2Name1 = document.getElementById("green1");
 	var btnTeam2Name2 = document.getElementById("green2");
 	var btnTeam2Name3 = document.getElementById("green3");
 	var btnTeam2Name4 = document.getElementById("green4");
 	var btnTeam2Name5 = document.getElementById("green5");
+	var btnTeam2Name6 = document.getElementById("green6");
 
 	//var divTotalTeamPoints;
 
 	
 	if(divplayer.innerHTML == btnTeam1Name1.innerHTML || divplayer.innerHTML == btnTeam1Name2.innerHTML ||
 		divplayer.innerHTML == btnTeam1Name3.innerHTML || divplayer.innerHTML == btnTeam1Name4.innerHTML ||
-		divplayer.innerHTML == btnTeam1Name5.innerHTML)
+		divplayer.innerHTML == btnTeam1Name5.innerHTML || divplayer.innerHTML == btnTeam1Name6.innerHTML)
 	{
 		var divTotalTeamPoints = document.getElementById("RedTeamTotalPoints");
 		var divTotal = divTotalTeamPoints.innerHTML;
@@ -2498,7 +2738,7 @@ function run3PTGet()
 	}
 	else if(divplayer.innerHTML == btnTeam2Name1.innerHTML || divplayer.innerHTML == btnTeam2Name2.innerHTML ||
 		divplayer.innerHTML == btnTeam2Name3.innerHTML || divplayer.innerHTML == btnTeam2Name4.innerHTML ||
-		divplayer.innerHTML == btnTeam2Name5.innerHTML)
+		divplayer.innerHTML == btnTeam2Name5.innerHTML || divplayer.innerHTML == btnTeam2Name6.innerHTML)
 	{
 		var divTotalTeamPoints = document.getElementById("GreenTeamTotalPoints");
 		var divTotal = divTotalTeamPoints.innerHTML;
@@ -2559,19 +2799,21 @@ function run3PTCancel()
 	var btnTeam1Name3 = document.getElementById("red3");
 	var btnTeam1Name4 = document.getElementById("red4");
 	var btnTeam1Name5 = document.getElementById("red5");
+	var btnTeam1Name6 = document.getElementById("red6");
 	
 	var btnTeam2Name1 = document.getElementById("green1");
 	var btnTeam2Name2 = document.getElementById("green2");
 	var btnTeam2Name3 = document.getElementById("green3");
 	var btnTeam2Name4 = document.getElementById("green4");
 	var btnTeam2Name5 = document.getElementById("green5");
+	var btnTeam2Name6 = document.getElementById("green6");
 
 	//var divTotalTeamPoints;
 
 	
 	if(divplayer.innerHTML == btnTeam1Name1.innerHTML || divplayer.innerHTML == btnTeam1Name2.innerHTML ||
 		divplayer.innerHTML == btnTeam1Name3.innerHTML || divplayer.innerHTML == btnTeam1Name4.innerHTML ||
-		divplayer.innerHTML == btnTeam1Name5.innerHTML)
+		divplayer.innerHTML == btnTeam1Name5.innerHTML || divplayer.innerHTML == btnTeam1Name6.innerHTML)
 	{
 		var divTotalTeamPoints = document.getElementById("RedTeamTotalPoints");
 		var divTotal = divTotalTeamPoints.innerHTML;
@@ -2581,7 +2823,7 @@ function run3PTCancel()
 	}
 	else if(divplayer.innerHTML == btnTeam2Name1.innerHTML || divplayer.innerHTML == btnTeam2Name2.innerHTML ||
 		divplayer.innerHTML == btnTeam2Name3.innerHTML || divplayer.innerHTML == btnTeam2Name4.innerHTML ||
-		divplayer.innerHTML == btnTeam2Name5.innerHTML)
+		divplayer.innerHTML == btnTeam2Name5.innerHTML || divplayer.innerHTML == btnTeam2Name6.innerHTML)
 	{
 		var divTotalTeamPoints = document.getElementById("GreenTeamTotalPoints");
 		var divTotal = divTotalTeamPoints.innerHTML;
@@ -2721,18 +2963,20 @@ function runFoul()
 	var btnTeam1Name3 = document.getElementById("red3");
 	var btnTeam1Name4 = document.getElementById("red4");
 	var btnTeam1Name5 = document.getElementById("red5");
+	var btnTeam1Name6 = document.getElementById("red6");
 	
 	var btnTeam2Name1 = document.getElementById("green1");
 	var btnTeam2Name2 = document.getElementById("green2");
 	var btnTeam2Name3 = document.getElementById("green3");
 	var btnTeam2Name4 = document.getElementById("green4");
 	var btnTeam2Name5 = document.getElementById("green5");
+	var btnTeam2Name6 = document.getElementById("green6");
 
 	var divTotalTeamPoints;
 	
 	if(divplayer.innerHTML == btnTeam1Name1.innerHTML || divplayer.innerHTML == btnTeam1Name2.innerHTML ||
 		divplayer.innerHTML == btnTeam1Name3.innerHTML || divplayer.innerHTML == btnTeam1Name4.innerHTML ||
-		divplayer.innerHTML == btnTeam1Name5.innerHTML)
+		divplayer.innerHTML == btnTeam1Name5.innerHTML || divplayer.innerHTML == btnTeam1Name6.innerHTML)
 	{
 		divTotalTeamPoints = document.getElementById("RedTeamTotalFouls");
 		var divTotal = divTotalTeamPoints.innerHTML;
@@ -2742,7 +2986,7 @@ function runFoul()
 	}
 	else if(divplayer.innerHTML == btnTeam2Name1.innerHTML || divplayer.innerHTML == btnTeam2Name2.innerHTML ||
 		divplayer.innerHTML == btnTeam2Name3.innerHTML || divplayer.innerHTML == btnTeam2Name4.innerHTML ||
-		divplayer.innerHTML == btnTeam2Name5.innerHTML)
+		divplayer.innerHTML == btnTeam2Name5.innerHTML || divplayer.innerHTML == btnTeam2Name6.innerHTML)
 	{
 		divTotalTeamPoints = document.getElementById("GreenTeamTotalFouls");
 		var divTotal = divTotalTeamPoints.innerHTML;
@@ -2790,18 +3034,20 @@ function runFoulCancel()
 	var btnTeam1Name3 = document.getElementById("red3");
 	var btnTeam1Name4 = document.getElementById("red4");
 	var btnTeam1Name5 = document.getElementById("red5");
+	var btnTeam1Name6 = document.getElementById("red6");
 	
 	var btnTeam2Name1 = document.getElementById("green1");
 	var btnTeam2Name2 = document.getElementById("green2");
 	var btnTeam2Name3 = document.getElementById("green3");
 	var btnTeam2Name4 = document.getElementById("green4");
 	var btnTeam2Name5 = document.getElementById("green5");
+	var btnTeam2Name6 = document.getElementById("green6");
 
 	var divTotalTeamPoints;
 	
 	if(divplayer.innerHTML == btnTeam1Name1.innerHTML || divplayer.innerHTML == btnTeam1Name2.innerHTML ||
 		divplayer.innerHTML == btnTeam1Name3.innerHTML || divplayer.innerHTML == btnTeam1Name4.innerHTML ||
-		divplayer.innerHTML == btnTeam1Name5.innerHTML)
+		divplayer.innerHTML == btnTeam1Name5.innerHTML || divplayer.innerHTML == btnTeam1Name6.innerHTML)
 	{
 		divTotalTeamPoints = document.getElementById("RedTeamTotalFouls");
 		var divTotal = divTotalTeamPoints.innerHTML;
@@ -2811,7 +3057,7 @@ function runFoulCancel()
 	}
 	else if(divplayer.innerHTML == btnTeam2Name1.innerHTML || divplayer.innerHTML == btnTeam2Name2.innerHTML ||
 		divplayer.innerHTML == btnTeam2Name3.innerHTML || divplayer.innerHTML == btnTeam2Name4.innerHTML ||
-		divplayer.innerHTML == btnTeam2Name5.innerHTML)
+		divplayer.innerHTML == btnTeam2Name5.innerHTML || divplayer.innerHTML == btnTeam2Name6.innerHTML)
 	{
 		divTotalTeamPoints = document.getElementById("GreenTeamTotalFouls");
 		var divTotal = divTotalTeamPoints.innerHTML;
@@ -3838,6 +4084,24 @@ $.ajax({
 	document.getElementById("Red5Turnover").innerHTML="";
 	document.getElementById("Red5Block").innerHTML="";
 	
+	
+	document.getElementById("Red6Player").innerHTML="";
+	document.getElementById("Red6Score1Converted").innerHTML="";
+	document.getElementById("Red6Score1Attempted").innerHTML="";
+	document.getElementById("Red6Score1Percent").innerHTML="";
+	document.getElementById("Red6Score2Converted").innerHTML="";
+	document.getElementById("Red6Score2Attempted").innerHTML="";
+	document.getElementById("Red6Score2Percent").innerHTML="";
+	document.getElementById("Red6Score3Converted").innerHTML="";
+	document.getElementById("Red6Score3Attempted").innerHTML="";
+	document.getElementById("Red6Score3Percent").innerHTML="";
+	document.getElementById("Red6Rebound").innerHTML="";
+	document.getElementById("Red6Foul").innerHTML="";
+	document.getElementById("Red6Assist").innerHTML="";
+	document.getElementById("Red6Steal").innerHTML="";	
+	document.getElementById("Red6Turnover").innerHTML="";
+	document.getElementById("Red6Block").innerHTML="";
+	
 	// Green 팀	
 	document.getElementById("Green1Player").innerHTML="";
 	document.getElementById("Green1Score1Converted").innerHTML="";
@@ -3926,6 +4190,22 @@ $.ajax({
 	document.getElementById("Green5Turnover").innerHTML="";
 	document.getElementById("Green5Block").innerHTML="";
 	
+	document.getElementById("Green6Player").innerHTML="";
+	document.getElementById("Green6Score1Converted").innerHTML="";
+	document.getElementById("Green6Score1Attempted").innerHTML="";
+	document.getElementById("Green6Score1Percent").innerHTML="";
+	document.getElementById("Green6Score2Converted").innerHTML="";
+	document.getElementById("Green6Score2Attempted").innerHTML="";
+	document.getElementById("Green6Score2Percent").innerHTML="";
+	document.getElementById("Green6Score3Converted").innerHTML="";
+	document.getElementById("Green6Score3Attempted").innerHTML="";
+	document.getElementById("Green6Score3Percent").innerHTML="";
+	document.getElementById("Green6Rebound").innerHTML="";
+	document.getElementById("Green6Foul").innerHTML="";
+	document.getElementById("Green6Assist").innerHTML="";
+	document.getElementById("Green6Steal").innerHTML="";	
+	document.getElementById("Green6Turnover").innerHTML="";
+	document.getElementById("Green6Block").innerHTML="";
 	
 	document.getElementById("player").innerHTML="";
 	document.getElementById("score1Converted").innerHTML="";
@@ -4061,18 +4341,19 @@ $.ajax({
 			<div id="red3" align="center">조던</div>
 			</div>
 			
-			<div style="position: absolute; top: 40px; left: 90px;">
+			<div style="position: absolute; top: 00px; left: 90px;">
 			<button type="button" id="btnRedTeamName4" onclick="selectTeamPlayer(this)"><img class="btn-img" src="./redteam.jpg" width="50" height="80"></button>
 			<div id="red4" align="center">조던</div>
 			</div>
 			
-			<div style="position: absolute; top: 160px; left: 90px;">
+			<div style="position: absolute; top: 120px; left: 90px;">
 			<button type="button" id="btnRedTeamName5" onclick="selectTeamPlayer(this)"><img class="btn-img" src="./redteam.jpg" width="50" height="80"></button>
 			<div id="red5" align="center">조던</div> 
-			<div>
-				<input type="radio" name="red5_radio" value="Five" checked="checked" onclick="Red5RadioClick()">5맨
-				<input type="radio" name="red5_radio" value="Six" onclick="Red5RadioClick()">6맨
 			</div>
+			
+			<div style="position: absolute; top: 240px; left: 90px;">
+			<button type="button" id="btnRedTeamName6" onclick="selectTeamPlayer(this)"><img class="btn-img" src="./redteam.jpg" width="50" height="80"></button>
+			<div id="red6" align="center">조던</div> 
 			</div>
 			
 			
@@ -4134,34 +4415,34 @@ $.ajax({
 			
 			
 			
-			<div style="position: absolute; top: 0px; left: 650px;">
+			<div style="position: absolute; top: 0px; left: 690px;">
 			<button type="button" id="btnGreenTeamName1" onclick="selectTeamPlayer(this)"><img class="btn-img" src="./greenteam.jpg" width="50" height="80"></button>
 			<div id="green1" align="center">조던</div>
+			</div>
 			
-			
-			<div style="position: absolute; top: 120px; left: 0px;">
+			<div style="position: absolute; top: 120px; left: 690px;">
 			<button type="button" id="btnGreenTeamName2" onclick="selectTeamPlayer(this)"><img class="btn-img" src="./greenteam.jpg" width="50" height="80"></button>
 			<div id="green2" align="center">조던</div>
 			</div>
 			
-			<div style="position: absolute; top: 240px; left: 0px;">
+			<div style="position: absolute; top: 240px; left: 690px;">
 			<button type="button" id="btnGreenTeamName3" onclick="selectTeamPlayer(this)"><img class="btn-img" src="./greenteam.jpg" width="50" height="80"></button>
 			<div id="green3" align="center">조던</div>
 			</div>
 			
-			<div style="position: absolute; top: 40px; left: -90px;">
+			<div style="position: absolute; top: 00px; left: 600px;">
 			<button type="button" id="btnGreenTeamName4" onclick="selectTeamPlayer(this)"><img class="btn-img" src="./greenteam.jpg" width="50" height="80"></button>
 			<div id="green4" align="center">조던</div>
 			</div>
 			
-			<div style="position: absolute; top: 160px; left: -90px;">
+			<div style="position: absolute; top: 120px; left: 600px;">
 			<button type="button" id="btnGreenTeamName5" onclick="selectTeamPlayer(this)"><img class="btn-img" src="./greenteam.jpg" width="50" height="80"></button>
 			<div id="green5" align="center">조던</div> 
-			
-			<div>
-				<input type="radio" name="green5_radio" value="Five" checked="checked" onclick="Green5RadioClick()">5맨
-				<input type="radio" name="green5_radio" value="Six" onclick="Green5RadioClick()">6맨
 			</div>
+			
+			<div style="position: absolute; top: 240px; left: 600px;">
+			<button type="button" id="btnGreenTeamName6" onclick="selectTeamPlayer(this)"><img class="btn-img" src="./greenteam.jpg" width="50" height="80"></button>
+			<div id="green6" align="center">조던</div> 
 			</div>
 			
 		</div>
