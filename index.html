@@ -13,13 +13,25 @@
        https://developers.google.com/sheets/api/quickstart/js#step_2_set_up_the_sample
     -->
     <script>
-    function makeApiCall() {
-      var params = {
+	// read
+	// update
+	// append
+	
+	var g_Vals;
+	
+    function makeApiCall(action="read") {
+      
+	  var ssID = '1oUOKUlqJbwhbE97f88MnAPJS4zrmHxKMTRQzR3Azk8w';
+	  var rng = '시트1';
+	  
+	  if(action == "read")
+	  {
+		var params = {
         // The ID of the spreadsheet to retrieve data from.
-        spreadsheetId: '1oUOKUlqJbwhbE97f88MnAPJS4zrmHxKMTRQzR3Azk8w',  // TODO: Update placeholder value.
+        spreadsheetId: ssID,  // TODO: Update placeholder value.
 
         // The A1 notation of the values to retrieve.
-        range: '시트1',  // TODO: Update placeholder value.
+        range: rng,  // TODO: Update placeholder value.
 
         // How values should be represented in the output.
         // The default render option is ValueRenderOption.FORMATTED_VALUE.
@@ -30,16 +42,61 @@
         // FORMATTED_VALUE.
         // The default dateTime render option is [DateTimeRenderOption.SERIAL_NUMBER].
         //dateTimeRenderOption: '',  // TODO: Update placeholder value.
+		};
+
+		var request = gapi.client.sheets.spreadsheets.values.get(params);
+		request.then(function(response) {
+		// TODO: Change code below to process the `response` object:
+		  //console.log(response.result);
+		  populateSheet(response.result);
+		  g_Vals = response.result;
+		  }, function(reason) {
+		  console.error('!!error: ' + reason.result.error.message);
+		});
+	  }
+	  else if(action=="update")
+	  {
+		g_Vals[1][1] = "테스트";
+		
+		var params = {
+        // The ID of the spreadsheet to retrieve data from.
+        spreadsheetId: ssID,  // TODO: Update placeholder value.
+
+        // The A1 notation of the values to retrieve.
+        range: rng,  // TODO: Update placeholder value.
+
+        // How values should be represented in the output.
+        // The default render option is ValueRenderOption.FORMATTED_VALUE.
+        valueRenderOption: 'RAW',  // TODO: Update placeholder value.
+
+        // How dates, times, and durations should be represented in the output.
+        // This is ignored if value_render_option is
+        // FORMATTED_VALUE.
+        // The default dateTime render option is [DateTimeRenderOption.SERIAL_NUMBER].
+        //dateTimeRenderOption: '',  // TODO: Update placeholder value.
+		};
+		
+		var valueRangeBody = { "values": g_Vals };
+		var request = gapi.client.sheets.spreadsheets.values.update(params, valueRangeBody);
+		request.then(function(response) {
+		// TODO: Change code below to process the `response` object:
+		  //console.log(response.result);
+		  populateSheet(response.result);
+		  g_Vals = response.result;
+		  }, function(reason) {
+		  console.error('!!error: ' + reason.result.error.message);
+		});	
+		
+	  }
+	  /*var valueRangeBody = {
+        // TODO: Add desired properties to the request body. All existing properties
+        // will be replaced.
       };
 
-      var request = gapi.client.sheets.spreadsheets.values.get(params);
-      request.then(function(response) {
-        // TODO: Change code below to process the `response` object:
-        console.log(response.result);
-		populateSheet(response.result);
-      }, function(reason) {
-        console.error('!!error: ' + reason.result.error.message);
-      });
+      
+	  */
+	  
+	  
     }
 
     function initClient() {
@@ -72,7 +129,7 @@
 
     function updateSignInStatus(isSignedIn) {
       if (isSignedIn) {
-        makeApiCall();
+        makeApiCall("read");
       }
     }
 
@@ -84,9 +141,23 @@
       gapi.auth2.getAuthInstance().signOut();
     }
 	
+	function handleUpdateClick(event){
+		if (gapi.auth2.getAuthInstance().isSignedIn.get()) {
+        makeApiCall("update");
+      }
+		
+	}
+	
+	
 	function populateSheet(result) {
 	
 		var my_tbody = document.getElementById('my-tbody');
+		
+		while(my_tbody.rows.length > 0)
+		{
+			my_tbody.deleteRow( my_tbody.rows.length-1 ); // 하단부터 삭제
+		}
+		
 		var row = my_tbody.insertRow(0); // 상단에 추가		
 		var cell0 = row.insertCell(0);
 		var cell1 = row.insertCell(1);
@@ -123,7 +194,10 @@
     </script>
     <button id="signin-button" onclick="handleSignInClick()">Sign in</button>
     <button id="signout-button" onclick="handleSignOutClick()">Sign out</button>
-  
+	<button id="save-button" onclick="handleUpdateClick()">Sign out</button>
+
+	
+	
   <table>
   
   <tbody id="my-tbody"></tbody>
