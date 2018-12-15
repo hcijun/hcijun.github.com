@@ -49,7 +49,7 @@
 		// TODO: Change code below to process the `response` object:
 		  //console.log(response.result);
 		  populateSheet(response.result);
-		  g_Vals = response.result;
+		  g_Vals = response.result.values;
 		  }, function(reason) {
 		  console.error('!!error: ' + reason.result.error.message);
 		});
