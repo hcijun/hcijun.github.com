@@ -81,8 +81,8 @@
 		var request = gapi.client.sheets.spreadsheets.values.update(params, valueRangeBody);
 		  request.then(function(response) {
 			// TODO: Change code below to process the `response` object:
-			populateSheet(response.result);
-		  g_Vals = response.result;
+			//populateSheet(response.result);
+		    //g_Vals = response.result;
 		  }, function(reason) {
 			console.error('error: ' + reason.result.error.message);
 		  });
@@ -90,14 +90,41 @@
 		  
 		
 	  }
-	  /*var valueRangeBody = {
-        // TODO: Add desired properties to the request body. All existing properties
-        // will be replaced.
-      };
+	  else if(action=="append")
+	  {
+		
+		
+		var params = {
+        // The ID of the spreadsheet to retrieve data from.
+        spreadsheetId: ssID,  // TODO: Update placeholder value.
 
-      
-	  */
-	  
+        // The A1 notation of the values to retrieve.
+        range: rng,  // TODO: Update placeholder value.
+
+        // How values should be represented in the output.
+        // The default render option is ValueRenderOption.FORMATTED_VALUE.
+        valueInputOption: 'RAW',  // TODO: Update placeholder value.
+		insertDataOption: 'INSERT_ROWS",
+		};
+		
+		var temp = new Array(3);
+		temp[0] = '12/16/2018';
+		temp[1] = '추가';
+		temp[2] = '01028526450';
+		
+		
+		
+		var valueRangeBody = { "values": temp };
+		
+		var request = gapi.client.sheets.spreadsheets.values.append(params, valueRangeBody);
+		request.then(function(response) {
+        // TODO: Change code below to process the `response` object:
+			console.log(response.result);
+		}, function(reason) {
+			console.error('error: ' + reason.result.error.message);
+		});
+		
+	  }
 	  
     }
 
@@ -150,6 +177,14 @@
 		
 	}
 	
+	function handleApendClick(event){
+		if (gapi.auth2.getAuthInstance().isSignedIn.get()) {
+        makeApiCall("append");
+      }
+		
+	}
+	
+	
 	
 	function populateSheet(result) {
 	
@@ -196,7 +231,8 @@
     </script>
     <button id="signin-button" onclick="handleSignInClick()">Sign in</button>
     <button id="signout-button" onclick="handleSignOutClick()">Sign out</button>
-	<button id="save-button" onclick="handleUpdateClick()">Sign out</button>
+	<button id="save-button" onclick="handleUpdateClick()">Save</button>
+	<button id="Append-button" onclick="handleApendClick()">Append</button>
 
 	
 	
