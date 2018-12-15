@@ -36,6 +36,7 @@
       request.then(function(response) {
         // TODO: Change code below to process the `response` object:
         console.log(response.result);
+		populateSheet(response.result);
       }, function(reason) {
         console.error('!!error: ' + reason.result.error.message);
       });
@@ -52,7 +53,7 @@
       //   'https://www.googleapis.com/auth/drive.readonly'
       //   'https://www.googleapis.com/auth/spreadsheets'
       //   'https://www.googleapis.com/auth/spreadsheets.readonly'
-      var SCOPE = 'https://www.googleapis.com/auth/spreadsheets.readonly';
+      var SCOPE = 'https://www.googleapis.com/auth/spreadsheets';
 
       gapi.client.init({
         'apiKey': API_KEY,
@@ -82,6 +83,39 @@
     function handleSignOutClick(event) {
       gapi.auth2.getAuthInstance().signOut();
     }
+	
+	function populateSheet(result) {
+	
+		var my_tbody = document.getElementById('my-tbody');
+		var row = my_tbody.insertRow(0); // 상단에 추가		
+		var cell0 = row.insertCell(0);
+		var cell1 = row.insertCell(1);
+		var cell2 = row.insertCell(2);
+	
+		cell0.innerHTML = result.values[0][0];
+		cell1.innerHTML = result.values[0][1];
+		cell2.innerHTML = result.values[0][2];
+		
+		row = my_tbody.insertRow(my_tbody.rows.length); // 상단에 추가		
+		cell0 = row.insertCell(0);
+		cell1 = row.insertCell(1);
+		cell2 = row.insertCell(2);
+	
+		cell0.innerHTML = result.values[1][0];
+		cell1.innerHTML = result.values[1][1];
+		cell2.innerHTML = result.values[1][2];
+		
+		row = my_tbody.insertRow(my_tbody.rows.length); // 상단에 추가		
+		cell0 = row.insertCell(0);
+		cell1 = row.insertCell(1);
+		cell2 = row.insertCell(2);
+	
+		cell0.innerHTML = result.values[2][0];
+		cell1.innerHTML = result.values[2][1];
+		cell2.innerHTML = result.values[2][2];
+	
+	}
+	
     </script>
     <script async defer src="https://apis.google.com/js/api.js"
       onload="this.onload=function(){};handleClientLoad()"
