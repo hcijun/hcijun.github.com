@@ -1,1469 +1,1446 @@
-<!DOCTYPE html>
-
 <html>
-<head>
-<title>족구 하라고 해!</title>
-</head>
-<body>
-<h1>족구 페이지</h1>
 
 
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
-
-<script language="javascript">  
-
-// 족구기록 : 작업생성 날짜,팀들 이름이 Key 으로 생성을 함
-// 해당 데이터에서 사용자가 실시간으로 정보를 기록 하면 업데이트 되도록 만듦
-
-
-//팀1플레이어1
-function team1_name1_attack()
-{
-	var div = document.getElementById("team1_name1_attack_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name1_attack_info").innerHTML = String(div);
-} 
-function team1_name1_point()
-{
-	var div = document.getElementById("team1_name1_point_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name1_point_info").innerHTML = String(div);
-} 
-function team1_name1_mistake()
-{
-	var div = document.getElementById("team1_name1_mistake_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name1_mistake_info").innerHTML = String(div);
-} 
-function team1_name1_receive()
-{
-	var div = document.getElementById("team1_name1_receive_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name1_receive_info").innerHTML = String(div);
-} 
-function team1_name1_receive_s()
-{
-	var div = document.getElementById("team1_name1_receive_s_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name1_receive_s_info").innerHTML = String(div);
-} 
-function team1_name1_toss()
-{
-	var div = document.getElementById("team1_name1_toss_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name1_toss_info").innerHTML = String(div);
-} 
-function team1_name1_toss_s()
-{
-	var div = document.getElementById("team1_name1_toss_s_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name1_toss_s_info").innerHTML = String(div);
-} 
-function team1_name1_serve()
-{
-	var div = document.getElementById("team1_name1_serve_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name1_serve_info").innerHTML = String(div);
-} 
-function team1_name1_serve_s()
-{
-	var div = document.getElementById("team1_name1_serve_s_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name1_serve_s_info").innerHTML = String(div);
-} 
-
-// 팀1플레이어2
-function team1_name2_attack()
-{
-	var div = document.getElementById("team1_name2_attack_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name2_attack_info").innerHTML = String(div);
-} 
-function team1_name2_point()
-{
-	var div = document.getElementById("team1_name2_point_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name2_point_info").innerHTML = String(div);
-} 
-function team1_name2_mistake()
-{
-	var div = document.getElementById("team1_name2_mistake_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name2_mistake_info").innerHTML = String(div);
-} 
-function team1_name2_receive()
-{
-	var div = document.getElementById("team1_name2_receive_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name2_receive_info").innerHTML = String(div);
-} 
-function team1_name2_receive_s()
-{
-	var div = document.getElementById("team1_name2_receive_s_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name2_receive_s_info").innerHTML = String(div);
-} 
-function team1_name2_toss()
-{
-	var div = document.getElementById("team1_name2_toss_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name2_toss_info").innerHTML = String(div);
-} 
-function team1_name2_toss_s()
-{
-	var div = document.getElementById("team1_name2_toss_s_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name2_toss_s_info").innerHTML = String(div);
-} 
-function team1_name2_serve()
-{
-	var div = document.getElementById("team1_name2_serve_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name2_serve_info").innerHTML = String(div);
-} 
-function team1_name2_serve_s()
-{
-	var div = document.getElementById("team1_name2_serve_s_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name2_serve_s_info").innerHTML = String(div);
-} 
-
-function team1_name2_toss_success()
-{	
-	var div = document.getElementById("team1_name2_toss_success").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name2_toss_success").innerHTML = String(div);
-}
-
-// 팀1플레이어3
-function team1_name3_attack()
-{
-	var div = document.getElementById("team1_name3_attack_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name3_attack_info").innerHTML = String(div);
-} 
-function team1_name3_point()
-{
-	var div = document.getElementById("team1_name3_point_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name3_point_info").innerHTML = String(div);
-} 
-function team1_name3_mistake()
-{
-	var div = document.getElementById("team1_name3_mistake_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name3_mistake_info").innerHTML = String(div);
-} 
-function team1_name3_receive()
-{
-	var div = document.getElementById("team1_name3_receive_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name3_receive_info").innerHTML = String(div);
-} 
-function team1_name3_receive_s()
-{
-	var div = document.getElementById("team1_name3_receive_s_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name3_receive_s_info").innerHTML = String(div);
-} 
-function team1_name3_toss()
-{
-	var div = document.getElementById("team1_name3_toss_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name3_toss_info").innerHTML = String(div);
-} 
-function team1_name3_toss_s()
-{
-	var div = document.getElementById("team1_name3_toss_s_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name3_toss_s_info").innerHTML = String(div);
-} 
-function team1_name3_serve()
-{
-	var div = document.getElementById("team1_name3_serve_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name3_serve_info").innerHTML = String(div);
-} 
-function team1_name3_serve_s()
-{
-	var div = document.getElementById("team1_name3_serve_s_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name3_serve_s_info").innerHTML = String(div);
-} 
-
-function team1_name3_receive_success()
-{
-	var div = document.getElementById("team1_name3_receive_success").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name3_receive_success").innerHTML = String(div);
-}
-
-// 팀1플레이어4
-function team1_name4_attack()
-{
-	var div = document.getElementById("team1_name4_attack_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name4_attack_info").innerHTML = String(div);
-} 
-function team1_name4_point()
-{
-	var div = document.getElementById("team1_name4_point_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name4_point_info").innerHTML = String(div);
-} 
-function team1_name4_mistake()
-{
-	var div = document.getElementById("team1_name4_mistake_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name4_mistake_info").innerHTML = String(div);
-} 
-function team1_name4_receive()
-{
-	var div = document.getElementById("team1_name4_receive_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name4_receive_info").innerHTML = String(div);
-} 
-function team1_name4_receive_s()
-{
-	var div = document.getElementById("team1_name4_receive_s_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name4_receive_s_info").innerHTML = String(div);
-} 
-function team1_name4_toss()
-{
-	var div = document.getElementById("team1_name4_toss_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name4_toss_info").innerHTML = String(div);
-} 
-function team1_name4_toss_s()
-{
-	var div = document.getElementById("team1_name4_toss_s_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name4_toss_s_info").innerHTML = String(div);
-} 
-function team1_name4_serve()
-{
-	var div = document.getElementById("team1_name4_serve_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name4_serve_info").innerHTML = String(div);
-} 
-function team1_name4_serve_s()
-{
-	var div = document.getElementById("team1_name4_serve_s_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name4_serve_s_info").innerHTML = String(div);
-} 
-
-function team1_name4_receive_success()
-{
-	var div = document.getElementById("team1_name4_receive_success").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name4_receive_success").innerHTML = String(div);
-}
-
-// 팀1플레이어4
-function team1_name5_attack()
-{
-	var div = document.getElementById("team1_name5_attack_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name5_attack_info").innerHTML = String(div);
-} 
-function team1_name5_point()
-{
-	var div = document.getElementById("team1_name5_point_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name5_point_info").innerHTML = String(div);
-} 
-function team1_name5_mistake()
-{
-	var div = document.getElementById("team1_name5_mistake_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name5_mistake_info").innerHTML = String(div);
-} 
-function team1_name5_receive()
-{
-	var div = document.getElementById("team1_name5_receive_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name5_receive_info").innerHTML = String(div);
-} 
-function team1_name5_receive_s()
-{
-	var div = document.getElementById("team1_name5_receive_s_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name5_receive_s_info").innerHTML = String(div);
-} 
-function team1_name5_toss()
-{
-	var div = document.getElementById("team1_name5_toss_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name5_toss_info").innerHTML = String(div);
-} 
-function team1_name5_toss_s()
-{
-	var div = document.getElementById("team1_name5_toss_s_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name5_toss_s_info").innerHTML = String(div);
-} 
-function team1_name5_serve()
-{
-	var div = document.getElementById("team1_name5_serve_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name5_serve_info").innerHTML = String(div);
-} 
-function team1_name5_serve_s()
-{
-	var div = document.getElementById("team1_name5_serve_s_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name5_serve_s_info").innerHTML = String(div);
-} 
-
-function team1_name5_receive_success()
-{
-	var div = document.getElementById("team1_name5_receive_success").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name5_receive_success").innerHTML = String(div);
-}
-
-//팀2플레이어1
-function team2_name1_attack()
-{
-	var div = document.getElementById("team2_name1_attack_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name1_attack_info").innerHTML = String(div);
-} 
-function team2_name1_point()
-{
-	var div = document.getElementById("team2_name1_point_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name1_point_info").innerHTML = String(div);
-} 
-function team2_name1_mistake()
-{
-	var div = document.getElementById("team2_name1_mistake_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name1_mistake_info").innerHTML = String(div);
-} 
-function team2_name1_receive()
-{
-	var div = document.getElementById("team2_name1_receive_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name1_receive_info").innerHTML = String(div);
-} 
-function team2_name1_receive_s()
-{
-	var div = document.getElementById("team2_name1_receive_s_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name1_receive_s_info").innerHTML = String(div);
-} 
-function team2_name1_toss()
-{
-	var div = document.getElementById("team2_name1_toss_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name1_toss_info").innerHTML = String(div);
-} 
-function team2_name1_toss_s()
-{
-	var div = document.getElementById("team2_name1_toss_s_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name1_toss_s_info").innerHTML = String(div);
-} 
-function team2_name1_serve()
-{
-	var div = document.getElementById("team2_name1_serve_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name1_serve_info").innerHTML = String(div);
-} 
-function team2_name1_serve_s()
-{
-	var div = document.getElementById("team2_name1_serve_s_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name1_serve_s_info").innerHTML = String(div);
-} 
-
-// 팀2플레이어2
-function team2_name2_attack()
-{
-	var div = document.getElementById("team2_name2_attack_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name2_attack_info").innerHTML = String(div);
-} 
-function team2_name2_point()
-{
-	var div = document.getElementById("team2_name2_point_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name2_point_info").innerHTML = String(div);
-} 
-function team2_name2_mistake()
-{
-	var div = document.getElementById("team2_name2_mistake_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name2_mistake_info").innerHTML = String(div);
-} 
-function team2_name2_receive()
-{
-	var div = document.getElementById("team2_name2_receive_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name2_receive_info").innerHTML = String(div);
-} 
-function team2_name2_receive_s()
-{
-	var div = document.getElementById("team2_name2_receive_s_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name2_receive_s_info").innerHTML = String(div);
-} 
-function team2_name2_toss()
-{
-	var div = document.getElementById("team2_name2_toss_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name2_toss_info").innerHTML = String(div);
-} 
-function team2_name2_toss_s()
-{
-	var div = document.getElementById("team2_name2_toss_s_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name2_toss_s_info").innerHTML = String(div);
-} 
-function team2_name2_serve()
-{
-	var div = document.getElementById("team2_name2_serve_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name2_serve_info").innerHTML = String(div);
-} 
-function team2_name2_serve_s()
-{
-	var div = document.getElementById("team2_name2_serve_s_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name2_serve_s_info").innerHTML = String(div);
-}
-
-function team2_name2_toss_success()
-{	
-	var div = document.getElementById("team2_name2_toss_success").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name2_toss_success").innerHTML = String(div);
-} 
-
-// 팀2플레이어3
-function team2_name3_attack()
-{
-	var div = document.getElementById("team2_name3_attack_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name3_attack_info").innerHTML = String(div);
-} 
-function team2_name3_point()
-{
-	var div = document.getElementById("team2_name3_point_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name3_point_info").innerHTML = String(div);
-} 
-function team2_name3_mistake()
-{
-	var div = document.getElementById("team2_name3_mistake_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name3_mistake_info").innerHTML = String(div);
-} 
-function team2_name3_receive()
-{
-	var div = document.getElementById("team2_name3_receive_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name3_receive_info").innerHTML = String(div);
-} 
-function team2_name3_receive_s()
-{
-	var div = document.getElementById("team2_name3_receive_s_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name3_receive_s_info").innerHTML = String(div);
-} 
-function team2_name3_toss()
-{
-	var div = document.getElementById("team2_name3_toss_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name3_toss_info").innerHTML = String(div);
-} 
-function team2_name3_toss_s()
-{
-	var div = document.getElementById("team2_name3_toss_s_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name3_toss_s_info").innerHTML = String(div);
-} 
-function team2_name3_serve()
-{
-	var div = document.getElementById("team2_name3_serve_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name3_serve_info").innerHTML = String(div);
-} 
-function team2_name3_serve_s()
-{
-	var div = document.getElementById("team2_name3_serve_s_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name3_serve_s_info").innerHTML = String(div);
-} 
-
-function team2_name3_receive_success()
-{
-	var div = document.getElementById("team2_name3_receive_success").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name3_receive_success").innerHTML = String(div);
-}
-
-// 팀2플레이어4
-function team2_name4_attack()
-{
-	var div = document.getElementById("team2_name4_attack_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name4_attack_info").innerHTML = String(div);
-} 
-function team2_name4_point()
-{
-	var div = document.getElementById("team2_name4_point_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name4_point_info").innerHTML = String(div);
-} 
-function team2_name4_mistake()
-{
-	var div = document.getElementById("team2_name4_mistake_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name4_mistake_info").innerHTML = String(div);
-} 
-function team2_name4_receive()
-{
-	var div = document.getElementById("team2_name4_receive_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name4_receive_info").innerHTML = String(div);
-} 
-function team2_name4_receive_s()
-{
-	var div = document.getElementById("team2_name4_receive_s_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name4_receive_s_info").innerHTML = String(div);
-} 
-function team2_name4_toss()
-{
-	var div = document.getElementById("team2_name4_toss_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name4_toss_info").innerHTML = String(div);
-} 
-function team2_name4_toss_s()
-{
-	var div = document.getElementById("team2_name4_toss_s_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name4_toss_s_info").innerHTML = String(div);
-} 
-function team2_name4_serve()
-{
-	var div = document.getElementById("team2_name4_serve_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name4_serve_info").innerHTML = String(div);
-} 
-function team2_name4_serve_s()
-{
-	var div = document.getElementById("team2_name4_serve_s_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name4_serve_s_info").innerHTML = String(div);
-} 
-
-function team2_name4_receive_success()
-{
-	var div = document.getElementById("team2_name4_receive_success").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name4_receive_success").innerHTML = String(div);
-}
-
-// 팀2플레이어4
-function team2_name5_attack()
-{
-	var div = document.getElementById("team2_name5_attack_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name5_attack_info").innerHTML = String(div);
-} 
-function team2_name5_point()
-{
-	var div = document.getElementById("team2_name5_point_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name5_point_info").innerHTML = String(div);
-} 
-function team2_name5_mistake()
-{
-	var div = document.getElementById("team2_name5_mistake_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name5_mistake_info").innerHTML = String(div);
-} 
-function team2_name5_receive()
-{
-	var div = document.getElementById("team2_name5_receive_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name5_receive_info").innerHTML = String(div);
-} 
-function team2_name5_receive_s()
-{
-	var div = document.getElementById("team2_name5_receive_s_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name5_receive_s_info").innerHTML = String(div);
-} 
-function team2_name5_toss()
-{
-	var div = document.getElementById("team2_name5_toss_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name5_toss_info").innerHTML = String(div);
-} 
-function team2_name5_toss_s()
-{
-	var div = document.getElementById("team2_name5_toss_s_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name5_toss_s_info").innerHTML = String(div);
-} 
-function team2_name5_serve()
-{
-	var div = document.getElementById("team2_name5_serve_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name5_serve_info").innerHTML = String(div);
-} 
-function team2_name5_serve_s()
-{
-	var div = document.getElementById("team2_name5_serve_s_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name5_serve_s_info").innerHTML = String(div);
-} 
-
-function team2_name5_receive_success()
-{
-	var div = document.getElementById("team2_name5_receive_success").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name5_receive_success").innerHTML = String(div);
-}
-
-function team1_name1_hustle()
-{
-	var div = document.getElementById("team1_name1_hustle_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name1_hustle_info").innerHTML = String(div);
-}
-
-function team2_name1_hustle()
-{
-	var div = document.getElementById("team2_name1_hustle_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name1_hustle_info").innerHTML = String(div);
-}
-
-function team1_name2_hustle()
-{
-	var div = document.getElementById("team1_name2_hustle_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name2_hustle_info").innerHTML = String(div);
-}
-
-function team2_name2_hustle()
-{
-	var div = document.getElementById("team2_name2_hustle_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name2_hustle_info").innerHTML = String(div);
-}
-
-
-function team1_name3_hustle()
-{
-	var div = document.getElementById("team1_name3_hustle_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name3_hustle_info").innerHTML = String(div);
-}
-
-function team2_name3_hustle()
-{
-	var div = document.getElementById("team2_name3_hustle_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name3_hustle_info").innerHTML = String(div);
-}
-
-
-function team1_name4_hustle()
-{
-	var div = document.getElementById("team1_name4_hustle_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name4_hustle_info").innerHTML = String(div);
-}
-
-function team2_name4_hustle()
-{
-	var div = document.getElementById("team2_name4_hustle_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name4_hustle_info").innerHTML = String(div);
-}
-
-function team1_name5_hustle()
-{
-	var div = document.getElementById("team1_name5_hustle_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team1_name5_hustle_info").innerHTML = String(div);
-}
-
-function team2_name5_hustle()
-{
-	var div = document.getElementById("team2_name5_hustle_info").innerHTML;  
-	div = Number(div);
-	div+=1;
-	document.getElementById("team2_name5_hustle_info").innerHTML = String(div);
-}
-
-
-
-function save()
-{
-	var var_game = document.getElementById("game").value;
+  <head></head>
+  <body>
+    <!--
+    BEFORE RUNNING:
+    ---------------
+    1. If not already done, enable the Google Sheets API
+       and check the quota for your project at
+       https://console.developers.google.com/apis/api/sheets
+    2. Get access keys for your application. See
+       https://developers.google.com/api-client-library/javascript/start/start-js#get-access-keys-for-your-application
+    3. For additional information on authentication, see
+       https://developers.google.com/sheets/api/quickstart/js#step_2_set_up_the_sample
+    -->
+    
+	<h1>족구 페이지</h1>
+	<script>
+	// read
+	// update
+	// append
 	
+	var g_Vals;
 	
-	var e1 = document.getElementById("team1");
-	var var_team1 = e1.options[e1.selectedIndex].value;
-	
-	var e2 = document.getElementById("team2");
-	var var_team2 = e2.options[e2.selectedIndex].value;
+    function makeApiCall(action="read") {
+      
+	  var ssID = '1oUOKUlqJbwhbE97f88MnAPJS4zrmHxKMTRQzR3Azk8w';
+	  var rng = '시트1';
+	  
+	  if(action == "read")
+	  {
+		var params = {
+        // The ID of the spreadsheet to retrieve data from.
+        spreadsheetId: ssID,  // TODO: Update placeholder value.
 
-	//var var_team1 = document.getElementById("team1").value; 
-	//var var_team2 = document.getElementById("team2").value; 
-	
-	var var_team1_score_1 = document.getElementById("team1_score_1").value + "vs" + document.getElementById("team2_score_1").value; 
-	var var_team1_score_2 = document.getElementById("team1_score_2").value + "vs" + document.getElementById("team2_score_2").value;  
-	var var_team1_score_3 = document.getElementById("team1_score_3").value + "vs" + document.getElementById("team2_score_3").value;  
+        // The A1 notation of the values to retrieve.
+        range: rng,  // TODO: Update placeholder value.
 
-	//var var_team2_score_1 = document.getElementById("team2_score_1").value; 
-	//var var_team2_score_2 = document.getElementById("team2_score_2").value; 
-	//var var_team2_score_3 = document.getElementById("team2_score_3").value; 
-	
-	
-	// 1팀 1플레이어
-	var var_team1_name1 = document.getElementById("team1_name1").value;
-	var var_team1_name1_attack_info = document.getElementById("team1_name1_attack_info").innerHTML;
-	var var_team1_name1_point_info= document.getElementById("team1_name1_point_info").innerHTML;
-	var var_team1_name1_serve_info= "";// document.getElementById("team1_name1_serve_info").innerHTML;
-	var var_team1_name1_serve_s_info= "";//document.getElementById("team1_name1_serve_s_info").innerHTML;
-	var var_team1_name1_receive_info= "";//document.getElementById("team1_name1_receive_info").innerHTML;
-	var var_team1_name1_receive_s_info= "";//document.getElementById("team1_name1_receive_s_info").innerHTML;
-	var var_team1_name1_toss_info= "";//document.getElementById("team1_name1_toss_info").innerHTML;
-	var var_team1_name1_toss_s_info= "";//document.getElementById("team1_name1_toss_s_info").innerHTML;
-	var var_team1_name1_mistake_info= document.getElementById("team1_name1_mistake_info").innerHTML;
-	var var_team1_name1_hustle_info= document.getElementById("team1_name1_hustle_info").innerHTML;
-	
-	
-	var var_team2_name1 = document.getElementById("team2_name1").value;
-	var var_team2_name1_attack_info = document.getElementById("team2_name1_attack_info").innerHTML;
-	var var_team2_name1_point_info= document.getElementById("team2_name1_point_info").innerHTML;
-	var var_team2_name1_serve_info= "";//document.getElementById("team2_name1_serve_info").innerHTML;
-	var var_team2_name1_serve_s_info= "";//document.getElementById("team2_name1_serve_s_info").innerHTML;
-	var var_team2_name1_receive_info= "";//document.getElementById("team2_name1_receive_info").innerHTML;
-	var var_team2_name1_receive_s_info= "";//document.getElementById("team2_name1_receive_s_info").innerHTML;
-	var var_team2_name1_toss_info= "";//document.getElementById("team2_name1_toss_info").innerHTML;
-	var var_team2_name1_toss_s_info= "";//document.getElementById("team2_name1_toss_s_info").innerHTML;
-	var var_team2_name1_mistake_info= document.getElementById("team2_name1_mistake_info").innerHTML;
-	var var_team2_name1_hustle_info= document.getElementById("team2_name1_hustle_info").innerHTML;
-	
-	// 2플레이어
-	var var_team1_name2 = document.getElementById("team1_name2").value;
-	var var_team1_name2_attack_info = "";//document.getElementById("team1_name2_attack_info").innerHTML;
-	var var_team1_name2_point_info= "";//document.getElementById("team1_name2_point_info").innerHTML;
-	var var_team1_name2_serve_info= "";//document.getElementById("team1_name2_serve_info").innerHTML;
-	var var_team1_name2_serve_s_info= "";//document.getElementById("team1_name2_serve_s_info").innerHTML;
-	var var_team1_name2_receive_info= "";//document.getElementById("team1_name2_receive_info").innerHTML;
-	var var_team1_name2_receive_s_info= "";//document.getElementById("team1_name2_receive_s_info").innerHTML;
-	var var_team1_name2_toss_info= document.getElementById("team1_name2_toss_info").innerHTML;
-	var var_team1_name2_toss_s_info= document.getElementById("team1_name2_toss_success").innerHTML;
-	var var_team1_name2_mistake_info= document.getElementById("team1_name2_mistake_info").innerHTML;
-	var var_team1_name2_hustle_info= document.getElementById("team1_name2_hustle_info").innerHTML;
-	
-	var var_team2_name2 = document.getElementById("team2_name2").value;
-	var var_team2_name2_attack_info = "";//document.getElementById("team2_name2_attack_info").innerHTML;
-	var var_team2_name2_point_info= "";//document.getElementById("team2_name2_point_info").innerHTML;
-	var var_team2_name2_serve_info= "";//document.getElementById("team2_name2_serve_info").innerHTML;
-	var var_team2_name2_serve_s_info= "";//document.getElementById("team2_name2_serve_s_info").innerHTML;
-	var var_team2_name2_receive_info= "";//document.getElementById("team2_name2_receive_info").innerHTML;
-	var var_team2_name2_receive_s_info= "";//document.getElementById("team2_name2_receive_s_info").innerHTML;
-	var var_team2_name2_toss_info= document.getElementById("team2_name2_toss_info").innerHTML;
-	var var_team2_name2_toss_s_info= document.getElementById("team2_name2_toss_success").innerHTML;
-	var var_team2_name2_mistake_info= document.getElementById("team2_name2_mistake_info").innerHTML;
-	var var_team2_name2_hustle_info= document.getElementById("team2_name2_hustle_info").innerHTML;
+        // How values should be represented in the output.
+        // The default render option is ValueRenderOption.FORMATTED_VALUE.
+        //valueRenderOption: '',  // TODO: Update placeholder value.
+
+        // How dates, times, and durations should be represented in the output.
+        // This is ignored if value_render_option is
+        // FORMATTED_VALUE.
+        // The default dateTime render option is [DateTimeRenderOption.SERIAL_NUMBER].
+        //dateTimeRenderOption: '',  // TODO: Update placeholder value.
+		};
+
+		var request = gapi.client.sheets.spreadsheets.values.get(params);
+		request.then(function(response) {
+		// TODO: Change code below to process the `response` object:
+		  //console.log(response.result);
+		  populateSheet(response.result);
+		  g_Vals = response.result.values;
+		  }, function(reason) {
+		  console.error('!!error: ' + reason.result.error.message);
+		});
+	  }
+	  else if(action=="update")
+	  {
+		g_Vals[1][1] = "테스트";
 		
-	// 3플레이어
-	var var_team1_name3 = document.getElementById("team1_name3").value;
-	var var_team1_name3_attack_info = "";//document.getElementById("team1_name3_attack_info").innerHTML;
-	var var_team1_name3_point_info= "";//document.getElementById("team1_name3_point_info").innerHTML;
-	var var_team1_name3_serve_info= document.getElementById("team1_name3_serve_info").innerHTML;
-	var var_team1_name3_serve_s_info= "";//document.getElementById("team1_name3_serve_s_info").innerHTML;
-	var var_team1_name3_receive_info= document.getElementById("team1_name3_receive_info").innerHTML;
-	var var_team1_name3_receive_s_info= document.getElementById("team1_name3_receive_success").innerHTML;
-	var var_team1_name3_toss_info= "";//document.getElementById("team1_name3_toss_info").innerHTML;
-	var var_team1_name3_toss_s_info= "";//document.getElementById("team1_name3_toss_s_info").innerHTML;
-	var var_team1_name3_mistake_info= document.getElementById("team1_name3_mistake_info").innerHTML;
-	var var_team1_name3_hustle_info= document.getElementById("team1_name3_hustle_info").innerHTML;
-	
-	var var_team2_name3 = document.getElementById("team2_name3").value;
-	var var_team2_name3_attack_info = "";//document.getElementById("team2_name3_attack_info").innerHTML;
-	var var_team2_name3_point_info= "";//document.getElementById("team2_name3_point_info").innerHTML;
-	var var_team2_name3_serve_info= document.getElementById("team2_name3_serve_info").innerHTML;
-	var var_team2_name3_serve_s_info= "";//document.getElementById("team2_name3_serve_s_info").innerHTML;
-	var var_team2_name3_receive_info= document.getElementById("team2_name3_receive_info").innerHTML;
-	var var_team2_name3_receive_s_info= document.getElementById("team2_name3_receive_success").innerHTML;
-	var var_team2_name3_toss_info= "";//document.getElementById("team2_name3_toss_info").innerHTML;
-	var var_team2_name3_toss_s_info= "";//document.getElementById("team2_name3_toss_s_info").innerHTML;
-	var var_team2_name3_mistake_info= document.getElementById("team2_name3_mistake_info").innerHTML;
-	var var_team2_name3_hustle_info= document.getElementById("team2_name3_hustle_info").innerHTML;
+		var params = {
+        // The ID of the spreadsheet to retrieve data from.
+        spreadsheetId: ssID,  // TODO: Update placeholder value.
+
+        // The A1 notation of the values to retrieve.
+        range: rng,  // TODO: Update placeholder value.
+
+        // How values should be represented in the output.
+        // The default render option is ValueRenderOption.FORMATTED_VALUE.
+        valueInputOption: 'RAW',  // TODO: Update placeholder value.
+
+        // How dates, times, and durations should be represented in the output.
+        // This is ignored if value_render_option is
+        // FORMATTED_VALUE.
+        // The default dateTime render option is [DateTimeRenderOption.SERIAL_NUMBER].
+        //dateTimeRenderOption: '',  // TODO: Update placeholder value.
+		};
 		
-	// 4플레이어
-	var var_team1_name4 = document.getElementById("team1_name4").value;
-	var var_team1_name4_attack_info = "";//document.getElementById("team1_name4_attack_info").innerHTML;
-	var var_team1_name4_point_info= "";//document.getElementById("team1_name4_point_info").innerHTML;
-	var var_team1_name4_serve_info= document.getElementById("team1_name4_serve_info").innerHTML;
-	var var_team1_name4_serve_s_info= "";//document.getElementById("team1_name4_serve_s_info").innerHTML;
-	var var_team1_name4_receive_info= document.getElementById("team1_name4_receive_info").innerHTML;
-	var var_team1_name4_receive_s_info= document.getElementById("team1_name4_receive_success").innerHTML;
-	var var_team1_name4_toss_info= "";//document.getElementById("team1_name4_toss_info").innerHTML;
-	var var_team1_name4_toss_s_info= "";//document.getElementById("team1_name4_toss_s_info").innerHTML;
-	var var_team1_name4_mistake_info= document.getElementById("team1_name4_mistake_info").innerHTML;
-	var var_team1_name4_hustle_info= document.getElementById("team1_name4_hustle_info").innerHTML;
-	
-	var var_team2_name4 = document.getElementById("team2_name4").value;
-	var var_team2_name4_attack_info = "";//document.getElementById("team2_name4_attack_info").innerHTML;
-	var var_team2_name4_point_info= "";//document.getElementById("team2_name4_point_info").innerHTML;
-	var var_team2_name4_serve_info= document.getElementById("team2_name4_serve_info").innerHTML;
-	var var_team2_name4_serve_s_info= "";//document.getElementById("team2_name4_serve_s_info").innerHTML;
-	var var_team2_name4_receive_info= document.getElementById("team2_name4_receive_info").innerHTML;
-	var var_team2_name4_receive_s_info= document.getElementById("team2_name4_receive_success").innerHTML;
-	var var_team2_name4_toss_info= "";//document.getElementById("team2_name4_toss_info").innerHTML;
-	var var_team2_name4_toss_s_info= "";//document.getElementById("team2_name4_toss_s_info").innerHTML;
-	var var_team2_name4_mistake_info= document.getElementById("team2_name4_mistake_info").innerHTML;
-	var var_team2_name4_hustle_info= document.getElementById("team2_name4_hustle_info").innerHTML;
-	
-	// 5플레이어
-	
-	var var_team1_name5 = document.getElementById("team1_name5").value;
-	
-	if(var_team1_name5 != "")
-	{
-	
-		var var_team1_name5_attack_info = "";//document.getElementById("team1_name5_attack_info").innerHTML;
-		var var_team1_name5_point_info= "";//document.getElementById("team1_name5_point_info").innerHTML;
-		var var_team1_name5_serve_info= document.getElementById("team1_name5_serve_info").innerHTML;
-		var var_team1_name5_serve_s_info= "";//document.getElementById("team1_name5_serve_s_info").innerHTML;
-		var var_team1_name5_receive_info= document.getElementById("team1_name5_receive_info").innerHTML;
-		var var_team1_name5_receive_s_info= document.getElementById("team1_name5_receive_success").innerHTML;
-		var var_team1_name5_toss_info= "";//document.getElementById("team1_name5_toss_info").innerHTML;
-		var var_team1_name5_toss_s_info= "";//document.getElementById("team1_name5_toss_s_info").innerHTML;
-		var var_team1_name5_mistake_info= document.getElementById("team1_name5_mistake_info").innerHTML;
-		var var_team1_name5_hustle_info= document.getElementById("team1_name5_hustle_info").innerHTML;
-	}	
-	
-	var var_team2_name5 = document.getElementById("team2_name5").value;
-	
-	if(var_team2_name5 != "")
-	{
-		var var_team2_name5_attack_info = "";//document.getElementById("team2_name5_attack_info").innerHTML;
-		var var_team2_name5_point_info= "";//document.getElementById("team2_name5_point_info").innerHTML;
-		var var_team2_name5_serve_info= document.getElementById("team2_name5_serve_info").innerHTML;
-		var var_team2_name5_serve_s_info= "";//document.getElementById("team2_name5_serve_s_info").innerHTML;
-		var var_team2_name5_receive_info= document.getElementById("team2_name5_receive_info").innerHTML;
-		var var_team2_name5_receive_s_info= document.getElementById("team2_name5_receive_success").innerHTML;
-		var var_team2_name5_toss_info= "";//document.getElementById("team2_name5_toss_info").innerHTML;
-		var var_team2_name5_toss_s_info= "";//document.getElementById("team2_name5_toss_s_info").innerHTML;
-		var var_team2_name5_mistake_info= document.getElementById("team2_name5_mistake_info").innerHTML;
-		var var_team2_name5_hustle_info= document.getElementById("team2_name5_hustle_info").innerHTML;
-	}
-	//data: {팀1선수:var_team1_name1, 팀1공격시도:var_team1_name1_attack_info, 팀1득점:var_team1_name1_point_info,
-		//			팀1토스시도:var_team1_name1_toss_info, 팀1토스성공:var_team1_name1_toss_s_info,
-		//			팀1서브시도:var_team1_name1_serve_info, 팀1서브성공:var_team1_name1_toss_s_info,
-		//			팀1리시브시도:var_team1_name1_receive_info, 팀1리시브성공:var_team1_name1_receive_s_info,},
-	
-	/*
-$.ajax({
-
-  url: "https://script.google.com/a/game.hoseo.edu/macros/s/1lTJ_2q4plPWb0CtnLBX-0B8gU5vhND6GSMZtjP2DDw0/exec",
-  data: {팀1이름:var_team1, 팀1선수:var_team1_name5, 팀1공격시도:var_team1_name5_attack_info, 팀1득점:var_team1_name5_point_info,
-					팀1토스시도:var_team1_name5_toss_info, 팀1토스성공:var_team1_name5_toss_s_info,
-					팀1서브시도:var_team1_name5_serve_info, 팀1서브성공:var_team1_name5_toss_s_info,
-					팀1리시브시도:var_team1_name5_receive_info, 팀1리시브성공:var_team1_name5_receive_s_info, 팀1허슬:var_team1_name5_hustle_info, 팀1범실:var_team1_name5_mistake_info, 
-					
-		팀2이름:var_team2, 팀2선수:var_team2_name5, 팀2공격시도:var_team2_name5_attack_info, 팀2득점:var_team2_name5_point_info,
-					팀2토스시도:var_team2_name5_toss_info, 팀2토스성공:var_team2_name5_toss_s_info,
-					팀2서브시도:var_team2_name5_serve_info, 팀2서브성공:var_team2_name5_toss_s_info,
-					팀2리시브시도:var_team2_name5_receive_info, 팀2리시브성공:var_team2_name5_receive_s_info, 팀2허슬:var_team2_name5_hustle_info, 팀2범실:var_team2_name5_mistake_info
-					},
-  type: "POST"
-  
-});
-	
-$.ajax({
-
-  url: "https://script.google.com/a/game.hoseo.edu/macros/s/1lTJ_2q4plPWb0CtnLBX-0B8gU5vhND6GSMZtjP2DDw0/exec",
-  data: {팀1이름:var_team1, 팀1선수:var_team1_name4, 팀1공격시도:var_team1_name4_attack_info, 팀1득점:var_team1_name4_point_info,
-					팀1토스시도:var_team1_name4_toss_info, 팀1토스성공:var_team1_name4_toss_s_info,
-					팀1서브시도:var_team1_name4_serve_info, 팀1서브성공:var_team1_name4_toss_s_info,
-					팀1리시브시도:var_team1_name4_receive_info, 팀1리시브성공:var_team1_name4_receive_s_info, 팀1허슬:var_team1_name4_hustle_info, 팀1범실:var_team1_name4_mistake_info,
-					
-		팀2이름:var_team2, 팀2선수:var_team2_name4, 팀2공격시도:var_team2_name4_attack_info, 팀2득점:var_team2_name4_point_info,
-					팀2토스시도:var_team2_name4_toss_info, 팀2토스성공:var_team2_name4_toss_s_info,
-					팀2서브시도:var_team2_name4_serve_info, 팀2서브성공:var_team2_name4_toss_s_info,
-					팀2리시브시도:var_team2_name4_receive_info, 팀2리시브성공:var_team2_name4_receive_s_info, 팀2허슬:var_team1_name4_hustle_info, 팀2범실:var_team2_name4_mistake_info
-					},
-  type: "POST"
-  
-});
-
-$.ajax({
-
-  url: "https://script.google.com/a/game.hoseo.edu/macros/s/1lTJ_2q4plPWb0CtnLBX-0B8gU5vhND6GSMZtjP2DDw0/exec",
-  data: {팀1이름:var_team1, 팀1선수:var_team1_name3, 팀1공격시도:var_team1_name3_attack_info, 팀1득점:var_team1_name3_point_info,
-					팀1토스시도:var_team1_name3_toss_info, 팀1토스성공:var_team1_name3_toss_s_info,
-					팀1서브시도:var_team1_name3_serve_info, 팀1서브성공:var_team1_name3_toss_s_info,
-					팀1리시브시도:var_team1_name3_receive_info, 팀1리시브성공:var_team1_name3_receive_s_info, 팀1허슬:var_team1_name3_hustle_info, 팀1범실:var_team1_name3_mistake_info,
-					
-		팀2이름:var_team2, 팀2선수:var_team2_name3, 팀2공격시도:var_team2_name3_attack_info, 팀2득점:var_team2_name3_point_info,
-					팀2토스시도:var_team2_name3_toss_info, 팀2토스성공:var_team2_name3_toss_s_info,
-					팀2서브시도:var_team2_name3_serve_info, 팀2서브성공:var_team2_name3_toss_s_info,
-					팀2리시브시도:var_team2_name3_receive_info, 팀2리시브성공:var_team2_name3_receive_s_info, 팀2허슬:var_team2_name3_hustle_info, 팀2범실:var_team2_name3_mistake_info
-					},
-  type: "POST"
-  
-});
-
-
-$.ajax({
-
-  url: "https://script.google.com/a/game.hoseo.edu/macros/s/1lTJ_2q4plPWb0CtnLBX-0B8gU5vhND6GSMZtjP2DDw0/exec",
-  data: {팀1이름:var_team1, 팀1선수:var_team1_name2, 팀1공격시도:var_team1_name2_attack_info, 팀1득점:var_team1_name2_point_info,
-					팀1토스시도:var_team1_name2_toss_info, 팀1토스성공:var_team1_name2_toss_s_info,
-					팀1서브시도:var_team1_name2_serve_info, 팀1서브성공:var_team1_name2_toss_s_info,
-					팀1리시브시도:var_team1_name2_receive_info, 팀1리시브성공:var_team1_name2_receive_s_info, 팀1허슬:var_team1_name2_hustle_info, 팀1범실:var_team1_name2_mistake_info,
-					
-		팀2이름:var_team2, 팀2선수:var_team2_name2, 팀2공격시도:var_team2_name2_attack_info, 팀2득점:var_team2_name2_point_info,
-					팀2토스시도:var_team2_name2_toss_info, 팀2토스성공:var_team2_name2_toss_s_info,
-					팀2서브시도:var_team2_name2_serve_info, 팀2서브성공:var_team2_name2_toss_s_info,
-					팀2리시브시도:var_team2_name2_receive_info, 팀2리시브성공:var_team2_name2_receive_s_info, 팀2허슬:var_team2_name2_hustle_info, 팀2범실:var_team2_name2_mistake_info
-					},
-  type: "POST"
-  
-});	
-	
-$.ajax({
-
-  url: "https://script.google.com/a/game.hoseo.edu/macros/s/1lTJ_2q4plPWb0CtnLBX-0B8gU5vhND6GSMZtjP2DDw0/exec",
-  //data: {팀1선수:var_team1_name1},
-  data: {세트1:var_team1_score_1, 세트2:var_team1_score_2, 세트3:var_team1_score_3, 팀1이름:var_team1, 팀1선수:var_team1_name1, 팀1공격시도:var_team1_name1_attack_info, 팀1득점:var_team1_name1_point_info,
-					팀1토스시도:var_team1_name1_toss_info, 팀1토스성공:var_team1_name1_toss_s_info,
-					팀1서브시도:var_team1_name1_serve_info, 팀1서브성공:var_team1_name1_toss_s_info,
-					팀1리시브시도:var_team1_name1_receive_info, 팀1리시브성공:var_team1_name1_receive_s_info, 팀1허슬:var_team1_name1_hustle_info, 팀1범실:var_team1_name1_mistake_info,
-					
-		팀2이름:var_team2, 팀2선수:var_team2_name1, 팀2공격시도:var_team2_name1_attack_info, 팀2득점:var_team2_name1_point_info,
-					팀2토스시도:var_team2_name1_toss_info, 팀2토스성공:var_team2_name1_toss_s_info,
-					팀2서브시도:var_team2_name1_serve_info, 팀2서브성공:var_team2_name1_toss_s_info,
-					팀2리시브시도:var_team2_name1_receive_info, 팀2리시브성공:var_team2_name1_receive_s_info, 팀2허슬:var_team2_name1_hustle_info, 팀2범실:var_team2_name1_mistake_info},
-					
-		 type: "POST"
-
-});			
+		var valueRangeBody = { "values": g_Vals };
 		
-		*/
+		var request = gapi.client.sheets.spreadsheets.values.update(params, valueRangeBody);
+		  request.then(function(response) {
+			// TODO: Change code below to process the `response` object:
+			//populateSheet(response.result);
+		    //g_Vals = response.result;
+		  }, function(reason) {
+			console.error('error: ' + reason.result.error.message);
+		  });
+	  
+	  }
+	  else if(action=="append")
+	  {
+		
+		var params = {
+        // The ID of the spreadsheet to retrieve data from.
+        spreadsheetId: ssID,  // TODO: Update placeholder value.
 
-	//capture();
-	// 이제 초기화 작업 수행
+        // The A1 notation of the values to retrieve.
+        range: rng,  // TODO: Update placeholder value.
 
-	//경기이름
-	document.getElementById("game").value="";
-	//document.getElementById("team1").value="";
-	//document.getElementById("team2").value="";
-	
-	document.getElementById("team1_name1").value="";
-	
-	document.getElementById("team1_name1_attack_info").innerHTML="0";
-	document.getElementById("team1_name1_point_info").innerHTML="0";
-	//document.getElementById("team1_name1_serve_info").innerHTML="0";
-	//document.getElementById("team1_name1_serve_s_info").innerHTML="0";
-	//document.getElementById("team1_name1_receive_info").innerHTML="0";
-	//document.getElementById("team1_name1_receive_s_info").innerHTML="0";
-	//document.getElementById("team1_name1_toss_info").innerHTML="0";
-	//document.getElementById("team1_name1_toss_s_info").innerHTML="0";
-	document.getElementById("team1_name1_mistake_info").innerHTML="0";
-	document.getElementById("team1_name1_hustle_info").innerHTML="0";
-	
-	document.getElementById("team2_name1").value="";
-	
-	document.getElementById("team2_name1_attack_info").innerHTML="0";
-	document.getElementById("team2_name1_point_info").innerHTML="0";
-	//document.getElementById("team2_name1_serve_info").innerHTML="0";
-	//document.getElementById("team2_name1_serve_s_info").innerHTML="0";
-	//document.getElementById("team2_name1_receive_info").innerHTML="0";
-	//document.getElementById("team2_name1_receive_s_info").innerHTML="0";
-	//document.getElementById("team2_name1_toss_info").innerHTML="0";
-	//document.getElementById("team2_name1_toss_s_info").innerHTML="0";
-	document.getElementById("team2_name1_mistake_info").innerHTML="0";
-	document.getElementById("team2_name1_hustle_info").innerHTML="0";
-	
-	
-	document.getElementById("team1_name2").value="";
-	
-	//document.getElementById("team1_name2_attack_info").innerHTML="0";
-	//document.getElementById("team1_name2_point_info").innerHTML="0";
-	//document.getElementById("team1_name2_serve_info").innerHTML="0";
-	//document.getElementById("team1_name2_serve_s_info").innerHTML="0";
-	//document.getElementById("team1_name2_receive_info").innerHTML="0";
-	//document.getElementById("team1_name2_receive_s_info").innerHTML="0";
-	document.getElementById("team1_name2_toss_info").innerHTML="0";
-	//document.getElementById("team1_name2_toss_s_info").innerHTML="0";
-	document.getElementById("team1_name2_mistake_info").innerHTML="0";
-	document.getElementById("team1_name2_toss_success").innerHTML="0";
-	document.getElementById("team1_name2_hustle_info").innerHTML="0";
-	
-	document.getElementById("team2_name2").value="";
-	
-	//document.getElementById("team2_name2_attack_info").innerHTML="0";
-	//document.getElementById("team2_name2_point_info").innerHTML="0";
-	//document.getElementById("team2_name2_serve_info").innerHTML="0";
-	//document.getElementById("team2_name2_serve_s_info").innerHTML="0";
-	//document.getElementById("team2_name2_receive_info").innerHTML="0";
-	//document.getElementById("team2_name2_receive_s_info").innerHTML="0";
-	document.getElementById("team2_name2_toss_info").innerHTML="0";
-	//document.getElementById("team2_name2_toss_s_info").innerHTML="0";
-	document.getElementById("team2_name2_mistake_info").innerHTML="0";
-	document.getElementById("team2_name2_toss_success").innerHTML="0";
-	document.getElementById("team2_name2_hustle_info").innerHTML="0";
-	document.getElementById("team2_name2_toss_success").innerHTML="0";
-	document.getElementById("team2_name2_hustle_info").innerHTML="0";
-	
-	document.getElementById("team1_name3").value="";
-	
-	//document.getElementById("team1_name3_attack_info").innerHTML="0";
-	//document.getElementById("team1_name3_point_info").innerHTML="0";
-	document.getElementById("team1_name3_serve_info").innerHTML="0";
-	//document.getElementById("team1_name3_serve_s_info").innerHTML="0";
-	document.getElementById("team1_name3_receive_info").innerHTML="0";
-	//document.getElementById("team1_name3_receive_s_info").innerHTML="0";
-	//document.getElementById("team1_name3_toss_info").innerHTML="0";
-	//document.getElementById("team1_name3_toss_s_info").innerHTML="0";
-	document.getElementById("team1_name3_mistake_info").innerHTML="0";
-	document.getElementById("team1_name3_receive_success").innerHTML="0";
-	document.getElementById("team1_name3_hustle_info").innerHTML="0";
-	
-	
-	document.getElementById("team2_name3").value="";
-	
-	//document.getElementById("team2_name3_attack_info").innerHTML="0";
-	//document.getElementById("team2_name3_point_info").innerHTML="0";
-	document.getElementById("team2_name3_serve_info").innerHTML="0";
-	//document.getElementById("team2_name3_serve_s_info").innerHTML="0";
-	document.getElementById("team2_name3_receive_info").innerHTML="0";
-	//document.getElementById("team2_name3_receive_s_info").innerHTML="0";
-	//document.getElementById("team2_name3_toss_info").innerHTML="0";
-	//document.getElementById("team2_name3_toss_s_info").innerHTML="0";
-	document.getElementById("team2_name3_mistake_info").innerHTML="0";
-	document.getElementById("team2_name3_receive_success").innerHTML="0";
-	document.getElementById("team2_name3_hustle_info").innerHTML="0";
-	
-	document.getElementById("team1_name4").value="";
-	
-	//document.getElementById("team1_name4_attack_info").innerHTML="0";
-	//document.getElementById("team1_name4_point_info").innerHTML="0";
-	document.getElementById("team1_name4_serve_info").innerHTML="0";
-	//document.getElementById("team1_name4_serve_s_info").innerHTML="0";
-	document.getElementById("team1_name4_receive_info").innerHTML="0";
-	//document.getElementById("team1_name4_receive_s_info").innerHTML="0";
-	//document.getElementById("team1_name4_toss_info").innerHTML="0";
-	//document.getElementById("team1_name4_toss_s_info").innerHTML="0";
-	document.getElementById("team1_name4_mistake_info").innerHTML="0";
-	document.getElementById("team1_name4_receive_success").innerHTML="0";
-	document.getElementById("team1_name4_hustle_info").innerHTML="0";
-	
-	document.getElementById("team2_name4").value="";
-	
-	//document.getElementById("team2_name4_attack_info").innerHTML="0";
-	//document.getElementById("team2_name4_point_info").innerHTML="0";
-	document.getElementById("team2_name4_serve_info").innerHTML="0";
-	//document.getElementById("team2_name4_serve_s_info").innerHTML="0";
-	document.getElementById("team2_name4_receive_info").innerHTML="0";
-	//document.getElementById("team2_name4_receive_s_info").innerHTML="0";
-	//document.getElementById("team2_name4_toss_info").innerHTML="0";
-	//document.getElementById("team2_name4_toss_s_info").innerHTML="0";
-	document.getElementById("team2_name4_mistake_info").innerHTML="0";
-	document.getElementById("team2_name4_receive_success").innerHTML="0";
-	document.getElementById("team2_name4_hustle_info").innerHTML="0";
-	
-	document.getElementById("team1_name5").value="";
-	
-	//document.getElementById("team1_name5_attack_info").innerHTML="0";
-	//document.getElementById("team1_name5_point_info").innerHTML="0";
-	document.getElementById("team1_name5_serve_info").innerHTML="0";
-	//document.getElementById("team1_name5_serve_s_info").innerHTML="0";
-	document.getElementById("team1_name5_receive_info").innerHTML="0";
-	//document.getElementById("team1_name5_receive_s_info").innerHTML="0";
-	//document.getElementById("team1_name5_toss_info").innerHTML="0";
-	//document.getElementById("team1_name5_toss_s_info").innerHTML="0";
-	document.getElementById("team1_name5_mistake_info").innerHTML="0";
-	document.getElementById("team1_name5_receive_success").innerHTML="0";
-	document.getElementById("team1_name5_hustle_info").innerHTML="0";
-	
-	document.getElementById("team2_name5").value="";
-	
-	//document.getElementById("team2_name5_attack_info").innerHTML="0";
-	//document.getElementById("team2_name5_point_info").innerHTML="0";
-	document.getElementById("team2_name5_serve_info").innerHTML="0";
-	//document.getElementById("team2_name5_serve_s_info").innerHTML="0";
-	document.getElementById("team2_name5_receive_info").innerHTML="0";
-	//document.getElementById("team2_name5_receive_s_info").innerHTML="0";
-	//document.getElementById("team2_name5_toss_info").innerHTML="0";
-	//document.getElementById("team2_name5_toss_s_info").innerHTML="0";
-	document.getElementById("team2_name5_mistake_info").innerHTML="0";
-	document.getElementById("team2_name5_receive_success").innerHTML="0";
-	document.getElementById("team2_name5_hustle_info").innerHTML="0";
+        // How values should be represented in the output.
+        // The default render option is ValueRenderOption.FORMATTED_VALUE.
+        valueInputOption: 'RAW',  // TODO: Update placeholder value.
+		insertDataOption: 'INSERT_ROWS',
+		};
+		
+		var vals = new Array(1);
+		vals[0] = new Array(3);
+		vals[0][0] = '12/16/2018';
+		vals[0][1] = '추가';
+		vals[0][2] = '01028526450';
+		
+		var valueRangeBody = { "values": vals };
+		
+		var request = gapi.client.sheets.spreadsheets.values.append(params, valueRangeBody);
+		request.then(function(response) {
+        // TODO: Change code below to process the `response` object:
+			console.log(response.result);
+		}, function(reason) {
+			console.error('error: ' + reason.result.error.message);
+		});
+		
+	  }
+	  
+    }
 
-	
-	document.getElementById("team1_score_1").value = "";
-	document.getElementById("team1_score_2").value = "";
-	document.getElementById("team1_score_3").value = "";
-	
-	document.getElementById("team2_score_1").value = "";
-	document.getElementById("team2_score_2").value = "";
-	document.getElementById("team2_score_3").value = "";
-	
-}
+    function initClient() {
+      var API_KEY = 'AIzaSyAJS1XT7CdKK7tJFle5X-7SdCJ8dWF6gKI';  // TODO: Update placeholder with desired API key.
+      var CLIENT_ID = '509932299045-6b65od63inkfo8lq1b6v4gg8i9usjl2c.apps.googleusercontent.com';  // TODO: Update placeholder with desired client ID.
+      // TODO: Authorize using one of the following scopes:
+      //   'https://www.googleapis.com/auth/drive'
+      //   'https://www.googleapis.com/auth/drive.file'
+      //   'https://www.googleapis.com/auth/drive.readonly'
+      //   'https://www.googleapis.com/auth/spreadsheets'
+      //   'https://www.googleapis.com/auth/spreadsheets.readonly'
+      var SCOPE = 'https://www.googleapis.com/auth/spreadsheets';
 
-function capture()
-{
-	//html2canvas(document.querySelector("#chart_div")).then(canvas => {
-	//Canvas2Image.saveAsPNG(canvas)
-	//document.body.appendChild(canvas) 
+      gapi.client.init({
+        'apiKey': API_KEY,
+        'clientId': CLIENT_ID,
+        'scope': SCOPE,
+        'discoveryDocs': ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
+      }).then(function() {
+        gapi.auth2.getAuthInstance().isSignedIn.listen(updateSignInStatus);
+        updateSignInStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+      });
+    }
 
-	//});
-	
-	html2canvas(document.querySelector('#chart_div'), {
-	onrendered: function(canvas) {
-  // document.body.appendChild(canvas);
-		return Canvas2Image.saveAsPNG(canvas);
-	}
-	});
-	
-	
-  
-  
-}
+    function handleClientLoad() {
+      gapi.load('client:auth2', initClient);
+    }
 
-function selectEventTeam1(selectObj) 
-{
-	//alert(selectObj.value + "가 선택 되었습니다.");
-	
-	if(selectObj.value == "MJ")
-	{
-		document.getElementById("team1_name1").value="MJ";
-		document.getElementById("team1_name2").value="이도형";
-		document.getElementById("team1_name3").value="이용찬";
-		document.getElementById("team1_name4").value="박동훈";
-	}
-	else if(selectObj.value == "박민수")
-	{
-		document.getElementById("team1_name1").value="박민수";
-		document.getElementById("team1_name2").value="오용택";
-		document.getElementById("team1_name3").value="박종수";
-		document.getElementById("team1_name4").value="이지호";
-	}
-	else if(selectObj.value == "조은상")
-	{
-		document.getElementById("team1_name1").value="조은상";
-		document.getElementById("team1_name2").value="김민형";
-		document.getElementById("team1_name3").value="김민현";
-		document.getElementById("team1_name4").value="유의정";
-	}
-	else if(selectObj.value == "김낙원")
-	{
-		document.getElementById("team1_name1").value="김낙원";
-		document.getElementById("team1_name2").value="김태균";
-		document.getElementById("team1_name3").value="이임표";
-		document.getElementById("team1_name4").value="이현";
-	}
-	else if(selectObj.value == "박유준")
-	{
-		document.getElementById("team1_name1").value="박유준";
-		document.getElementById("team1_name2").value="조명희";
-		document.getElementById("team1_name3").value="유정우";
-		document.getElementById("team1_name4").value="김형규";
-	}
-	else if(selectObj.value == "김형준")
-	{
-		document.getElementById("team1_name1").value="김형준";
-		document.getElementById("team1_name2").value="박재영";
-		document.getElementById("team1_name3").value="김원규";
-		document.getElementById("team1_name4").value="이성찬";
-	}
-	else if(selectObj.value == "마경민")
-	{
-		document.getElementById("team1_name1").value="마경민";
-		document.getElementById("team1_name2").value="신상준";
-		document.getElementById("team1_name3").value="박정배";
-		document.getElementById("team1_name4").value="임근우";
-	}
-	else if(selectObj.value == "유혁준")
-	{
-		document.getElementById("team1_name1").value="유혁준";
-		document.getElementById("team1_name2").value="김사무엘";
-		document.getElementById("team1_name3").value="강현국";
-		document.getElementById("team1_name4").value="도진태";
-	}
-	else if(selectObj.value == "김두식")
-	{
-		document.getElementById("team1_name1").value="김두식";
-		document.getElementById("team1_name2").value="임성찬";
-		document.getElementById("team1_name3").value="이준창";
-		document.getElementById("team1_name4").value="서범종";
-	}
-	else if(selectObj.value == "장동현")
-	{
-		document.getElementById("team1_name1").value="장동현";
-		document.getElementById("team1_name2").value="이범희";
-		document.getElementById("team1_name3").value="문준석";
-		document.getElementById("team1_name4").value="황장훈";
-	}
-	else if(selectObj.value == "정규순")
-	{
-		document.getElementById("team1_name1").value="정규순";
-		document.getElementById("team1_name2").value="안은혁";
-		document.getElementById("team1_name3").value="권호연";
-		document.getElementById("team1_name4").value="강용구";
-	}
-	else if(selectObj.value == "장수동")
-	{
-		document.getElementById("team1_name1").value="장수동";
-		document.getElementById("team1_name2").value="최성필";
-		document.getElementById("team1_name3").value="허정석";
-		document.getElementById("team1_name4").value="정남석";
+    function updateSignInStatus(isSignedIn) {
+      if (isSignedIn) {
+        makeApiCall("read");
+      }
+    }
 
-	}
-	else if(selectObj.value == "장호선")
-	{
-		document.getElementById("team1_name1").value="장호선";
-		document.getElementById("team1_name2").value="임기천";
-		document.getElementById("team1_name3").value="이용주";
-		document.getElementById("team1_name4").value="이종욱";
+    function handleSignInClick(event) {
+      gapi.auth2.getAuthInstance().signIn();
+    }
 
+    function handleSignOutClick(event) {
+      gapi.auth2.getAuthInstance().signOut();
+    }
+	
+	function handleUpdateClick(event){
+		if (gapi.auth2.getAuthInstance().isSignedIn.get()) {
+        makeApiCall("update");
+      }
+		
 	}
 	
+	function handleApendClick(event){
+		if (gapi.auth2.getAuthInstance().isSignedIn.get()) {
+        makeApiCall("append");
+      }
+		
+	}
 	
+	function populateSheet(result) {
 	
-}
+		var my_tbody = document.getElementById('my-tbody');
+		
+		while(my_tbody.rows.length > 0)
+		{
+			my_tbody.deleteRow( my_tbody.rows.length-1 ); // 하단부터 삭제
+		}
+		
+		var row = my_tbody.insertRow(0); // 상단에 추가		
+		var cell0 = row.insertCell(0);
+		var cell1 = row.insertCell(1);
+		var cell2 = row.insertCell(2);
+	
+		cell0.innerHTML = result.values[0][0];
+		cell1.innerHTML = result.values[0][1];
+		cell2.innerHTML = result.values[0][2];
+		
+		row = my_tbody.insertRow(my_tbody.rows.length); // 상단에 추가		
+		cell0 = row.insertCell(0);
+		cell1 = row.insertCell(1);
+		cell2 = row.insertCell(2);
+	
+		cell0.innerHTML = result.values[1][0];
+		cell1.innerHTML = result.values[1][1];
+		cell2.innerHTML = result.values[1][2];
+		
+		row = my_tbody.insertRow(my_tbody.rows.length); // 상단에 추가		
+		cell0 = row.insertCell(0);
+		cell1 = row.insertCell(1);
+		cell2 = row.insertCell(2);
+	
+		cell0.innerHTML = result.values[2][0];
+		cell1.innerHTML = result.values[2][1];
+		cell2.innerHTML = result.values[2][2];
+	
+	}
+	
+	// 족구 기존 기록 작업
+	//팀1플레이어1
+	function team1_name1_attack()
+	{
+		var div = document.getElementById("team1_name1_attack_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name1_attack_info").innerHTML = String(div);
+	} 
+	function team1_name1_point()
+	{
+		var div = document.getElementById("team1_name1_point_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name1_point_info").innerHTML = String(div);
+	} 
+	function team1_name1_mistake()
+	{
+		var div = document.getElementById("team1_name1_mistake_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name1_mistake_info").innerHTML = String(div);
+	} 
+	function team1_name1_receive()
+	{
+		var div = document.getElementById("team1_name1_receive_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name1_receive_info").innerHTML = String(div);
+	} 
+	function team1_name1_receive_s()
+	{
+		var div = document.getElementById("team1_name1_receive_s_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name1_receive_s_info").innerHTML = String(div);
+	} 
+	function team1_name1_toss()
+	{
+		var div = document.getElementById("team1_name1_toss_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name1_toss_info").innerHTML = String(div);
+	} 
+	function team1_name1_toss_s()
+	{
+		var div = document.getElementById("team1_name1_toss_s_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name1_toss_s_info").innerHTML = String(div);
+	} 
+	function team1_name1_serve()
+	{
+		var div = document.getElementById("team1_name1_serve_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name1_serve_info").innerHTML = String(div);
+	} 
+	function team1_name1_serve_s()
+	{
+		var div = document.getElementById("team1_name1_serve_s_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name1_serve_s_info").innerHTML = String(div);
+	} 
+
+	// 팀1플레이어2
+	function team1_name2_attack()
+	{
+		var div = document.getElementById("team1_name2_attack_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name2_attack_info").innerHTML = String(div);
+	} 
+	function team1_name2_point()
+	{
+		var div = document.getElementById("team1_name2_point_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name2_point_info").innerHTML = String(div);
+	} 
+	function team1_name2_mistake()
+	{
+		var div = document.getElementById("team1_name2_mistake_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name2_mistake_info").innerHTML = String(div);
+	} 
+	function team1_name2_receive()
+	{
+		var div = document.getElementById("team1_name2_receive_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name2_receive_info").innerHTML = String(div);
+	} 
+	function team1_name2_receive_s()
+	{
+		var div = document.getElementById("team1_name2_receive_s_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name2_receive_s_info").innerHTML = String(div);
+	} 
+	function team1_name2_toss()
+	{
+		var div = document.getElementById("team1_name2_toss_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name2_toss_info").innerHTML = String(div);
+	} 
+	function team1_name2_toss_s()
+	{
+		var div = document.getElementById("team1_name2_toss_s_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name2_toss_s_info").innerHTML = String(div);
+	} 
+	function team1_name2_serve()
+	{
+		var div = document.getElementById("team1_name2_serve_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name2_serve_info").innerHTML = String(div);
+	} 
+	function team1_name2_serve_s()
+	{
+		var div = document.getElementById("team1_name2_serve_s_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name2_serve_s_info").innerHTML = String(div);
+	} 
+
+	function team1_name2_toss_success()
+	{	
+		var div = document.getElementById("team1_name2_toss_success").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name2_toss_success").innerHTML = String(div);
+	}
+
+	// 팀1플레이어3
+	function team1_name3_attack()
+	{
+		var div = document.getElementById("team1_name3_attack_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name3_attack_info").innerHTML = String(div);
+	} 
+	function team1_name3_point()
+	{
+		var div = document.getElementById("team1_name3_point_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name3_point_info").innerHTML = String(div);
+	} 
+	function team1_name3_mistake()
+	{
+		var div = document.getElementById("team1_name3_mistake_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name3_mistake_info").innerHTML = String(div);
+	} 
+	function team1_name3_receive()
+	{
+		var div = document.getElementById("team1_name3_receive_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name3_receive_info").innerHTML = String(div);
+	} 
+	function team1_name3_receive_s()
+	{
+		var div = document.getElementById("team1_name3_receive_s_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name3_receive_s_info").innerHTML = String(div);
+	} 
+	function team1_name3_toss()
+	{
+		var div = document.getElementById("team1_name3_toss_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name3_toss_info").innerHTML = String(div);
+	} 
+	function team1_name3_toss_s()
+	{
+		var div = document.getElementById("team1_name3_toss_s_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name3_toss_s_info").innerHTML = String(div);
+	} 
+	function team1_name3_serve()
+	{
+		var div = document.getElementById("team1_name3_serve_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name3_serve_info").innerHTML = String(div);
+	} 
+	function team1_name3_serve_s()
+	{
+		var div = document.getElementById("team1_name3_serve_s_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name3_serve_s_info").innerHTML = String(div);
+	} 
+
+	function team1_name3_receive_success()
+	{
+		var div = document.getElementById("team1_name3_receive_success").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name3_receive_success").innerHTML = String(div);
+	}
+
+	// 팀1플레이어4
+	function team1_name4_attack()
+	{
+		var div = document.getElementById("team1_name4_attack_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name4_attack_info").innerHTML = String(div);
+	} 
+	function team1_name4_point()
+	{
+		var div = document.getElementById("team1_name4_point_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name4_point_info").innerHTML = String(div);
+	} 
+	function team1_name4_mistake()
+	{
+		var div = document.getElementById("team1_name4_mistake_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name4_mistake_info").innerHTML = String(div);
+	} 
+	function team1_name4_receive()
+	{
+		var div = document.getElementById("team1_name4_receive_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name4_receive_info").innerHTML = String(div);
+	} 
+	function team1_name4_receive_s()
+	{
+		var div = document.getElementById("team1_name4_receive_s_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name4_receive_s_info").innerHTML = String(div);
+	} 
+	function team1_name4_toss()
+	{
+		var div = document.getElementById("team1_name4_toss_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name4_toss_info").innerHTML = String(div);
+	} 
+	function team1_name4_toss_s()
+	{
+		var div = document.getElementById("team1_name4_toss_s_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name4_toss_s_info").innerHTML = String(div);
+	} 
+	function team1_name4_serve()
+	{
+		var div = document.getElementById("team1_name4_serve_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name4_serve_info").innerHTML = String(div);
+	} 
+	function team1_name4_serve_s()
+	{
+		var div = document.getElementById("team1_name4_serve_s_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name4_serve_s_info").innerHTML = String(div);
+	} 
+
+	function team1_name4_receive_success()
+	{
+		var div = document.getElementById("team1_name4_receive_success").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name4_receive_success").innerHTML = String(div);
+	}
+
+	// 팀1플레이어4
+	function team1_name5_attack()
+	{
+		var div = document.getElementById("team1_name5_attack_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name5_attack_info").innerHTML = String(div);
+	} 
+	function team1_name5_point()
+	{
+		var div = document.getElementById("team1_name5_point_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name5_point_info").innerHTML = String(div);
+	} 
+	function team1_name5_mistake()
+	{
+		var div = document.getElementById("team1_name5_mistake_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name5_mistake_info").innerHTML = String(div);
+	} 
+	function team1_name5_receive()
+	{
+		var div = document.getElementById("team1_name5_receive_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name5_receive_info").innerHTML = String(div);
+	} 
+	function team1_name5_receive_s()
+	{
+		var div = document.getElementById("team1_name5_receive_s_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name5_receive_s_info").innerHTML = String(div);
+	} 
+	function team1_name5_toss()
+	{
+		var div = document.getElementById("team1_name5_toss_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name5_toss_info").innerHTML = String(div);
+	} 
+	function team1_name5_toss_s()
+	{
+		var div = document.getElementById("team1_name5_toss_s_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name5_toss_s_info").innerHTML = String(div);
+	} 
+	function team1_name5_serve()
+	{
+		var div = document.getElementById("team1_name5_serve_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name5_serve_info").innerHTML = String(div);
+	} 
+	function team1_name5_serve_s()
+	{
+		var div = document.getElementById("team1_name5_serve_s_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name5_serve_s_info").innerHTML = String(div);
+	} 
+
+	function team1_name5_receive_success()
+	{
+		var div = document.getElementById("team1_name5_receive_success").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name5_receive_success").innerHTML = String(div);
+	}
+
+	//팀2플레이어1
+	function team2_name1_attack()
+	{
+		var div = document.getElementById("team2_name1_attack_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name1_attack_info").innerHTML = String(div);
+	} 
+	function team2_name1_point()
+	{
+		var div = document.getElementById("team2_name1_point_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name1_point_info").innerHTML = String(div);
+	} 
+	function team2_name1_mistake()
+	{
+		var div = document.getElementById("team2_name1_mistake_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name1_mistake_info").innerHTML = String(div);
+	} 
+	function team2_name1_receive()
+	{
+		var div = document.getElementById("team2_name1_receive_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name1_receive_info").innerHTML = String(div);
+	} 
+	function team2_name1_receive_s()
+	{
+		var div = document.getElementById("team2_name1_receive_s_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name1_receive_s_info").innerHTML = String(div);
+	} 
+	function team2_name1_toss()
+	{
+		var div = document.getElementById("team2_name1_toss_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name1_toss_info").innerHTML = String(div);
+	} 
+	function team2_name1_toss_s()
+	{
+		var div = document.getElementById("team2_name1_toss_s_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name1_toss_s_info").innerHTML = String(div);
+	} 
+	function team2_name1_serve()
+	{
+		var div = document.getElementById("team2_name1_serve_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name1_serve_info").innerHTML = String(div);
+	} 
+	function team2_name1_serve_s()
+	{
+		var div = document.getElementById("team2_name1_serve_s_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name1_serve_s_info").innerHTML = String(div);
+	} 
+
+	// 팀2플레이어2
+	function team2_name2_attack()
+	{
+		var div = document.getElementById("team2_name2_attack_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name2_attack_info").innerHTML = String(div);
+	} 
+	function team2_name2_point()
+	{
+		var div = document.getElementById("team2_name2_point_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name2_point_info").innerHTML = String(div);
+	} 
+	function team2_name2_mistake()
+	{
+		var div = document.getElementById("team2_name2_mistake_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name2_mistake_info").innerHTML = String(div);
+	} 
+	function team2_name2_receive()
+	{
+		var div = document.getElementById("team2_name2_receive_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name2_receive_info").innerHTML = String(div);
+	} 
+	function team2_name2_receive_s()
+	{
+		var div = document.getElementById("team2_name2_receive_s_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name2_receive_s_info").innerHTML = String(div);
+	} 
+	function team2_name2_toss()
+	{
+		var div = document.getElementById("team2_name2_toss_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name2_toss_info").innerHTML = String(div);
+	} 
+	function team2_name2_toss_s()
+	{
+		var div = document.getElementById("team2_name2_toss_s_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name2_toss_s_info").innerHTML = String(div);
+	} 
+	function team2_name2_serve()
+	{
+		var div = document.getElementById("team2_name2_serve_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name2_serve_info").innerHTML = String(div);
+	} 
+	function team2_name2_serve_s()
+	{
+		var div = document.getElementById("team2_name2_serve_s_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name2_serve_s_info").innerHTML = String(div);
+	}
+
+	function team2_name2_toss_success()
+	{	
+		var div = document.getElementById("team2_name2_toss_success").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name2_toss_success").innerHTML = String(div);
+	} 
+
+	// 팀2플레이어3
+	function team2_name3_attack()
+	{
+		var div = document.getElementById("team2_name3_attack_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name3_attack_info").innerHTML = String(div);
+	} 
+	function team2_name3_point()
+	{
+		var div = document.getElementById("team2_name3_point_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name3_point_info").innerHTML = String(div);
+	} 
+	function team2_name3_mistake()
+	{
+		var div = document.getElementById("team2_name3_mistake_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name3_mistake_info").innerHTML = String(div);
+	} 
+	function team2_name3_receive()
+	{
+		var div = document.getElementById("team2_name3_receive_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name3_receive_info").innerHTML = String(div);
+	} 
+	function team2_name3_receive_s()
+	{
+		var div = document.getElementById("team2_name3_receive_s_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name3_receive_s_info").innerHTML = String(div);
+	} 
+	function team2_name3_toss()
+	{
+		var div = document.getElementById("team2_name3_toss_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name3_toss_info").innerHTML = String(div);
+	} 
+	function team2_name3_toss_s()
+	{
+		var div = document.getElementById("team2_name3_toss_s_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name3_toss_s_info").innerHTML = String(div);
+	} 
+	function team2_name3_serve()
+	{
+		var div = document.getElementById("team2_name3_serve_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name3_serve_info").innerHTML = String(div);
+	} 
+	function team2_name3_serve_s()
+	{
+		var div = document.getElementById("team2_name3_serve_s_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name3_serve_s_info").innerHTML = String(div);
+	} 
+
+	function team2_name3_receive_success()
+	{
+		var div = document.getElementById("team2_name3_receive_success").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name3_receive_success").innerHTML = String(div);
+	}
+
+	// 팀2플레이어4
+	function team2_name4_attack()
+	{
+		var div = document.getElementById("team2_name4_attack_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name4_attack_info").innerHTML = String(div);
+	} 
+	function team2_name4_point()
+	{
+		var div = document.getElementById("team2_name4_point_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name4_point_info").innerHTML = String(div);
+	} 
+	function team2_name4_mistake()
+	{
+		var div = document.getElementById("team2_name4_mistake_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name4_mistake_info").innerHTML = String(div);
+	} 
+	function team2_name4_receive()
+	{
+		var div = document.getElementById("team2_name4_receive_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name4_receive_info").innerHTML = String(div);
+	} 
+	function team2_name4_receive_s()
+	{
+		var div = document.getElementById("team2_name4_receive_s_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name4_receive_s_info").innerHTML = String(div);
+	} 
+	function team2_name4_toss()
+	{
+		var div = document.getElementById("team2_name4_toss_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name4_toss_info").innerHTML = String(div);
+	} 
+	function team2_name4_toss_s()
+	{
+		var div = document.getElementById("team2_name4_toss_s_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name4_toss_s_info").innerHTML = String(div);
+	} 
+	function team2_name4_serve()
+	{
+		var div = document.getElementById("team2_name4_serve_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name4_serve_info").innerHTML = String(div);
+	} 
+	function team2_name4_serve_s()
+	{
+		var div = document.getElementById("team2_name4_serve_s_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name4_serve_s_info").innerHTML = String(div);
+	} 
+
+	function team2_name4_receive_success()
+	{
+		var div = document.getElementById("team2_name4_receive_success").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name4_receive_success").innerHTML = String(div);
+	}
+
+	// 팀2플레이어4
+	function team2_name5_attack()
+	{
+		var div = document.getElementById("team2_name5_attack_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name5_attack_info").innerHTML = String(div);
+	} 
+	function team2_name5_point()
+	{
+		var div = document.getElementById("team2_name5_point_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name5_point_info").innerHTML = String(div);
+	} 
+	function team2_name5_mistake()
+	{
+		var div = document.getElementById("team2_name5_mistake_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name5_mistake_info").innerHTML = String(div);
+	} 
+	function team2_name5_receive()
+	{
+		var div = document.getElementById("team2_name5_receive_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name5_receive_info").innerHTML = String(div);
+	} 
+	function team2_name5_receive_s()
+	{
+		var div = document.getElementById("team2_name5_receive_s_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name5_receive_s_info").innerHTML = String(div);
+	} 
+	function team2_name5_toss()
+	{
+		var div = document.getElementById("team2_name5_toss_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name5_toss_info").innerHTML = String(div);
+	} 
+	function team2_name5_toss_s()
+	{
+		var div = document.getElementById("team2_name5_toss_s_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name5_toss_s_info").innerHTML = String(div);
+	} 
+	function team2_name5_serve()
+	{
+		var div = document.getElementById("team2_name5_serve_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name5_serve_info").innerHTML = String(div);
+	} 
+	function team2_name5_serve_s()
+	{
+		var div = document.getElementById("team2_name5_serve_s_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name5_serve_s_info").innerHTML = String(div);
+	} 
+
+	function team2_name5_receive_success()
+	{
+		var div = document.getElementById("team2_name5_receive_success").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name5_receive_success").innerHTML = String(div);
+	}
+
+	function team1_name1_hustle()
+	{
+		var div = document.getElementById("team1_name1_hustle_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name1_hustle_info").innerHTML = String(div);
+	}
+
+	function team2_name1_hustle()
+	{
+		var div = document.getElementById("team2_name1_hustle_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name1_hustle_info").innerHTML = String(div);
+	}
+
+	function team1_name2_hustle()
+	{
+		var div = document.getElementById("team1_name2_hustle_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name2_hustle_info").innerHTML = String(div);
+	}
+
+	function team2_name2_hustle()
+	{
+		var div = document.getElementById("team2_name2_hustle_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name2_hustle_info").innerHTML = String(div);
+	}
+
+
+	function team1_name3_hustle()
+	{
+		var div = document.getElementById("team1_name3_hustle_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name3_hustle_info").innerHTML = String(div);
+	}
+
+	function team2_name3_hustle()
+	{
+		var div = document.getElementById("team2_name3_hustle_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name3_hustle_info").innerHTML = String(div);
+	}
+
+
+	function team1_name4_hustle()
+	{
+		var div = document.getElementById("team1_name4_hustle_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name4_hustle_info").innerHTML = String(div);
+	}
+
+	function team2_name4_hustle()
+	{
+		var div = document.getElementById("team2_name4_hustle_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name4_hustle_info").innerHTML = String(div);
+	}
+
+	function team1_name5_hustle()
+	{
+		var div = document.getElementById("team1_name5_hustle_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team1_name5_hustle_info").innerHTML = String(div);
+	}
+
+	function team2_name5_hustle()
+	{
+		var div = document.getElementById("team2_name5_hustle_info").innerHTML;  
+		div = Number(div);
+		div+=1;
+		document.getElementById("team2_name5_hustle_info").innerHTML = String(div);
+	}
+
+
+
+	function save()
+	{
+		var var_game = document.getElementById("game").value;
+		
+		
+		var e1 = document.getElementById("team1");
+		var var_team1 = e1.options[e1.selectedIndex].value;
+		
+		var e2 = document.getElementById("team2");
+		var var_team2 = e2.options[e2.selectedIndex].value;
+
+		//var var_team1 = document.getElementById("team1").value; 
+		//var var_team2 = document.getElementById("team2").value; 
+		
+		var var_team1_score_1 = document.getElementById("team1_score_1").value + "vs" + document.getElementById("team2_score_1").value; 
+		var var_team1_score_2 = document.getElementById("team1_score_2").value + "vs" + document.getElementById("team2_score_2").value;  
+		var var_team1_score_3 = document.getElementById("team1_score_3").value + "vs" + document.getElementById("team2_score_3").value;  
+
+		//var var_team2_score_1 = document.getElementById("team2_score_1").value; 
+		//var var_team2_score_2 = document.getElementById("team2_score_2").value; 
+		//var var_team2_score_3 = document.getElementById("team2_score_3").value; 
+		
+		
+		// 1팀 1플레이어
+		var var_team1_name1 = document.getElementById("team1_name1").value;
+		var var_team1_name1_attack_info = document.getElementById("team1_name1_attack_info").innerHTML;
+		var var_team1_name1_point_info= document.getElementById("team1_name1_point_info").innerHTML;
+		var var_team1_name1_serve_info= "";// document.getElementById("team1_name1_serve_info").innerHTML;
+		var var_team1_name1_serve_s_info= "";//document.getElementById("team1_name1_serve_s_info").innerHTML;
+		var var_team1_name1_receive_info= "";//document.getElementById("team1_name1_receive_info").innerHTML;
+		var var_team1_name1_receive_s_info= "";//document.getElementById("team1_name1_receive_s_info").innerHTML;
+		var var_team1_name1_toss_info= "";//document.getElementById("team1_name1_toss_info").innerHTML;
+		var var_team1_name1_toss_s_info= "";//document.getElementById("team1_name1_toss_s_info").innerHTML;
+		var var_team1_name1_mistake_info= document.getElementById("team1_name1_mistake_info").innerHTML;
+		var var_team1_name1_hustle_info= document.getElementById("team1_name1_hustle_info").innerHTML;
+		
+		
+		var var_team2_name1 = document.getElementById("team2_name1").value;
+		var var_team2_name1_attack_info = document.getElementById("team2_name1_attack_info").innerHTML;
+		var var_team2_name1_point_info= document.getElementById("team2_name1_point_info").innerHTML;
+		var var_team2_name1_serve_info= "";//document.getElementById("team2_name1_serve_info").innerHTML;
+		var var_team2_name1_serve_s_info= "";//document.getElementById("team2_name1_serve_s_info").innerHTML;
+		var var_team2_name1_receive_info= "";//document.getElementById("team2_name1_receive_info").innerHTML;
+		var var_team2_name1_receive_s_info= "";//document.getElementById("team2_name1_receive_s_info").innerHTML;
+		var var_team2_name1_toss_info= "";//document.getElementById("team2_name1_toss_info").innerHTML;
+		var var_team2_name1_toss_s_info= "";//document.getElementById("team2_name1_toss_s_info").innerHTML;
+		var var_team2_name1_mistake_info= document.getElementById("team2_name1_mistake_info").innerHTML;
+		var var_team2_name1_hustle_info= document.getElementById("team2_name1_hustle_info").innerHTML;
+		
+		// 2플레이어
+		var var_team1_name2 = document.getElementById("team1_name2").value;
+		var var_team1_name2_attack_info = "";//document.getElementById("team1_name2_attack_info").innerHTML;
+		var var_team1_name2_point_info= "";//document.getElementById("team1_name2_point_info").innerHTML;
+		var var_team1_name2_serve_info= "";//document.getElementById("team1_name2_serve_info").innerHTML;
+		var var_team1_name2_serve_s_info= "";//document.getElementById("team1_name2_serve_s_info").innerHTML;
+		var var_team1_name2_receive_info= "";//document.getElementById("team1_name2_receive_info").innerHTML;
+		var var_team1_name2_receive_s_info= "";//document.getElementById("team1_name2_receive_s_info").innerHTML;
+		var var_team1_name2_toss_info= document.getElementById("team1_name2_toss_info").innerHTML;
+		var var_team1_name2_toss_s_info= document.getElementById("team1_name2_toss_success").innerHTML;
+		var var_team1_name2_mistake_info= document.getElementById("team1_name2_mistake_info").innerHTML;
+		var var_team1_name2_hustle_info= document.getElementById("team1_name2_hustle_info").innerHTML;
+		
+		var var_team2_name2 = document.getElementById("team2_name2").value;
+		var var_team2_name2_attack_info = "";//document.getElementById("team2_name2_attack_info").innerHTML;
+		var var_team2_name2_point_info= "";//document.getElementById("team2_name2_point_info").innerHTML;
+		var var_team2_name2_serve_info= "";//document.getElementById("team2_name2_serve_info").innerHTML;
+		var var_team2_name2_serve_s_info= "";//document.getElementById("team2_name2_serve_s_info").innerHTML;
+		var var_team2_name2_receive_info= "";//document.getElementById("team2_name2_receive_info").innerHTML;
+		var var_team2_name2_receive_s_info= "";//document.getElementById("team2_name2_receive_s_info").innerHTML;
+		var var_team2_name2_toss_info= document.getElementById("team2_name2_toss_info").innerHTML;
+		var var_team2_name2_toss_s_info= document.getElementById("team2_name2_toss_success").innerHTML;
+		var var_team2_name2_mistake_info= document.getElementById("team2_name2_mistake_info").innerHTML;
+		var var_team2_name2_hustle_info= document.getElementById("team2_name2_hustle_info").innerHTML;
 			
+		// 3플레이어
+		var var_team1_name3 = document.getElementById("team1_name3").value;
+		var var_team1_name3_attack_info = "";//document.getElementById("team1_name3_attack_info").innerHTML;
+		var var_team1_name3_point_info= "";//document.getElementById("team1_name3_point_info").innerHTML;
+		var var_team1_name3_serve_info= document.getElementById("team1_name3_serve_info").innerHTML;
+		var var_team1_name3_serve_s_info= "";//document.getElementById("team1_name3_serve_s_info").innerHTML;
+		var var_team1_name3_receive_info= document.getElementById("team1_name3_receive_info").innerHTML;
+		var var_team1_name3_receive_s_info= document.getElementById("team1_name3_receive_success").innerHTML;
+		var var_team1_name3_toss_info= "";//document.getElementById("team1_name3_toss_info").innerHTML;
+		var var_team1_name3_toss_s_info= "";//document.getElementById("team1_name3_toss_s_info").innerHTML;
+		var var_team1_name3_mistake_info= document.getElementById("team1_name3_mistake_info").innerHTML;
+		var var_team1_name3_hustle_info= document.getElementById("team1_name3_hustle_info").innerHTML;
 		
-function selectEventTeam2(selectObj) 
-{
-	//alert(selectObj.value + "가 선택 되었습니다.");
+		var var_team2_name3 = document.getElementById("team2_name3").value;
+		var var_team2_name3_attack_info = "";//document.getElementById("team2_name3_attack_info").innerHTML;
+		var var_team2_name3_point_info= "";//document.getElementById("team2_name3_point_info").innerHTML;
+		var var_team2_name3_serve_info= document.getElementById("team2_name3_serve_info").innerHTML;
+		var var_team2_name3_serve_s_info= "";//document.getElementById("team2_name3_serve_s_info").innerHTML;
+		var var_team2_name3_receive_info= document.getElementById("team2_name3_receive_info").innerHTML;
+		var var_team2_name3_receive_s_info= document.getElementById("team2_name3_receive_success").innerHTML;
+		var var_team2_name3_toss_info= "";//document.getElementById("team2_name3_toss_info").innerHTML;
+		var var_team2_name3_toss_s_info= "";//document.getElementById("team2_name3_toss_s_info").innerHTML;
+		var var_team2_name3_mistake_info= document.getElementById("team2_name3_mistake_info").innerHTML;
+		var var_team2_name3_hustle_info= document.getElementById("team2_name3_hustle_info").innerHTML;
+			
+		// 4플레이어
+		var var_team1_name4 = document.getElementById("team1_name4").value;
+		var var_team1_name4_attack_info = "";//document.getElementById("team1_name4_attack_info").innerHTML;
+		var var_team1_name4_point_info= "";//document.getElementById("team1_name4_point_info").innerHTML;
+		var var_team1_name4_serve_info= document.getElementById("team1_name4_serve_info").innerHTML;
+		var var_team1_name4_serve_s_info= "";//document.getElementById("team1_name4_serve_s_info").innerHTML;
+		var var_team1_name4_receive_info= document.getElementById("team1_name4_receive_info").innerHTML;
+		var var_team1_name4_receive_s_info= document.getElementById("team1_name4_receive_success").innerHTML;
+		var var_team1_name4_toss_info= "";//document.getElementById("team1_name4_toss_info").innerHTML;
+		var var_team1_name4_toss_s_info= "";//document.getElementById("team1_name4_toss_s_info").innerHTML;
+		var var_team1_name4_mistake_info= document.getElementById("team1_name4_mistake_info").innerHTML;
+		var var_team1_name4_hustle_info= document.getElementById("team1_name4_hustle_info").innerHTML;
+		
+		var var_team2_name4 = document.getElementById("team2_name4").value;
+		var var_team2_name4_attack_info = "";//document.getElementById("team2_name4_attack_info").innerHTML;
+		var var_team2_name4_point_info= "";//document.getElementById("team2_name4_point_info").innerHTML;
+		var var_team2_name4_serve_info= document.getElementById("team2_name4_serve_info").innerHTML;
+		var var_team2_name4_serve_s_info= "";//document.getElementById("team2_name4_serve_s_info").innerHTML;
+		var var_team2_name4_receive_info= document.getElementById("team2_name4_receive_info").innerHTML;
+		var var_team2_name4_receive_s_info= document.getElementById("team2_name4_receive_success").innerHTML;
+		var var_team2_name4_toss_info= "";//document.getElementById("team2_name4_toss_info").innerHTML;
+		var var_team2_name4_toss_s_info= "";//document.getElementById("team2_name4_toss_s_info").innerHTML;
+		var var_team2_name4_mistake_info= document.getElementById("team2_name4_mistake_info").innerHTML;
+		var var_team2_name4_hustle_info= document.getElementById("team2_name4_hustle_info").innerHTML;
+		
+		// 5플레이어
+		
+		var var_team1_name5 = document.getElementById("team1_name5").value;
+		
+		if(var_team1_name5 != "")
+		{
+		
+			var var_team1_name5_attack_info = "";//document.getElementById("team1_name5_attack_info").innerHTML;
+			var var_team1_name5_point_info= "";//document.getElementById("team1_name5_point_info").innerHTML;
+			var var_team1_name5_serve_info= document.getElementById("team1_name5_serve_info").innerHTML;
+			var var_team1_name5_serve_s_info= "";//document.getElementById("team1_name5_serve_s_info").innerHTML;
+			var var_team1_name5_receive_info= document.getElementById("team1_name5_receive_info").innerHTML;
+			var var_team1_name5_receive_s_info= document.getElementById("team1_name5_receive_success").innerHTML;
+			var var_team1_name5_toss_info= "";//document.getElementById("team1_name5_toss_info").innerHTML;
+			var var_team1_name5_toss_s_info= "";//document.getElementById("team1_name5_toss_s_info").innerHTML;
+			var var_team1_name5_mistake_info= document.getElementById("team1_name5_mistake_info").innerHTML;
+			var var_team1_name5_hustle_info= document.getElementById("team1_name5_hustle_info").innerHTML;
+		}	
+		
+		var var_team2_name5 = document.getElementById("team2_name5").value;
+		
+		if(var_team2_name5 != "")
+		{
+			var var_team2_name5_attack_info = "";//document.getElementById("team2_name5_attack_info").innerHTML;
+			var var_team2_name5_point_info= "";//document.getElementById("team2_name5_point_info").innerHTML;
+			var var_team2_name5_serve_info= document.getElementById("team2_name5_serve_info").innerHTML;
+			var var_team2_name5_serve_s_info= "";//document.getElementById("team2_name5_serve_s_info").innerHTML;
+			var var_team2_name5_receive_info= document.getElementById("team2_name5_receive_info").innerHTML;
+			var var_team2_name5_receive_s_info= document.getElementById("team2_name5_receive_success").innerHTML;
+			var var_team2_name5_toss_info= "";//document.getElementById("team2_name5_toss_info").innerHTML;
+			var var_team2_name5_toss_s_info= "";//document.getElementById("team2_name5_toss_s_info").innerHTML;
+			var var_team2_name5_mistake_info= document.getElementById("team2_name5_mistake_info").innerHTML;
+			var var_team2_name5_hustle_info= document.getElementById("team2_name5_hustle_info").innerHTML;
+		}
+		//data: {팀1선수:var_team1_name1, 팀1공격시도:var_team1_name1_attack_info, 팀1득점:var_team1_name1_point_info,
+			//			팀1토스시도:var_team1_name1_toss_info, 팀1토스성공:var_team1_name1_toss_s_info,
+			//			팀1서브시도:var_team1_name1_serve_info, 팀1서브성공:var_team1_name1_toss_s_info,
+			//			팀1리시브시도:var_team1_name1_receive_info, 팀1리시브성공:var_team1_name1_receive_s_info,},
+		
+		/*
+	$.ajax({
+
+	  url: "https://script.google.com/a/game.hoseo.edu/macros/s/1lTJ_2q4plPWb0CtnLBX-0B8gU5vhND6GSMZtjP2DDw0/exec",
+	  data: {팀1이름:var_team1, 팀1선수:var_team1_name5, 팀1공격시도:var_team1_name5_attack_info, 팀1득점:var_team1_name5_point_info,
+						팀1토스시도:var_team1_name5_toss_info, 팀1토스성공:var_team1_name5_toss_s_info,
+						팀1서브시도:var_team1_name5_serve_info, 팀1서브성공:var_team1_name5_toss_s_info,
+						팀1리시브시도:var_team1_name5_receive_info, 팀1리시브성공:var_team1_name5_receive_s_info, 팀1허슬:var_team1_name5_hustle_info, 팀1범실:var_team1_name5_mistake_info, 
+						
+			팀2이름:var_team2, 팀2선수:var_team2_name5, 팀2공격시도:var_team2_name5_attack_info, 팀2득점:var_team2_name5_point_info,
+						팀2토스시도:var_team2_name5_toss_info, 팀2토스성공:var_team2_name5_toss_s_info,
+						팀2서브시도:var_team2_name5_serve_info, 팀2서브성공:var_team2_name5_toss_s_info,
+						팀2리시브시도:var_team2_name5_receive_info, 팀2리시브성공:var_team2_name5_receive_s_info, 팀2허슬:var_team2_name5_hustle_info, 팀2범실:var_team2_name5_mistake_info
+						},
+	  type: "POST"
+	  
+	});
+		
+	$.ajax({
+
+	  url: "https://script.google.com/a/game.hoseo.edu/macros/s/1lTJ_2q4plPWb0CtnLBX-0B8gU5vhND6GSMZtjP2DDw0/exec",
+	  data: {팀1이름:var_team1, 팀1선수:var_team1_name4, 팀1공격시도:var_team1_name4_attack_info, 팀1득점:var_team1_name4_point_info,
+						팀1토스시도:var_team1_name4_toss_info, 팀1토스성공:var_team1_name4_toss_s_info,
+						팀1서브시도:var_team1_name4_serve_info, 팀1서브성공:var_team1_name4_toss_s_info,
+						팀1리시브시도:var_team1_name4_receive_info, 팀1리시브성공:var_team1_name4_receive_s_info, 팀1허슬:var_team1_name4_hustle_info, 팀1범실:var_team1_name4_mistake_info,
+						
+			팀2이름:var_team2, 팀2선수:var_team2_name4, 팀2공격시도:var_team2_name4_attack_info, 팀2득점:var_team2_name4_point_info,
+						팀2토스시도:var_team2_name4_toss_info, 팀2토스성공:var_team2_name4_toss_s_info,
+						팀2서브시도:var_team2_name4_serve_info, 팀2서브성공:var_team2_name4_toss_s_info,
+						팀2리시브시도:var_team2_name4_receive_info, 팀2리시브성공:var_team2_name4_receive_s_info, 팀2허슬:var_team1_name4_hustle_info, 팀2범실:var_team2_name4_mistake_info
+						},
+	  type: "POST"
+	  
+	});
+
+	$.ajax({
+
+	  url: "https://script.google.com/a/game.hoseo.edu/macros/s/1lTJ_2q4plPWb0CtnLBX-0B8gU5vhND6GSMZtjP2DDw0/exec",
+	  data: {팀1이름:var_team1, 팀1선수:var_team1_name3, 팀1공격시도:var_team1_name3_attack_info, 팀1득점:var_team1_name3_point_info,
+						팀1토스시도:var_team1_name3_toss_info, 팀1토스성공:var_team1_name3_toss_s_info,
+						팀1서브시도:var_team1_name3_serve_info, 팀1서브성공:var_team1_name3_toss_s_info,
+						팀1리시브시도:var_team1_name3_receive_info, 팀1리시브성공:var_team1_name3_receive_s_info, 팀1허슬:var_team1_name3_hustle_info, 팀1범실:var_team1_name3_mistake_info,
+						
+			팀2이름:var_team2, 팀2선수:var_team2_name3, 팀2공격시도:var_team2_name3_attack_info, 팀2득점:var_team2_name3_point_info,
+						팀2토스시도:var_team2_name3_toss_info, 팀2토스성공:var_team2_name3_toss_s_info,
+						팀2서브시도:var_team2_name3_serve_info, 팀2서브성공:var_team2_name3_toss_s_info,
+						팀2리시브시도:var_team2_name3_receive_info, 팀2리시브성공:var_team2_name3_receive_s_info, 팀2허슬:var_team2_name3_hustle_info, 팀2범실:var_team2_name3_mistake_info
+						},
+	  type: "POST"
+	  
+	});
+
+
+	$.ajax({
+
+	  url: "https://script.google.com/a/game.hoseo.edu/macros/s/1lTJ_2q4plPWb0CtnLBX-0B8gU5vhND6GSMZtjP2DDw0/exec",
+	  data: {팀1이름:var_team1, 팀1선수:var_team1_name2, 팀1공격시도:var_team1_name2_attack_info, 팀1득점:var_team1_name2_point_info,
+						팀1토스시도:var_team1_name2_toss_info, 팀1토스성공:var_team1_name2_toss_s_info,
+						팀1서브시도:var_team1_name2_serve_info, 팀1서브성공:var_team1_name2_toss_s_info,
+						팀1리시브시도:var_team1_name2_receive_info, 팀1리시브성공:var_team1_name2_receive_s_info, 팀1허슬:var_team1_name2_hustle_info, 팀1범실:var_team1_name2_mistake_info,
+						
+			팀2이름:var_team2, 팀2선수:var_team2_name2, 팀2공격시도:var_team2_name2_attack_info, 팀2득점:var_team2_name2_point_info,
+						팀2토스시도:var_team2_name2_toss_info, 팀2토스성공:var_team2_name2_toss_s_info,
+						팀2서브시도:var_team2_name2_serve_info, 팀2서브성공:var_team2_name2_toss_s_info,
+						팀2리시브시도:var_team2_name2_receive_info, 팀2리시브성공:var_team2_name2_receive_s_info, 팀2허슬:var_team2_name2_hustle_info, 팀2범실:var_team2_name2_mistake_info
+						},
+	  type: "POST"
+	  
+	});	
+		
+	$.ajax({
+
+	  url: "https://script.google.com/a/game.hoseo.edu/macros/s/1lTJ_2q4plPWb0CtnLBX-0B8gU5vhND6GSMZtjP2DDw0/exec",
+	  //data: {팀1선수:var_team1_name1},
+	  data: {세트1:var_team1_score_1, 세트2:var_team1_score_2, 세트3:var_team1_score_3, 팀1이름:var_team1, 팀1선수:var_team1_name1, 팀1공격시도:var_team1_name1_attack_info, 팀1득점:var_team1_name1_point_info,
+						팀1토스시도:var_team1_name1_toss_info, 팀1토스성공:var_team1_name1_toss_s_info,
+						팀1서브시도:var_team1_name1_serve_info, 팀1서브성공:var_team1_name1_toss_s_info,
+						팀1리시브시도:var_team1_name1_receive_info, 팀1리시브성공:var_team1_name1_receive_s_info, 팀1허슬:var_team1_name1_hustle_info, 팀1범실:var_team1_name1_mistake_info,
+						
+			팀2이름:var_team2, 팀2선수:var_team2_name1, 팀2공격시도:var_team2_name1_attack_info, 팀2득점:var_team2_name1_point_info,
+						팀2토스시도:var_team2_name1_toss_info, 팀2토스성공:var_team2_name1_toss_s_info,
+						팀2서브시도:var_team2_name1_serve_info, 팀2서브성공:var_team2_name1_toss_s_info,
+						팀2리시브시도:var_team2_name1_receive_info, 팀2리시브성공:var_team2_name1_receive_s_info, 팀2허슬:var_team2_name1_hustle_info, 팀2범실:var_team2_name1_mistake_info},
+						
+			 type: "POST"
+
+	});			
+			
+			*/
+
+		//capture();
+		// 이제 초기화 작업 수행
+
+		//경기이름
+		document.getElementById("game").value="";
+		//document.getElementById("team1").value="";
+		//document.getElementById("team2").value="";
+		
+		document.getElementById("team1_name1").value="";
+		
+		document.getElementById("team1_name1_attack_info").innerHTML="0";
+		document.getElementById("team1_name1_point_info").innerHTML="0";
+		//document.getElementById("team1_name1_serve_info").innerHTML="0";
+		//document.getElementById("team1_name1_serve_s_info").innerHTML="0";
+		//document.getElementById("team1_name1_receive_info").innerHTML="0";
+		//document.getElementById("team1_name1_receive_s_info").innerHTML="0";
+		//document.getElementById("team1_name1_toss_info").innerHTML="0";
+		//document.getElementById("team1_name1_toss_s_info").innerHTML="0";
+		document.getElementById("team1_name1_mistake_info").innerHTML="0";
+		document.getElementById("team1_name1_hustle_info").innerHTML="0";
+		
+		document.getElementById("team2_name1").value="";
+		
+		document.getElementById("team2_name1_attack_info").innerHTML="0";
+		document.getElementById("team2_name1_point_info").innerHTML="0";
+		//document.getElementById("team2_name1_serve_info").innerHTML="0";
+		//document.getElementById("team2_name1_serve_s_info").innerHTML="0";
+		//document.getElementById("team2_name1_receive_info").innerHTML="0";
+		//document.getElementById("team2_name1_receive_s_info").innerHTML="0";
+		//document.getElementById("team2_name1_toss_info").innerHTML="0";
+		//document.getElementById("team2_name1_toss_s_info").innerHTML="0";
+		document.getElementById("team2_name1_mistake_info").innerHTML="0";
+		document.getElementById("team2_name1_hustle_info").innerHTML="0";
+		
+		
+		document.getElementById("team1_name2").value="";
+		
+		//document.getElementById("team1_name2_attack_info").innerHTML="0";
+		//document.getElementById("team1_name2_point_info").innerHTML="0";
+		//document.getElementById("team1_name2_serve_info").innerHTML="0";
+		//document.getElementById("team1_name2_serve_s_info").innerHTML="0";
+		//document.getElementById("team1_name2_receive_info").innerHTML="0";
+		//document.getElementById("team1_name2_receive_s_info").innerHTML="0";
+		document.getElementById("team1_name2_toss_info").innerHTML="0";
+		//document.getElementById("team1_name2_toss_s_info").innerHTML="0";
+		document.getElementById("team1_name2_mistake_info").innerHTML="0";
+		document.getElementById("team1_name2_toss_success").innerHTML="0";
+		document.getElementById("team1_name2_hustle_info").innerHTML="0";
+		
+		document.getElementById("team2_name2").value="";
+		
+		//document.getElementById("team2_name2_attack_info").innerHTML="0";
+		//document.getElementById("team2_name2_point_info").innerHTML="0";
+		//document.getElementById("team2_name2_serve_info").innerHTML="0";
+		//document.getElementById("team2_name2_serve_s_info").innerHTML="0";
+		//document.getElementById("team2_name2_receive_info").innerHTML="0";
+		//document.getElementById("team2_name2_receive_s_info").innerHTML="0";
+		document.getElementById("team2_name2_toss_info").innerHTML="0";
+		//document.getElementById("team2_name2_toss_s_info").innerHTML="0";
+		document.getElementById("team2_name2_mistake_info").innerHTML="0";
+		document.getElementById("team2_name2_toss_success").innerHTML="0";
+		document.getElementById("team2_name2_hustle_info").innerHTML="0";
+		document.getElementById("team2_name2_toss_success").innerHTML="0";
+		document.getElementById("team2_name2_hustle_info").innerHTML="0";
+		
+		document.getElementById("team1_name3").value="";
+		
+		//document.getElementById("team1_name3_attack_info").innerHTML="0";
+		//document.getElementById("team1_name3_point_info").innerHTML="0";
+		document.getElementById("team1_name3_serve_info").innerHTML="0";
+		//document.getElementById("team1_name3_serve_s_info").innerHTML="0";
+		document.getElementById("team1_name3_receive_info").innerHTML="0";
+		//document.getElementById("team1_name3_receive_s_info").innerHTML="0";
+		//document.getElementById("team1_name3_toss_info").innerHTML="0";
+		//document.getElementById("team1_name3_toss_s_info").innerHTML="0";
+		document.getElementById("team1_name3_mistake_info").innerHTML="0";
+		document.getElementById("team1_name3_receive_success").innerHTML="0";
+		document.getElementById("team1_name3_hustle_info").innerHTML="0";
+		
+		
+		document.getElementById("team2_name3").value="";
+		
+		//document.getElementById("team2_name3_attack_info").innerHTML="0";
+		//document.getElementById("team2_name3_point_info").innerHTML="0";
+		document.getElementById("team2_name3_serve_info").innerHTML="0";
+		//document.getElementById("team2_name3_serve_s_info").innerHTML="0";
+		document.getElementById("team2_name3_receive_info").innerHTML="0";
+		//document.getElementById("team2_name3_receive_s_info").innerHTML="0";
+		//document.getElementById("team2_name3_toss_info").innerHTML="0";
+		//document.getElementById("team2_name3_toss_s_info").innerHTML="0";
+		document.getElementById("team2_name3_mistake_info").innerHTML="0";
+		document.getElementById("team2_name3_receive_success").innerHTML="0";
+		document.getElementById("team2_name3_hustle_info").innerHTML="0";
+		
+		document.getElementById("team1_name4").value="";
+		
+		//document.getElementById("team1_name4_attack_info").innerHTML="0";
+		//document.getElementById("team1_name4_point_info").innerHTML="0";
+		document.getElementById("team1_name4_serve_info").innerHTML="0";
+		//document.getElementById("team1_name4_serve_s_info").innerHTML="0";
+		document.getElementById("team1_name4_receive_info").innerHTML="0";
+		//document.getElementById("team1_name4_receive_s_info").innerHTML="0";
+		//document.getElementById("team1_name4_toss_info").innerHTML="0";
+		//document.getElementById("team1_name4_toss_s_info").innerHTML="0";
+		document.getElementById("team1_name4_mistake_info").innerHTML="0";
+		document.getElementById("team1_name4_receive_success").innerHTML="0";
+		document.getElementById("team1_name4_hustle_info").innerHTML="0";
+		
+		document.getElementById("team2_name4").value="";
+		
+		//document.getElementById("team2_name4_attack_info").innerHTML="0";
+		//document.getElementById("team2_name4_point_info").innerHTML="0";
+		document.getElementById("team2_name4_serve_info").innerHTML="0";
+		//document.getElementById("team2_name4_serve_s_info").innerHTML="0";
+		document.getElementById("team2_name4_receive_info").innerHTML="0";
+		//document.getElementById("team2_name4_receive_s_info").innerHTML="0";
+		//document.getElementById("team2_name4_toss_info").innerHTML="0";
+		//document.getElementById("team2_name4_toss_s_info").innerHTML="0";
+		document.getElementById("team2_name4_mistake_info").innerHTML="0";
+		document.getElementById("team2_name4_receive_success").innerHTML="0";
+		document.getElementById("team2_name4_hustle_info").innerHTML="0";
+		
+		document.getElementById("team1_name5").value="";
+		
+		//document.getElementById("team1_name5_attack_info").innerHTML="0";
+		//document.getElementById("team1_name5_point_info").innerHTML="0";
+		document.getElementById("team1_name5_serve_info").innerHTML="0";
+		//document.getElementById("team1_name5_serve_s_info").innerHTML="0";
+		document.getElementById("team1_name5_receive_info").innerHTML="0";
+		//document.getElementById("team1_name5_receive_s_info").innerHTML="0";
+		//document.getElementById("team1_name5_toss_info").innerHTML="0";
+		//document.getElementById("team1_name5_toss_s_info").innerHTML="0";
+		document.getElementById("team1_name5_mistake_info").innerHTML="0";
+		document.getElementById("team1_name5_receive_success").innerHTML="0";
+		document.getElementById("team1_name5_hustle_info").innerHTML="0";
+		
+		document.getElementById("team2_name5").value="";
+		
+		//document.getElementById("team2_name5_attack_info").innerHTML="0";
+		//document.getElementById("team2_name5_point_info").innerHTML="0";
+		document.getElementById("team2_name5_serve_info").innerHTML="0";
+		//document.getElementById("team2_name5_serve_s_info").innerHTML="0";
+		document.getElementById("team2_name5_receive_info").innerHTML="0";
+		//document.getElementById("team2_name5_receive_s_info").innerHTML="0";
+		//document.getElementById("team2_name5_toss_info").innerHTML="0";
+		//document.getElementById("team2_name5_toss_s_info").innerHTML="0";
+		document.getElementById("team2_name5_mistake_info").innerHTML="0";
+		document.getElementById("team2_name5_receive_success").innerHTML="0";
+		document.getElementById("team2_name5_hustle_info").innerHTML="0";
+
+		
+		document.getElementById("team1_score_1").value = "";
+		document.getElementById("team1_score_2").value = "";
+		document.getElementById("team1_score_3").value = "";
+		
+		document.getElementById("team2_score_1").value = "";
+		document.getElementById("team2_score_2").value = "";
+		document.getElementById("team2_score_3").value = "";
+		
+	}
 	
-	if(selectObj.value == "MJ")
-	{
-		document.getElementById("team2_name1").value="MJ";
-		document.getElementById("team2_name2").value="이도형";
-		document.getElementById("team2_name3").value="이용찬";
-		document.getElementById("team2_name4").value="박동훈";
-	}
-	else if(selectObj.value == "박민수")
-	{
-		document.getElementById("team2_name1").value="박민수";
-		document.getElementById("team2_name2").value="오용택";
-		document.getElementById("team2_name3").value="박종수";
-		document.getElementById("team2_name4").value="이지호";
-	}
-	else if(selectObj.value == "조은상")
-	{
-		document.getElementById("team2_name1").value="조은상";
-		document.getElementById("team2_name2").value="김민형";
-		document.getElementById("team2_name3").value="김민현";
-		document.getElementById("team2_name4").value="유의정";
-	}
-	else if(selectObj.value == "김낙원")
-	{
-		document.getElementById("team2_name1").value="김낙원";
-		document.getElementById("team2_name2").value="김태균";
-		document.getElementById("team2_name3").value="이임표";
-		document.getElementById("team2_name4").value="이현";
-	}
-	else if(selectObj.value == "박유준")
-	{
-		document.getElementById("team2_name1").value="박유준";
-		document.getElementById("team2_name2").value="조명희";
-		document.getElementById("team2_name3").value="유정우";
-		document.getElementById("team2_name4").value="김형규";
-	}
-	else if(selectObj.value == "김형준")
-	{
-		document.getElementById("team2_name1").value="김형준";
-		document.getElementById("team2_name2").value="박재영";
-		document.getElementById("team2_name3").value="김원규";
-		document.getElementById("team2_name4").value="이성찬";
-	}
-	else if(selectObj.value == "마경민")
-	{
-		document.getElementById("team2_name1").value="마경민";
-		document.getElementById("team2_name2").value="신상준";
-		document.getElementById("team2_name3").value="박정배";
-		document.getElementById("team2_name4").value="임근우";
-	}
-	else if(selectObj.value == "유혁준")
-	{
-		document.getElementById("team2_name1").value="유혁준";
-		document.getElementById("team2_name2").value="김사무엘";
-		document.getElementById("team2_name3").value="강현국";
-		document.getElementById("team2_name4").value="도진태";
-	}
-	else if(selectObj.value == "김두식")
-	{
-		document.getElementById("team2_name1").value="김두식";
-		document.getElementById("team2_name2").value="임성찬";
-		document.getElementById("team2_name3").value="이준창";
-		document.getElementById("team2_name4").value="서범종";
-	}
-	else if(selectObj.value == "장동현")
-	{
-		document.getElementById("team2_name1").value="장동현";
-		document.getElementById("team2_name2").value="이범희";
-		document.getElementById("team2_name3").value="문준석";
-		document.getElementById("team2_name4").value="황장훈";
-	}
-	else if(selectObj.value == "정규순")
-	{
-		document.getElementById("team2_name1").value="정규순";
-		document.getElementById("team2_name2").value="안은혁";
-		document.getElementById("team2_name3").value="권호연";
-		document.getElementById("team2_name4").value="강용구";
-	}
-	else if(selectObj.value == "장수동")
-	{
-		document.getElementById("team2_name1").value="장수동";
-		document.getElementById("team2_name2").value="최성필";
-		document.getElementById("team2_name3").value="허정석";
-		document.getElementById("team2_name4").value="정남석";
-
-	}
-	else if(selectObj.value == "장호선")
-	{
-		document.getElementById("team2_name1").value="장호선";
-		document.getElementById("team2_name2").value="임기천";
-		document.getElementById("team2_name3").value="이용주";
-		document.getElementById("team2_name4").value="이종욱";
-
-	}
-}
-
-		
-</script>  
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
-
-
-
-
-
-
-</script>
-
-
+    </script>
+    <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+    
+	
+	
 <form>
 	
 	<table>
@@ -1695,12 +1672,19 @@ function selectEventTeam2(selectObj)
 	
 	
 </form>
+	
+	<!--
+	<button id="signin-button" onclick="handleSignInClick()">Sign in</button>
+    <button id="signout-button" onclick="handleSignOutClick()">Sign out</button>
+	<button id="save-button" onclick="handleUpdateClick()">Save</button>
+	<button id="Append-button" onclick="handleApendClick()">Append</button>
 
-
-
-</body>
-
-
-
-
+	
+	
+  <table>
+  
+  <tbody id="my-tbody"></tbody>
+</table>
+  -->
+  </body>
 </html>
