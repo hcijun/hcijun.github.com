@@ -192,9 +192,27 @@
 		}
 		
 		var row = my_tbody.insertRow(0); // 상단에 추가		
-		var cell0 = row.insertCell(0);
-		var cell1 = row.insertCell(1);
-		var cell2 = row.insertCell(2);
+		
+		
+		for(int i=0; i < result.values.length; i++)
+		{
+			if(i != 0)
+				row = my_tbody.insertRow(my_tbody.rows.length); // 상단에 추가	
+				
+			for(int j=0; j<60; j++)
+			{
+				var celltemp = row.insertCell(j);
+				celltemp.innerHTML = result.values[0][j];
+			}
+			
+		}
+		
+		
+		
+		
+		/*
+		
+		ell2 = row.insertCell(2);
 	
 		cell0.innerHTML = result.values[0][0];
 		cell1.innerHTML = result.values[0][1];
@@ -217,7 +235,7 @@
 		cell0.innerHTML = result.values[2][0];
 		cell1.innerHTML = result.values[2][1];
 		cell2.innerHTML = result.values[2][2];
-		
+		*/
 	
 	}
 	
@@ -562,6 +580,44 @@
 			
 		
 	}
+	
+	function loadExistGame()
+	{
+		// 여기서 게임을 생성 해야함!
+		var ssID = '1oUOKUlqJbwhbE97f88MnAPJS4zrmHxKMTRQzR3Azk8w';
+		var rng = '시트1';
+		
+		var params = {
+        // The ID of the spreadsheet to retrieve data from.
+        spreadsheetId: ssID,  // TODO: Update placeholder value.
+
+        // The A1 notation of the values to retrieve.
+        range: rng,  // TODO: Update placeholder value.
+
+        // How values should be represented in the output.
+        // The default render option is ValueRenderOption.FORMATTED_VALUE.
+        //valueRenderOption: '',  // TODO: Update placeholder value.
+
+        // How dates, times, and durations should be represented in the output.
+        // This is ignored if value_render_option is
+        // FORMATTED_VALUE.
+        // The default dateTime render option is [DateTimeRenderOption.SERIAL_NUMBER].
+        //dateTimeRenderOption: '',  // TODO: Update placeholder value.
+		};
+
+		var request = gapi.client.sheets.spreadsheets.values.get(params);
+		request.then(function(response) {
+		// TODO: Change code below to process the `response` object:
+		  //console.log(response.result);
+		  populateSheet(response.result);
+		  
+		  
+		  //g_Vals = response.result.values;
+		  }, function(reason) {
+		  console.error('!!error: ' + reason.result.error.message);
+		});
+	}
+	
 	
 	// 족구 기존 기록 작업
 	//팀1플레이어1
@@ -2031,6 +2087,7 @@ function selectEventTeam2(selectObj)
 				<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 		
 		<tr><input type="button" value="새로운경기시작!" onclick="createNewGame()"></tr>
+		<tr><input type="button" value="기존 경기 불러 오기!" onclick="loadExistGame()"></tr>
 		
 		
 		<tr><td>1세트<input type="text" id="team1_score_1"></td> <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>  <td>1세트<input type="text" id="team2_score_1"></td> <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
