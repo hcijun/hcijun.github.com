@@ -209,6 +209,9 @@
 			
 		}
 		
+		//
+		
+		
 		
 		
 		
@@ -244,6 +247,13 @@
 	
 	function createNewGame()
 	{
+	
+		// 먼저 기록 데이터가 초기화 및 로딩이 되어 있어야 함
+		if(!g_Vals)
+		{
+			alert('경기 데이터가 로딩 되어 있어야 합니다!');
+			return
+		}
 	
 		var var_game = document.getElementById("game").value;
 		var e1 = document.getElementById("team1");
@@ -424,6 +434,132 @@
 				var var_team2_name5_hustle_info= document.getElementById("team2_name5_hustle_info").innerHTML;
 			}
 			
+			
+			var vals = new Array(1);
+			vals[0] = new Array(60);
+			//경기 날짜 & 이름
+			//세트1	
+			//세트2	
+			//세트3	
+			//팀1선수1	
+			//팀1선수1득점	
+			//팀1선수1공격시도	
+			//팀1선수1허슬	
+			//팀1선수1범실	
+			//팀1선수2	
+			//팀1선수2토스시도	
+			//팀1선수2토스실패	
+			//팀1선수2허슬	
+			//팀1선수2범실	
+			//팀1선수3	
+			//팀1선수3리시브시도	
+			//팀1선수3리시브실패	
+			//팀1선수3서브	
+			//팀1선수3허슬	
+			//팀1선수3범실	
+			//팀1선수4	
+			//팀1선수4리시브시도	
+			//팀1선수4리시브실패	
+			//팀1선수4서브	
+			//팀1선수4허슬	
+			//팀1선수4범실	
+			//팀1선수5	
+			//팀1선수5리시브시도	
+			//팀1선수5리시브실패	
+			//팀1선수5서브	
+			//팀1선수5허슬	
+			//팀1선수5범실	
+			//팀2선수1	
+			//팀2선수1득점	
+			//팀2선수1공격시도	
+			//팀2선수1허슬	
+			//팀2선수1범실	
+			//팀2선수2	
+			//팀2선수2토스시도	
+			//팀2선수2토스실패	
+			//팀2선수2허슬	
+			//팀2선수2범실	
+			//팀2선수3	
+			//팀2선수3리시브시도	
+			//팀2선수3리시브실패	
+			//팀2선수3서브	
+			//팀2선수3허슬	
+			//팀2선수3범실	
+			//팀2선수4	
+			//팀2선수4리시브시도	
+			//팀2선수4리시브실패	
+			//팀2선수4서브	
+			//팀2선수4허슬	
+			//팀2선수4범실	
+			//팀2선수5	
+			//팀2선수5리시브시도	
+			//팀2선수5리시브실패	
+			//팀2선수5서브	
+			//팀2선수5허슬	
+			//팀2선수5범실
+			
+			
+			vals[0][0] = var_game; //경기 날짜 & 이름
+			vals[0][1] = ''; //세트1 
+			vals[0][2] = ''; //세트2
+			vals[0][3] = ''; //세트3
+			vals[0][4] = var_team1_name1; //팀1선수1 
+			vals[0][5] = var_team1_name1_point_info; //팀1선수1득점
+			vals[0][6] = var_team1_name1_attack_info; //팀1선수1공격시도
+			vals[0][7] = var_team1_name1_hustle_info; //팀1선수1허슬
+			vals[0][8] = var_team1_name1_mistake_info; //팀1선수1범실
+			vals[0][9] = var_team1_name2; //팀1선수2 
+			vals[0][10] = var_team1_name2_toss_info; //팀1선수2토스시도
+			vals[0][11] = var_team1_name2_toss_s_info; //팀1선수2토스실패
+			vals[0][12] = var_team1_name2_hustle_info; //팀1선수2허슬
+			vals[0][13] = var_team1_name2_mistake_info; //팀1선수2범실
+			vals[0][14] = var_team1_name3; //팀1선수3	
+			vals[0][15] = var_team1_name3_receive_info; //팀1선수3리시브시도
+			vals[0][16] = var_team1_name3_receive_s_info; //팀1선수3리시브실패
+			vals[0][17] = var_team1_name3_serve_info; //팀1선수3서브		
+			vals[0][18] = var_team1_name3_hustle_info; //팀1선수3허슬
+			vals[0][19] = var_team1_name3_mistake_info; //팀1선수3범실
+			vals[0][20] = var_team1_name4; //팀1선수4	
+			vals[0][21] = var_team1_name4_receive_info; //팀1선수4리시브시도
+			vals[0][22] = var_team1_name4_receive_s_info; //팀1선수4리시브실패
+			vals[0][23] = var_team1_name4_serve_info; //팀1선수4서브		
+			vals[0][24] = var_team1_name4_hustle_info; //팀1선수4허슬
+			vals[0][25] = var_team1_name4_mistake_info; //팀1선수4범실
+			vals[0][26] = var_team1_name5; //팀1선수5	
+			vals[0][27] = var_team1_name5_receive_info; //팀1선수5리시브시도
+			vals[0][28] = var_team1_name5_receive_s_info; //팀1선수5리시브실패
+			vals[0][29] = var_team1_name5_serve_info; //팀1선수5서브		
+			vals[0][30] = var_team1_name5_hustle_info; //팀1선수5허슬
+			vals[0][31] = var_team1_name5_mistake_info; //팀1선수5범실
+			vals[0][32] = var_team2_name1; //팀2선수1 
+			vals[0][33] = var_team2_name1_point_info; //팀2선수1득점
+			vals[0][34] = var_team2_name1_attack_info; //팀2선수1공격시도
+			vals[0][35] = var_team2_name1_hustle_info; //팀2선수1허슬
+			vals[0][36] = var_team2_name1_mistake_info; //팀2선수1범실
+			vals[0][37] = var_team2_name2; //팀2선수2 
+			vals[0][38] = var_team2_name2_toss_info; //팀2선수2토스시도
+			vals[0][39] = var_team2_name2_toss_s_info; //팀2선수2토스실패
+			vals[0][40] = var_team2_name2_hustle_info; //팀2선수2허슬
+			vals[0][41] = var_team2_name2_mistake_info; //팀2선수2범실
+			vals[0][42] = var_team2_name3; //팀2선수3	
+			vals[0][43] = var_team2_name3_receive_info; //팀2선수3리시브시도
+			vals[0][44] = var_team2_name3_receive_s_info; //팀2선수3리시브실패
+			vals[0][45] = var_team2_name3_serve_info; //팀2선수3서브		
+			vals[0][46] = var_team2_name3_hustle_info; //팀2선수3허슬
+			vals[0][47] = var_team2_name3_mistake_info; //팀2선수3범실
+			vals[0][48] = var_team2_name4; //팀2선수4	
+			vals[0][49] = var_team2_name4_receive_info; //팀2선수4리시브시도
+			vals[0][50] = var_team2_name4_receive_s_info; //팀2선수4리시브실패
+			vals[0][51] = var_team2_name4_serve_info; //팀2선수4서브		
+			vals[0][52] = var_team2_name4_hustle_info; //팀2선수4허슬
+			vals[0][53] = var_team2_name4_mistake_info; //팀2선수4범실
+			vals[0][54] = var_team2_name5; //팀2선수5	
+			vals[0][55] = var_team2_name5_receive_info; //팀2선수5리시브시도
+			vals[0][56] = var_team2_name5_receive_s_info; //팀2선수5리시브실패
+			vals[0][57] = var_team2_name5_serve_info; //팀2선수5서브		
+			vals[0][58] = var_team2_name5_hustle_info; //팀2선수5허슬
+			vals[0][59] = var_team2_name5_mistake_info; //팀2선수5범실
+				
 	
 			
 			var params = {
@@ -439,130 +575,6 @@
 				insertDataOption: 'INSERT_ROWS',
 				};
 				
-				//경기 날짜 & 이름
-				//세트1	
-				//세트2	
-				//세트3	
-				//팀1선수1	
-				//팀1선수1득점	
-				//팀1선수1공격시도	
-				//팀1선수1허슬	
-				//팀1선수1범실	
-				//팀1선수2	
-				//팀1선수2토스시도	
-				//팀1선수2토스실패	
-				//팀1선수2허슬	
-				//팀1선수2범실	
-				//팀1선수3	
-				//팀1선수3리시브시도	
-				//팀1선수3리시브실패	
-				//팀1선수3서브	
-				//팀1선수3허슬	
-				//팀1선수3범실	
-				//팀1선수4	
-				//팀1선수4리시브시도	
-				//팀1선수4리시브실패	
-				//팀1선수4서브	
-				//팀1선수4허슬	
-				//팀1선수4범실	
-				//팀1선수5	
-				//팀1선수5리시브시도	
-				//팀1선수5리시브실패	
-				//팀1선수5서브	
-				//팀1선수5허슬	
-				//팀1선수5범실	
-				//팀2선수1	
-				//팀2선수1득점	
-				//팀2선수1공격시도	
-				//팀2선수1허슬	
-				//팀2선수1범실	
-				//팀2선수2	
-				//팀2선수2토스시도	
-				//팀2선수2토스실패	
-				//팀2선수2허슬	
-				//팀2선수2범실	
-				//팀2선수3	
-				//팀2선수3리시브시도	
-				//팀2선수3리시브실패	
-				//팀2선수3서브	
-				//팀2선수3허슬	
-				//팀2선수3범실	
-				//팀2선수4	
-				//팀2선수4리시브시도	
-				//팀2선수4리시브실패	
-				//팀2선수4서브	
-				//팀2선수4허슬	
-				//팀2선수4범실	
-				//팀2선수5	
-				//팀2선수5리시브시도	
-				//팀2선수5리시브실패	
-				//팀2선수5서브	
-				//팀2선수5허슬	
-				//팀2선수5범실
-				
-				var vals = new Array(1);
-				vals[0] = new Array(60);
-				vals[0][0] = var_game; //경기 날짜 & 이름
-				vals[0][1] = ''; //세트1 
-				vals[0][2] = ''; //세트2
-				vals[0][3] = ''; //세트3
-				vals[0][4] = var_team1_name1; //팀1선수1 
-				vals[0][5] = var_team1_name1_point_info; //팀1선수1득점
-				vals[0][6] = var_team1_name1_attack_info; //팀1선수1공격시도
-				vals[0][7] = var_team1_name1_hustle_info; //팀1선수1허슬
-				vals[0][8] = var_team1_name1_mistake_info; //팀1선수1범실
-				vals[0][9] = var_team1_name2; //팀1선수2 
-				vals[0][10] = var_team1_name2_toss_info; //팀1선수2토스시도
-				vals[0][11] = var_team1_name2_toss_s_info; //팀1선수2토스실패
-				vals[0][12] = var_team1_name2_hustle_info; //팀1선수2허슬
-				vals[0][13] = var_team1_name2_mistake_info; //팀1선수2범실
-				vals[0][14] = var_team1_name3; //팀1선수3	
-				vals[0][15] = var_team1_name3_receive_info; //팀1선수3리시브시도
-				vals[0][16] = var_team1_name3_receive_s_info; //팀1선수3리시브실패
-				vals[0][17] = var_team1_name3_serve_info; //팀1선수3서브		
-				vals[0][18] = var_team1_name3_hustle_info; //팀1선수3허슬
-				vals[0][19] = var_team1_name3_mistake_info; //팀1선수3범실
-				vals[0][20] = var_team1_name4; //팀1선수4	
-				vals[0][21] = var_team1_name4_receive_info; //팀1선수4리시브시도
-				vals[0][22] = var_team1_name4_receive_s_info; //팀1선수4리시브실패
-				vals[0][23] = var_team1_name4_serve_info; //팀1선수4서브		
-				vals[0][24] = var_team1_name4_hustle_info; //팀1선수4허슬
-				vals[0][25] = var_team1_name4_mistake_info; //팀1선수4범실
-				vals[0][26] = var_team1_name5; //팀1선수5	
-				vals[0][27] = var_team1_name5_receive_info; //팀1선수5리시브시도
-				vals[0][28] = var_team1_name5_receive_s_info; //팀1선수5리시브실패
-				vals[0][29] = var_team1_name5_serve_info; //팀1선수5서브		
-				vals[0][30] = var_team1_name5_hustle_info; //팀1선수5허슬
-				vals[0][31] = var_team1_name5_mistake_info; //팀1선수5범실
-				vals[0][32] = var_team2_name1; //팀2선수1 
-				vals[0][33] = var_team2_name1_point_info; //팀2선수1득점
-				vals[0][34] = var_team2_name1_attack_info; //팀2선수1공격시도
-				vals[0][35] = var_team2_name1_hustle_info; //팀2선수1허슬
-				vals[0][36] = var_team2_name1_mistake_info; //팀2선수1범실
-				vals[0][37] = var_team2_name2; //팀2선수2 
-				vals[0][38] = var_team2_name2_toss_info; //팀2선수2토스시도
-				vals[0][39] = var_team2_name2_toss_s_info; //팀2선수2토스실패
-				vals[0][40] = var_team2_name2_hustle_info; //팀2선수2허슬
-				vals[0][41] = var_team2_name2_mistake_info; //팀2선수2범실
-				vals[0][42] = var_team2_name3; //팀2선수3	
-				vals[0][43] = var_team2_name3_receive_info; //팀2선수3리시브시도
-				vals[0][44] = var_team2_name3_receive_s_info; //팀2선수3리시브실패
-				vals[0][45] = var_team2_name3_serve_info; //팀2선수3서브		
-				vals[0][46] = var_team2_name3_hustle_info; //팀2선수3허슬
-				vals[0][47] = var_team2_name3_mistake_info; //팀2선수3범실
-				vals[0][48] = var_team2_name4; //팀2선수4	
-				vals[0][49] = var_team2_name4_receive_info; //팀2선수4리시브시도
-				vals[0][50] = var_team2_name4_receive_s_info; //팀2선수4리시브실패
-				vals[0][51] = var_team2_name4_serve_info; //팀2선수4서브		
-				vals[0][52] = var_team2_name4_hustle_info; //팀2선수4허슬
-				vals[0][53] = var_team2_name4_mistake_info; //팀2선수4범실
-				vals[0][54] = var_team2_name5; //팀2선수5	
-				vals[0][55] = var_team2_name5_receive_info; //팀2선수5리시브시도
-				vals[0][56] = var_team2_name5_receive_s_info; //팀2선수5리시브실패
-				vals[0][57] = var_team2_name5_serve_info; //팀2선수5서브		
-				vals[0][58] = var_team2_name5_hustle_info; //팀2선수5허슬
-				vals[0][59] = var_team2_name5_mistake_info; //팀2선수5범실
-					
 				
 				var valueRangeBody = { "values": vals };
 				
@@ -570,6 +582,11 @@
 				request.then(function(response) {
 				// TODO: Change code below to process the `response` object:
 					console.log(response.result);
+					
+					// 이제 기존 g_Vals 에 추가
+					g_Vals.append(vals);
+					
+					
 				}, function(reason) {
 					console.error('error: ' + reason.result.error.message);
 			});
@@ -612,9 +629,7 @@
 		// TODO: Change code below to process the `response` object:
 		  //console.log(response.result);
 		  populateSheet(response.result);
-		  
-		  
-		  //g_Vals = response.result.values;
+		  g_Vals = response.result.values;
 		  }, function(reason) {
 		  console.error('!!error: ' + reason.result.error.message);
 		});
@@ -2082,7 +2097,7 @@ function selectEventTeam2(selectObj)
 					<option value="조은상">조은상</option>
 					<option value="김낙원">김낙원</option>
 					<option value="박유준">박유준</option>
-					<option value="김형준">김형준</option>
+					<option value="김형준">김형준</optionp
 					<option value="마경민">마경민</option>
 					<option value="유혁준">유혁준</option>
 					<option value="김두식">김두식</option>
@@ -2115,8 +2130,8 @@ function selectEventTeam2(selectObj)
 				<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 		
 		<tr><input type="button" value="새로운경기시작!" onclick="createNewGame()"></tr>
-		<tr><input type="button" value="기존 경기 불러 오기!" onclick="loadExistGame()"></tr>
-		
+		<!--<tr><input type="button" value="기존 경기 불러 오기!" onclick="loadExistGame()"></tr>-->
+	
 		
 		<tr><td>1세트<input type="text" id="team1_score_1"></td> <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>  <td>1세트<input type="text" id="team2_score_1"></td> <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 		<tr><td>2세트<input type="text" id="team1_score_2"></td> <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>  <td>2세트<input type="text" id="team2_score_2"></td> <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
