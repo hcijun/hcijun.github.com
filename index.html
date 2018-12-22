@@ -230,8 +230,7 @@
 		var var_team1 = e1.options[e1.selectedIndex].value;
 		var e2 = document.getElementById("team2");
 		var var_team2 = e2.options[e2.selectedIndex].value;
-		var var_team1_name1 = document.getElementById("team1_name1").value;
-		
+				
 		//alert(var_team1);
 		
 		if(var_team1 == "")
@@ -268,6 +267,144 @@
 			var ssID = '1oUOKUlqJbwhbE97f88MnAPJS4zrmHxKMTRQzR3Azk8w';
 			var rng = '시트1';
 			
+			// 기존 save 참고해서 데이터 가져오기
+			// 1팀 1플레이어
+			var var_team1_name1 = document.getElementById("team1_name1").value;
+			var var_team1_name1_attack_info = document.getElementById("team1_name1_attack_info").innerHTML;
+			var var_team1_name1_point_info= document.getElementById("team1_name1_point_info").innerHTML;
+			var var_team1_name1_serve_info= "";// document.getElementById("team1_name1_serve_info").innerHTML;
+			var var_team1_name1_serve_s_info= "";//document.getElementById("team1_name1_serve_s_info").innerHTML;
+			var var_team1_name1_receive_info= "";//document.getElementById("team1_name1_receive_info").innerHTML;
+			var var_team1_name1_receive_s_info= "";//document.getElementById("team1_name1_receive_s_info").innerHTML;
+			var var_team1_name1_toss_info= "";//document.getElementById("team1_name1_toss_info").innerHTML;
+			var var_team1_name1_toss_s_info= "";//document.getElementById("team1_name1_toss_s_info").innerHTML;
+			var var_team1_name1_mistake_info= document.getElementById("team1_name1_mistake_info").innerHTML;
+			var var_team1_name1_hustle_info= document.getElementById("team1_name1_hustle_info").innerHTML;
+			
+			
+			var var_team2_name1 = document.getElementById("team2_name1").value;
+			var var_team2_name1_attack_info = document.getElementById("team2_name1_attack_info").innerHTML;
+			var var_team2_name1_point_info= document.getElementById("team2_name1_point_info").innerHTML;
+			var var_team2_name1_serve_info= "";//document.getElementById("team2_name1_serve_info").innerHTML;
+			var var_team2_name1_serve_s_info= "";//document.getElementById("team2_name1_serve_s_info").innerHTML;
+			var var_team2_name1_receive_info= "";//document.getElementById("team2_name1_receive_info").innerHTML;
+			var var_team2_name1_receive_s_info= "";//document.getElementById("team2_name1_receive_s_info").innerHTML;
+			var var_team2_name1_toss_info= "";//document.getElementById("team2_name1_toss_info").innerHTML;
+			var var_team2_name1_toss_s_info= "";//document.getElementById("team2_name1_toss_s_info").innerHTML;
+			var var_team2_name1_mistake_info= document.getElementById("team2_name1_mistake_info").innerHTML;
+			var var_team2_name1_hustle_info= document.getElementById("team2_name1_hustle_info").innerHTML;
+			
+			// 2플레이어
+			var var_team1_name2 = document.getElementById("team1_name2").value;
+			var var_team1_name2_attack_info = "";//document.getElementById("team1_name2_attack_info").innerHTML;
+			var var_team1_name2_point_info= "";//document.getElementById("team1_name2_point_info").innerHTML;
+			var var_team1_name2_serve_info= "";//document.getElementById("team1_name2_serve_info").innerHTML;
+			var var_team1_name2_serve_s_info= "";//document.getElementById("team1_name2_serve_s_info").innerHTML;
+			var var_team1_name2_receive_info= "";//document.getElementById("team1_name2_receive_info").innerHTML;
+			var var_team1_name2_receive_s_info= "";//document.getElementById("team1_name2_receive_s_info").innerHTML;
+			var var_team1_name2_toss_info= document.getElementById("team1_name2_toss_info").innerHTML;
+			var var_team1_name2_toss_s_info= document.getElementById("team1_name2_toss_fail").innerHTML;
+			var var_team1_name2_mistake_info= document.getElementById("team1_name2_mistake_info").innerHTML;
+			var var_team1_name2_hustle_info= document.getElementById("team1_name2_hustle_info").innerHTML;
+			
+			var var_team2_name2 = document.getElementById("team2_name2").value;
+			var var_team2_name2_attack_info = "";//document.getElementById("team2_name2_attack_info").innerHTML;
+			var var_team2_name2_point_info= "";//document.getElementById("team2_name2_point_info").innerHTML;
+			var var_team2_name2_serve_info= "";//document.getElementById("team2_name2_serve_info").innerHTML;
+			var var_team2_name2_serve_s_info= "";//document.getElementById("team2_name2_serve_s_info").innerHTML;
+			var var_team2_name2_receive_info= "";//document.getElementById("team2_name2_receive_info").innerHTML;
+			var var_team2_name2_receive_s_info= "";//document.getElementById("team2_name2_receive_s_info").innerHTML;
+			var var_team2_name2_toss_info= document.getElementById("team2_name2_toss_info").innerHTML;
+			var var_team2_name2_toss_s_info= document.getElementById("team2_name2_toss_fail").innerHTML;
+			var var_team2_name2_mistake_info= document.getElementById("team2_name2_mistake_info").innerHTML;
+			var var_team2_name2_hustle_info= document.getElementById("team2_name2_hustle_info").innerHTML;
+				
+			// 3플레이어
+			var var_team1_name3 = document.getElementById("team1_name3").value;
+			var var_team1_name3_attack_info = "";//document.getElementById("team1_name3_attack_info").innerHTML;
+			var var_team1_name3_point_info= "";//document.getElementById("team1_name3_point_info").innerHTML;
+			var var_team1_name3_serve_info= document.getElementById("team1_name3_serve_info").innerHTML;
+			var var_team1_name3_serve_s_info= "";//document.getElementById("team1_name3_serve_s_info").innerHTML;
+			var var_team1_name3_receive_info= document.getElementById("team1_name3_receive_info").innerHTML;
+			var var_team1_name3_receive_s_info= document.getElementById("team1_name3_receive_fail").innerHTML;
+			var var_team1_name3_toss_info= "";//document.getElementById("team1_name3_toss_info").innerHTML;
+			var var_team1_name3_toss_s_info= "";//document.getElementById("team1_name3_toss_s_info").innerHTML;
+			var var_team1_name3_mistake_info= document.getElementById("team1_name3_mistake_info").innerHTML;
+			var var_team1_name3_hustle_info= document.getElementById("team1_name3_hustle_info").innerHTML;
+			
+			var var_team2_name3 = document.getElementById("team2_name3").value;
+			var var_team2_name3_attack_info = "";//document.getElementById("team2_name3_attack_info").innerHTML;
+			var var_team2_name3_point_info= "";//document.getElementById("team2_name3_point_info").innerHTML;
+			var var_team2_name3_serve_info= document.getElementById("team2_name3_serve_info").innerHTML;
+			var var_team2_name3_serve_s_info= "";//document.getElementById("team2_name3_serve_s_info").innerHTML;
+			var var_team2_name3_receive_info= document.getElementById("team2_name3_receive_info").innerHTML;
+			var var_team2_name3_receive_s_info= document.getElementById("team2_name3_receive_fail").innerHTML;
+			var var_team2_name3_toss_info= "";//document.getElementById("team2_name3_toss_info").innerHTML;
+			var var_team2_name3_toss_s_info= "";//document.getElementById("team2_name3_toss_s_info").innerHTML;
+			var var_team2_name3_mistake_info= document.getElementById("team2_name3_mistake_info").innerHTML;
+			var var_team2_name3_hustle_info= document.getElementById("team2_name3_hustle_info").innerHTML;
+				
+			// 4플레이어
+			var var_team1_name4 = document.getElementById("team1_name4").value;
+			var var_team1_name4_attack_info = "";//document.getElementById("team1_name4_attack_info").innerHTML;
+			var var_team1_name4_point_info= "";//document.getElementById("team1_name4_point_info").innerHTML;
+			var var_team1_name4_serve_info= document.getElementById("team1_name4_serve_info").innerHTML;
+			var var_team1_name4_serve_s_info= "";//document.getElementById("team1_name4_serve_s_info").innerHTML;
+			var var_team1_name4_receive_info= document.getElementById("team1_name4_receive_info").innerHTML;
+			var var_team1_name4_receive_s_info= document.getElementById("team1_name4_receive_fail").innerHTML;
+			var var_team1_name4_toss_info= "";//document.getElementById("team1_name4_toss_info").innerHTML;
+			var var_team1_name4_toss_s_info= "";//document.getElementById("team1_name4_toss_s_info").innerHTML;
+			var var_team1_name4_mistake_info= document.getElementById("team1_name4_mistake_info").innerHTML;
+			var var_team1_name4_hustle_info= document.getElementById("team1_name4_hustle_info").innerHTML;
+			
+			var var_team2_name4 = document.getElementById("team2_name4").value;
+			var var_team2_name4_attack_info = "";//document.getElementById("team2_name4_attack_info").innerHTML;
+			var var_team2_name4_point_info= "";//document.getElementById("team2_name4_point_info").innerHTML;
+			var var_team2_name4_serve_info= document.getElementById("team2_name4_serve_info").innerHTML;
+			var var_team2_name4_serve_s_info= "";//document.getElementById("team2_name4_serve_s_info").innerHTML;
+			var var_team2_name4_receive_info= document.getElementById("team2_name4_receive_info").innerHTML;
+			var var_team2_name4_receive_s_info= document.getElementById("team2_name4_receive_fail").innerHTML;
+			var var_team2_name4_toss_info= "";//document.getElementById("team2_name4_toss_info").innerHTML;
+			var var_team2_name4_toss_s_info= "";//document.getElementById("team2_name4_toss_s_info").innerHTML;
+			var var_team2_name4_mistake_info= document.getElementById("team2_name4_mistake_info").innerHTML;
+			var var_team2_name4_hustle_info= document.getElementById("team2_name4_hustle_info").innerHTML;
+			
+			// 5플레이어
+			
+			var var_team1_name5 = document.getElementById("team1_name5").value;
+			
+			if(var_team1_name5 != "")
+			{
+			
+				var var_team1_name5_attack_info = "";//document.getElementById("team1_name5_attack_info").innerHTML;
+				var var_team1_name5_point_info= "";//document.getElementById("team1_name5_point_info").innerHTML;
+				var var_team1_name5_serve_info= document.getElementById("team1_name5_serve_info").innerHTML;
+				var var_team1_name5_serve_s_info= "";//document.getElementById("team1_name5_serve_s_info").innerHTML;
+				var var_team1_name5_receive_info= document.getElementById("team1_name5_receive_info").innerHTML;
+				var var_team1_name5_receive_s_info= document.getElementById("team1_name5_receive_fail").innerHTML;
+				var var_team1_name5_toss_info= "";//document.getElementById("team1_name5_toss_info").innerHTML;
+				var var_team1_name5_toss_s_info= "";//document.getElementById("team1_name5_toss_s_info").innerHTML;
+				var var_team1_name5_mistake_info= document.getElementById("team1_name5_mistake_info").innerHTML;
+				var var_team1_name5_hustle_info= document.getElementById("team1_name5_hustle_info").innerHTML;
+			}	
+			
+			var var_team2_name5 = document.getElementById("team2_name5").value;
+			
+			if(var_team2_name5 != "")
+			{
+				var var_team2_name5_attack_info = "";//document.getElementById("team2_name5_attack_info").innerHTML;
+				var var_team2_name5_point_info= "";//document.getElementById("team2_name5_point_info").innerHTML;
+				var var_team2_name5_serve_info= document.getElementById("team2_name5_serve_info").innerHTML;
+				var var_team2_name5_serve_s_info= "";//document.getElementById("team2_name5_serve_s_info").innerHTML;
+				var var_team2_name5_receive_info= document.getElementById("team2_name5_receive_info").innerHTML;
+				var var_team2_name5_receive_s_info= document.getElementById("team2_name5_receive_fail").innerHTML;
+				var var_team2_name5_toss_info= "";//document.getElementById("team2_name5_toss_info").innerHTML;
+				var var_team2_name5_toss_s_info= "";//document.getElementById("team2_name5_toss_s_info").innerHTML;
+				var var_team2_name5_mistake_info= document.getElementById("team2_name5_mistake_info").innerHTML;
+				var var_team2_name5_hustle_info= document.getElementById("team2_name5_hustle_info").innerHTML;
+			}
+			
+	
 			
 			var params = {
 				// The ID of the spreadsheet to retrieve data from.
@@ -282,11 +419,130 @@
 				insertDataOption: 'INSERT_ROWS',
 				};
 				
+				//경기 날짜 & 이름
+				//세트1	
+				//세트2	
+				//세트3	
+				//팀1선수1	
+				//팀1선수1득점	
+				//팀1선수1공격시도	
+				//팀1선수1허슬	
+				//팀1선수1범실	
+				//팀1선수2	
+				//팀1선수2토스시도	
+				//팀1선수2토스실패	
+				//팀1선수2허슬	
+				//팀1선수2범실	
+				//팀1선수3	
+				//팀1선수3리시브시도	
+				//팀1선수3리시브실패	
+				//팀1선수3서브	
+				//팀1선수3허슬	
+				//팀1선수3범실	
+				//팀1선수4	
+				//팀1선수4리시브시도	
+				//팀1선수4리시브실패	
+				//팀1선수4서브	
+				//팀1선수4허슬	
+				//팀1선수4범실	
+				//팀1선수5	
+				//팀1선수5리시브시도	
+				//팀1선수5리시브실패	
+				//팀1선수5서브	
+				//팀1선수5허슬	
+				//팀1선수5범실	
+				//팀2선수1	
+				//팀2선수1득점	
+				//팀2선수1공격시도	
+				//팀2선수1허슬	
+				//팀2선수1범실	
+				//팀2선수2	
+				//팀2선수2토스시도	
+				//팀2선수2토스실패	
+				//팀2선수2허슬	
+				//팀2선수2범실	
+				//팀2선수3	
+				//팀2선수3리시브시도	
+				//팀2선수3리시브실패	
+				//팀2선수3서브	
+				//팀2선수3허슬	
+				//팀2선수3범실	
+				//팀2선수4	
+				//팀2선수4리시브시도	
+				//팀2선수4리시브실패	
+				//팀2선수4서브	
+				//팀2선수4허슬	
+				//팀2선수4범실	
+				//팀2선수5	
+				//팀2선수5리시브시도	
+				//팀2선수5리시브실패	
+				//팀2선수5서브	
+				//팀2선수5허슬	
+				//팀2선수5범실
+				
 				var vals = new Array(1);
-				vals[0] = new Array(3);
-				vals[0][0] = '12/16/2018';
-				vals[0][1] = '추가';
-				vals[0][2] = '01028526450';
+				vals[0] = new Array(60);
+				vals[0][0] = var_game; //경기 날짜 & 이름
+				vals[0][1] = ''; //세트1 
+				vals[0][2] = ''; //세트2
+				vals[0][3] = ''; //세트3
+				vals[0][4] = var_team1_name1; //팀1선수1 
+				vals[0][5] = var_team1_name1_point_info; //팀1선수1득점
+				vals[0][6] = var_team1_name1_attack_info; //팀1선수1공격시도
+				vals[0][7] = var_team1_name1_hustle_info; //팀1선수1허슬
+				vals[0][8] = var_team1_name1_mistake_info; //팀1선수1범실
+				vals[0][9] = var_team1_name2; //팀1선수2 
+				vals[0][10] = var_team1_name2_toss_info; //팀1선수2토스시도
+				vals[0][11] = var_team1_name2_toss_s_info; //팀1선수2토스실패
+				vals[0][12] = var_team1_name2_hustle_info; //팀1선수2허슬
+				vals[0][13] = var_team1_name2_mistake_info; //팀1선수2범실
+				vals[0][14] = var_team1_name3; //팀1선수3	
+				vals[0][15] = var_team1_name3_receive_info; //팀1선수3리시브시도
+				vals[0][16] = var_team1_name3_receive_s_info; //팀1선수3리시브실패
+				vals[0][17] = var_team1_name3_serve_info; //팀1선수3서브		
+				vals[0][18] = var_team1_name3_hustle_info; //팀1선수3허슬
+				vals[0][19] = var_team1_name3_mistake_info; //팀1선수3범실
+				vals[0][20] = var_team1_name4; //팀1선수4	
+				vals[0][21] = var_team1_name4_receive_info; //팀1선수4리시브시도
+				vals[0][22] = var_team1_name4_receive_s_info; //팀1선수4리시브실패
+				vals[0][23] = var_team1_name4_serve_info; //팀1선수4서브		
+				vals[0][24] = var_team1_name4_hustle_info; //팀1선수4허슬
+				vals[0][25] = var_team1_name4_mistake_info; //팀1선수4범실
+				vals[0][26] = var_team1_name5; //팀1선수5	
+				vals[0][27] = var_team1_name5_receive_info; //팀1선수5리시브시도
+				vals[0][28] = var_team1_name5_receive_s_info; //팀1선수5리시브실패
+				vals[0][29] = var_team1_name5_serve_info; //팀1선수5서브		
+				vals[0][30] = var_team1_name5_hustle_info; //팀1선수5허슬
+				vals[0][31] = var_team1_name5_mistake_info; //팀1선수5범실
+				vals[0][32] = var_team2_name1; //팀2선수1 
+				vals[0][33] = var_team2_name1_point_info; //팀2선수1득점
+				vals[0][34] = var_team2_name1_attack_info; //팀2선수1공격시도
+				vals[0][35] = var_team2_name1_hustle_info; //팀2선수1허슬
+				vals[0][36] = var_team2_name1_mistake_info; //팀2선수1범실
+				vals[0][37] = var_team2_name2; //팀2선수2 
+				vals[0][38] = var_team2_name2_toss_info; //팀2선수2토스시도
+				vals[0][39] = var_team2_name2_toss_s_info; //팀2선수2토스실패
+				vals[0][40] = var_team2_name2_hustle_info; //팀2선수2허슬
+				vals[0][41] = var_team2_name2_mistake_info; //팀2선수2범실
+				vals[0][42] = var_team2_name3; //팀2선수3	
+				vals[0][43] = var_team2_name3_receive_info; //팀2선수3리시브시도
+				vals[0][44] = var_team2_name3_receive_s_info; //팀2선수3리시브실패
+				vals[0][45] = var_team2_name3_serve_info; //팀2선수3서브		
+				vals[0][46] = var_team2_name3_hustle_info; //팀2선수3허슬
+				vals[0][47] = var_team2_name3_mistake_info; //팀2선수3범실
+				vals[0][48] = var_team2_name4; //팀2선수4	
+				vals[0][49] = var_team2_name4_receive_info; //팀2선수4리시브시도
+				vals[0][50] = var_team2_name4_receive_s_info; //팀2선수4리시브실패
+				vals[0][51] = var_team2_name4_serve_info; //팀2선수4서브		
+				vals[0][52] = var_team2_name4_hustle_info; //팀2선수4허슬
+				vals[0][53] = var_team2_name4_mistake_info; //팀2선수4범실
+				vals[0][54] = var_team2_name5; //팀2선수5	
+				vals[0][55] = var_team2_name5_receive_info; //팀2선수5리시브시도
+				vals[0][56] = var_team2_name5_receive_s_info; //팀2선수5리시브실패
+				vals[0][57] = var_team2_name5_serve_info; //팀2선수5서브		
+				vals[0][58] = var_team2_name5_hustle_info; //팀2선수5허슬
+				vals[0][59] = var_team2_name5_mistake_info; //팀2선수5범실
+					
 				
 				var valueRangeBody = { "values": vals };
 				
@@ -438,12 +694,12 @@
 		document.getElementById("team1_name2_serve_s_info").innerHTML = String(div);
 	} 
 
-	function team1_name2_toss_success()
+	function team1_name2_toss_fail()
 	{	
-		var div = document.getElementById("team1_name2_toss_success").innerHTML;  
+		var div = document.getElementById("team1_name2_toss_fail").innerHTML;  
 		div = Number(div);
 		div+=1;
-		document.getElementById("team1_name2_toss_success").innerHTML = String(div);
+		document.getElementById("team1_name2_toss_fail").innerHTML = String(div);
 	}
 
 	// 팀1플레이어3
@@ -511,12 +767,12 @@
 		document.getElementById("team1_name3_serve_s_info").innerHTML = String(div);
 	} 
 
-	function team1_name3_receive_success()
+	function team1_name3_receive_fail()
 	{
-		var div = document.getElementById("team1_name3_receive_success").innerHTML;  
+		var div = document.getElementById("team1_name3_receive_fail").innerHTML;  
 		div = Number(div);
 		div+=1;
-		document.getElementById("team1_name3_receive_success").innerHTML = String(div);
+		document.getElementById("team1_name3_receive_fail").innerHTML = String(div);
 	}
 
 	// 팀1플레이어4
@@ -584,12 +840,12 @@
 		document.getElementById("team1_name4_serve_s_info").innerHTML = String(div);
 	} 
 
-	function team1_name4_receive_success()
+	function team1_name4_receive_fail()
 	{
-		var div = document.getElementById("team1_name4_receive_success").innerHTML;  
+		var div = document.getElementById("team1_name4_receive_fail").innerHTML;  
 		div = Number(div);
 		div+=1;
-		document.getElementById("team1_name4_receive_success").innerHTML = String(div);
+		document.getElementById("team1_name4_receive_fail").innerHTML = String(div);
 	}
 
 	// 팀1플레이어4
@@ -657,12 +913,12 @@
 		document.getElementById("team1_name5_serve_s_info").innerHTML = String(div);
 	} 
 
-	function team1_name5_receive_success()
+	function team1_name5_receive_fail()
 	{
-		var div = document.getElementById("team1_name5_receive_success").innerHTML;  
+		var div = document.getElementById("team1_name5_receive_fail").innerHTML;  
 		div = Number(div);
 		div+=1;
-		document.getElementById("team1_name5_receive_success").innerHTML = String(div);
+		document.getElementById("team1_name5_receive_fail").innerHTML = String(div);
 	}
 
 	//팀2플레이어1
@@ -795,12 +1051,12 @@
 		document.getElementById("team2_name2_serve_s_info").innerHTML = String(div);
 	}
 
-	function team2_name2_toss_success()
+	function team2_name2_toss_fail()
 	{	
-		var div = document.getElementById("team2_name2_toss_success").innerHTML;  
+		var div = document.getElementById("team2_name2_toss_fail").innerHTML;  
 		div = Number(div);
 		div+=1;
-		document.getElementById("team2_name2_toss_success").innerHTML = String(div);
+		document.getElementById("team2_name2_toss_fail").innerHTML = String(div);
 	} 
 
 	// 팀2플레이어3
@@ -868,12 +1124,12 @@
 		document.getElementById("team2_name3_serve_s_info").innerHTML = String(div);
 	} 
 
-	function team2_name3_receive_success()
+	function team2_name3_receive_fail()
 	{
-		var div = document.getElementById("team2_name3_receive_success").innerHTML;  
+		var div = document.getElementById("team2_name3_receive_fail").innerHTML;  
 		div = Number(div);
 		div+=1;
-		document.getElementById("team2_name3_receive_success").innerHTML = String(div);
+		document.getElementById("team2_name3_receive_fail").innerHTML = String(div);
 	}
 
 	// 팀2플레이어4
@@ -941,12 +1197,12 @@
 		document.getElementById("team2_name4_serve_s_info").innerHTML = String(div);
 	} 
 
-	function team2_name4_receive_success()
+	function team2_name4_receive_fail()
 	{
-		var div = document.getElementById("team2_name4_receive_success").innerHTML;  
+		var div = document.getElementById("team2_name4_receive_fail").innerHTML;  
 		div = Number(div);
 		div+=1;
-		document.getElementById("team2_name4_receive_success").innerHTML = String(div);
+		document.getElementById("team2_name4_receive_fail").innerHTML = String(div);
 	}
 
 	// 팀2플레이어4
@@ -1014,12 +1270,12 @@
 		document.getElementById("team2_name5_serve_s_info").innerHTML = String(div);
 	} 
 
-	function team2_name5_receive_success()
+	function team2_name5_receive_fail()
 	{
-		var div = document.getElementById("team2_name5_receive_success").innerHTML;  
+		var div = document.getElementById("team2_name5_receive_fail").innerHTML;  
 		div = Number(div);
 		div+=1;
-		document.getElementById("team2_name5_receive_success").innerHTML = String(div);
+		document.getElementById("team2_name5_receive_fail").innerHTML = String(div);
 	}
 
 	function team1_name1_hustle()
@@ -1164,7 +1420,7 @@
 		var var_team1_name2_receive_info= "";//document.getElementById("team1_name2_receive_info").innerHTML;
 		var var_team1_name2_receive_s_info= "";//document.getElementById("team1_name2_receive_s_info").innerHTML;
 		var var_team1_name2_toss_info= document.getElementById("team1_name2_toss_info").innerHTML;
-		var var_team1_name2_toss_s_info= document.getElementById("team1_name2_toss_success").innerHTML;
+		var var_team1_name2_toss_s_info= document.getElementById("team1_name2_toss_fail").innerHTML;
 		var var_team1_name2_mistake_info= document.getElementById("team1_name2_mistake_info").innerHTML;
 		var var_team1_name2_hustle_info= document.getElementById("team1_name2_hustle_info").innerHTML;
 		
@@ -1176,7 +1432,7 @@
 		var var_team2_name2_receive_info= "";//document.getElementById("team2_name2_receive_info").innerHTML;
 		var var_team2_name2_receive_s_info= "";//document.getElementById("team2_name2_receive_s_info").innerHTML;
 		var var_team2_name2_toss_info= document.getElementById("team2_name2_toss_info").innerHTML;
-		var var_team2_name2_toss_s_info= document.getElementById("team2_name2_toss_success").innerHTML;
+		var var_team2_name2_toss_s_info= document.getElementById("team2_name2_toss_fail").innerHTML;
 		var var_team2_name2_mistake_info= document.getElementById("team2_name2_mistake_info").innerHTML;
 		var var_team2_name2_hustle_info= document.getElementById("team2_name2_hustle_info").innerHTML;
 			
@@ -1187,7 +1443,7 @@
 		var var_team1_name3_serve_info= document.getElementById("team1_name3_serve_info").innerHTML;
 		var var_team1_name3_serve_s_info= "";//document.getElementById("team1_name3_serve_s_info").innerHTML;
 		var var_team1_name3_receive_info= document.getElementById("team1_name3_receive_info").innerHTML;
-		var var_team1_name3_receive_s_info= document.getElementById("team1_name3_receive_success").innerHTML;
+		var var_team1_name3_receive_s_info= document.getElementById("team1_name3_receive_fail").innerHTML;
 		var var_team1_name3_toss_info= "";//document.getElementById("team1_name3_toss_info").innerHTML;
 		var var_team1_name3_toss_s_info= "";//document.getElementById("team1_name3_toss_s_info").innerHTML;
 		var var_team1_name3_mistake_info= document.getElementById("team1_name3_mistake_info").innerHTML;
@@ -1199,7 +1455,7 @@
 		var var_team2_name3_serve_info= document.getElementById("team2_name3_serve_info").innerHTML;
 		var var_team2_name3_serve_s_info= "";//document.getElementById("team2_name3_serve_s_info").innerHTML;
 		var var_team2_name3_receive_info= document.getElementById("team2_name3_receive_info").innerHTML;
-		var var_team2_name3_receive_s_info= document.getElementById("team2_name3_receive_success").innerHTML;
+		var var_team2_name3_receive_s_info= document.getElementById("team2_name3_receive_fail").innerHTML;
 		var var_team2_name3_toss_info= "";//document.getElementById("team2_name3_toss_info").innerHTML;
 		var var_team2_name3_toss_s_info= "";//document.getElementById("team2_name3_toss_s_info").innerHTML;
 		var var_team2_name3_mistake_info= document.getElementById("team2_name3_mistake_info").innerHTML;
@@ -1212,7 +1468,7 @@
 		var var_team1_name4_serve_info= document.getElementById("team1_name4_serve_info").innerHTML;
 		var var_team1_name4_serve_s_info= "";//document.getElementById("team1_name4_serve_s_info").innerHTML;
 		var var_team1_name4_receive_info= document.getElementById("team1_name4_receive_info").innerHTML;
-		var var_team1_name4_receive_s_info= document.getElementById("team1_name4_receive_success").innerHTML;
+		var var_team1_name4_receive_s_info= document.getElementById("team1_name4_receive_fail").innerHTML;
 		var var_team1_name4_toss_info= "";//document.getElementById("team1_name4_toss_info").innerHTML;
 		var var_team1_name4_toss_s_info= "";//document.getElementById("team1_name4_toss_s_info").innerHTML;
 		var var_team1_name4_mistake_info= document.getElementById("team1_name4_mistake_info").innerHTML;
@@ -1224,7 +1480,7 @@
 		var var_team2_name4_serve_info= document.getElementById("team2_name4_serve_info").innerHTML;
 		var var_team2_name4_serve_s_info= "";//document.getElementById("team2_name4_serve_s_info").innerHTML;
 		var var_team2_name4_receive_info= document.getElementById("team2_name4_receive_info").innerHTML;
-		var var_team2_name4_receive_s_info= document.getElementById("team2_name4_receive_success").innerHTML;
+		var var_team2_name4_receive_s_info= document.getElementById("team2_name4_receive_fail").innerHTML;
 		var var_team2_name4_toss_info= "";//document.getElementById("team2_name4_toss_info").innerHTML;
 		var var_team2_name4_toss_s_info= "";//document.getElementById("team2_name4_toss_s_info").innerHTML;
 		var var_team2_name4_mistake_info= document.getElementById("team2_name4_mistake_info").innerHTML;
@@ -1242,7 +1498,7 @@
 			var var_team1_name5_serve_info= document.getElementById("team1_name5_serve_info").innerHTML;
 			var var_team1_name5_serve_s_info= "";//document.getElementById("team1_name5_serve_s_info").innerHTML;
 			var var_team1_name5_receive_info= document.getElementById("team1_name5_receive_info").innerHTML;
-			var var_team1_name5_receive_s_info= document.getElementById("team1_name5_receive_success").innerHTML;
+			var var_team1_name5_receive_s_info= document.getElementById("team1_name5_receive_fail").innerHTML;
 			var var_team1_name5_toss_info= "";//document.getElementById("team1_name5_toss_info").innerHTML;
 			var var_team1_name5_toss_s_info= "";//document.getElementById("team1_name5_toss_s_info").innerHTML;
 			var var_team1_name5_mistake_info= document.getElementById("team1_name5_mistake_info").innerHTML;
@@ -1258,7 +1514,7 @@
 			var var_team2_name5_serve_info= document.getElementById("team2_name5_serve_info").innerHTML;
 			var var_team2_name5_serve_s_info= "";//document.getElementById("team2_name5_serve_s_info").innerHTML;
 			var var_team2_name5_receive_info= document.getElementById("team2_name5_receive_info").innerHTML;
-			var var_team2_name5_receive_s_info= document.getElementById("team2_name5_receive_success").innerHTML;
+			var var_team2_name5_receive_s_info= document.getElementById("team2_name5_receive_fail").innerHTML;
 			var var_team2_name5_toss_info= "";//document.getElementById("team2_name5_toss_info").innerHTML;
 			var var_team2_name5_toss_s_info= "";//document.getElementById("team2_name5_toss_s_info").innerHTML;
 			var var_team2_name5_mistake_info= document.getElementById("team2_name5_mistake_info").innerHTML;
@@ -1405,7 +1661,7 @@
 		document.getElementById("team1_name2_toss_info").innerHTML="0";
 		//document.getElementById("team1_name2_toss_s_info").innerHTML="0";
 		document.getElementById("team1_name2_mistake_info").innerHTML="0";
-		document.getElementById("team1_name2_toss_success").innerHTML="0";
+		document.getElementById("team1_name2_toss_fail").innerHTML="0";
 		document.getElementById("team1_name2_hustle_info").innerHTML="0";
 		
 		document.getElementById("team2_name2").value="";
@@ -1419,9 +1675,9 @@
 		document.getElementById("team2_name2_toss_info").innerHTML="0";
 		//document.getElementById("team2_name2_toss_s_info").innerHTML="0";
 		document.getElementById("team2_name2_mistake_info").innerHTML="0";
-		document.getElementById("team2_name2_toss_success").innerHTML="0";
+		document.getElementById("team2_name2_toss_fail").innerHTML="0";
 		document.getElementById("team2_name2_hustle_info").innerHTML="0";
-		document.getElementById("team2_name2_toss_success").innerHTML="0";
+		document.getElementById("team2_name2_toss_fail").innerHTML="0";
 		document.getElementById("team2_name2_hustle_info").innerHTML="0";
 		
 		document.getElementById("team1_name3").value="";
@@ -1435,7 +1691,7 @@
 		//document.getElementById("team1_name3_toss_info").innerHTML="0";
 		//document.getElementById("team1_name3_toss_s_info").innerHTML="0";
 		document.getElementById("team1_name3_mistake_info").innerHTML="0";
-		document.getElementById("team1_name3_receive_success").innerHTML="0";
+		document.getElementById("team1_name3_receive_fail").innerHTML="0";
 		document.getElementById("team1_name3_hustle_info").innerHTML="0";
 		
 		
@@ -1450,7 +1706,7 @@
 		//document.getElementById("team2_name3_toss_info").innerHTML="0";
 		//document.getElementById("team2_name3_toss_s_info").innerHTML="0";
 		document.getElementById("team2_name3_mistake_info").innerHTML="0";
-		document.getElementById("team2_name3_receive_success").innerHTML="0";
+		document.getElementById("team2_name3_receive_fail").innerHTML="0";
 		document.getElementById("team2_name3_hustle_info").innerHTML="0";
 		
 		document.getElementById("team1_name4").value="";
@@ -1464,7 +1720,7 @@
 		//document.getElementById("team1_name4_toss_info").innerHTML="0";
 		//document.getElementById("team1_name4_toss_s_info").innerHTML="0";
 		document.getElementById("team1_name4_mistake_info").innerHTML="0";
-		document.getElementById("team1_name4_receive_success").innerHTML="0";
+		document.getElementById("team1_name4_receive_fail").innerHTML="0";
 		document.getElementById("team1_name4_hustle_info").innerHTML="0";
 		
 		document.getElementById("team2_name4").value="";
@@ -1478,7 +1734,7 @@
 		//document.getElementById("team2_name4_toss_info").innerHTML="0";
 		//document.getElementById("team2_name4_toss_s_info").innerHTML="0";
 		document.getElementById("team2_name4_mistake_info").innerHTML="0";
-		document.getElementById("team2_name4_receive_success").innerHTML="0";
+		document.getElementById("team2_name4_receive_fail").innerHTML="0";
 		document.getElementById("team2_name4_hustle_info").innerHTML="0";
 		
 		document.getElementById("team1_name5").value="";
@@ -1492,7 +1748,7 @@
 		//document.getElementById("team1_name5_toss_info").innerHTML="0";
 		//document.getElementById("team1_name5_toss_s_info").innerHTML="0";
 		document.getElementById("team1_name5_mistake_info").innerHTML="0";
-		document.getElementById("team1_name5_receive_success").innerHTML="0";
+		document.getElementById("team1_name5_receive_fail").innerHTML="0";
 		document.getElementById("team1_name5_hustle_info").innerHTML="0";
 		
 		document.getElementById("team2_name5").value="";
@@ -1506,7 +1762,7 @@
 		//document.getElementById("team2_name5_toss_info").innerHTML="0";
 		//document.getElementById("team2_name5_toss_s_info").innerHTML="0";
 		document.getElementById("team2_name5_mistake_info").innerHTML="0";
-		document.getElementById("team2_name5_receive_success").innerHTML="0";
+		document.getElementById("team2_name5_receive_fail").innerHTML="0";
 		document.getElementById("team2_name5_hustle_info").innerHTML="0";
 
 		
@@ -1824,7 +2080,7 @@ function selectEventTeam2(selectObj)
 		
 		<tr>
 						<td></td>
-						<td>토스<div id="team1_name2_toss_success">0</div><input type="button" value="실패" onclick="team1_name2_toss_success()"></td>
+						<td>토스<div id="team1_name2_toss_fail">0</div><input type="button" value="실패" onclick="team1_name2_toss_fail()"></td>
 						<td>범실<div id="team1_name2_mistake_info">0</div><input type="button" value="범실" onclick="team1_name2_mistake()"></td>
 						
 						<td>토서 :<input type="text" id="team1_name2"></td>
@@ -1840,7 +2096,7 @@ function selectEventTeam2(selectObj)
 						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>  
 						
 						
-						<td>토스<div id="team2_name2_toss_success">0</div><input type="button" value="실패" onclick="team2_name2_toss_success()"></td>
+						<td>토스<div id="team2_name2_toss_fail">0</div><input type="button" value="실패" onclick="team2_name2_toss_fail()"></td>
 						<td>범실<div id="team2_name2_mistake_info">0</div><input type="button" value="범실" onclick="team2_name2_mistake()"></td>
 						
 						<td>토서 :<input type="text" id="team2_name2"></td> 
@@ -1859,7 +2115,7 @@ function selectEventTeam2(selectObj)
 		</tr>
 		<tr>
 						<td></td>
-						<td>리시브<div id="team1_name3_receive_success">0</div><input type="button" value="실패" onclick="team1_name3_receive_success()"></td>
+						<td>리시브<div id="team1_name3_receive_fail">0</div><input type="button" value="실패" onclick="team1_name3_receive_fail()"></td>
 						<td>범실<div id="team1_name3_mistake_info">0</div><input type="button" value="범실" onclick="team1_name3_mistake()"></td>
 						
 						<td>수비1:<input type="text" id="team1_name3"></td>
@@ -1873,7 +2129,7 @@ function selectEventTeam2(selectObj)
 						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
 
 						
-						<td>리시브<div id="team2_name3_receive_success">0</div><input type="button" value="실패" onclick="team2_name3_receive_success()"></td>
+						<td>리시브<div id="team2_name3_receive_fail">0</div><input type="button" value="실패" onclick="team2_name3_receive_fail()"></td>
 						<td>범실<div id="team2_name3_mistake_info">0</div><input type="button" value="범실" onclick="team2_name3_mistake()"></td>
 						
 						<td>수비1:<input type="text" id="team2_name3"></td>
@@ -1892,7 +2148,7 @@ function selectEventTeam2(selectObj)
 		</tr>
 		<tr>
 						<td></td>
-						<td>리시브<div id="team1_name4_receive_success">0</div><input type="button" value="실패" onclick="team1_name4_receive_success()"></td>
+						<td>리시브<div id="team1_name4_receive_fail">0</div><input type="button" value="실패" onclick="team1_name4_receive_fail()"></td>
 						<td>범실<div id="team1_name4_mistake_info">0</div><input type="button" value="범실" onclick="team1_name4_mistake()"></td>
 						
 						<td>수비2:<input type="text" id="team1_name4"></td> 
@@ -1909,7 +2165,7 @@ function selectEventTeam2(selectObj)
 						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>  
 						
 						
-						<td>리시브<div id="team2_name4_receive_success">0</div><input type="button" value="실패" onclick="team2_name4_receive_success()"></td>
+						<td>리시브<div id="team2_name4_receive_fail">0</div><input type="button" value="실패" onclick="team2_name4_receive_fail()"></td>
 						<td>범실<div id="team2_name4_mistake_info">0</div><input type="button" value="범실" onclick="team2_name4_mistake()"></td>
 						
 						<td>수비2:<input type="text" id="team2_name4"></td>
@@ -1926,7 +2182,7 @@ function selectEventTeam2(selectObj)
 		
 		<tr>
 						<td></td>
-						<td>리시브<div id="team1_name5_receive_success">0</div><input type="button" value="실패" onclick="team1_name5_receive_success()"></td>
+						<td>리시브<div id="team1_name5_receive_fail">0</div><input type="button" value="실패" onclick="team1_name5_receive_fail()"></td>
 						<td>범실<div id="team1_name5_mistake_info">0</div><input type="button" value="범실" onclick="team1_name5_mistake()"></td>
 						
 						<td>수비3:<input type="text" id="team1_name5"></td> 
@@ -1941,7 +2197,7 @@ function selectEventTeam2(selectObj)
 						
 						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>  
 						
-						<td>리시브<div id="team2_name5_receive_success">0</div><input type="button" value="실패" onclick="team2_name5_receive_success()"></td>
+						<td>리시브<div id="team2_name5_receive_fail">0</div><input type="button" value="실패" onclick="team2_name5_receive_fail()"></td>
 						<td>범실<div id="team2_name5_mistake_info">0</div><input type="button" value="범실" onclick="team2_name5_mistake()"></td>
 						
 						<td>수비3:<input type="text" id="team2_name5"></td>
