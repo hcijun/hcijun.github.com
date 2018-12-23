@@ -287,6 +287,18 @@
 		} 
 		
 		var_game = yyyy+""+mm+""+dd +" " + var_team1 + " vs " + var_team2;
+		
+		for(int i=0; i < g_Vals.legth; i++)
+		{
+			if(g_Vals[i][0] == var_game)
+			{
+				alert('이미 게임이 만들어져 있으므로 이어서 경기 기록을 합니다!');
+				g_SelectedIndex = i;
+				return;
+			}
+		}
+		
+		
 		document.getElementById("game").value = var_game;
 		
 		if(confirm(var_game + '게임을 생성 하겠습니까?'))
