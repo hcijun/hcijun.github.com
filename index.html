@@ -22,7 +22,8 @@
 	// append
 	
 	var g_Vals;
-	var g_SelectedIndex;
+	var g_SelectedIndex=-1;
+	var g_IsGameStarted=0;
 	
     function makeApiCall(action="read") {
       
@@ -760,6 +761,7 @@
 					// 이제 기존 g_Vals 에 추가
 					g_Vals.push(vals[0]);
 					g_SelectedIndex = g_Vals.length-1;
+					g_IsGameStarted = 1;
 					
 				}, function(reason) {
 					console.error('error: ' + reason.result.error.message);
@@ -817,7 +819,13 @@
 		if(!g_Vals)
 		{
 			alert('경기 데이터가 로딩 되어 있어야 합니다!');
-			return
+			return;
+		}
+		
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
 		}
 	
 		var var_game = document.getElementById("game").value;
@@ -1117,6 +1125,12 @@
 	//팀1플레이어1
 	function team1_name1_attack()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name1_attack_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1126,6 +1140,12 @@
 	} 
 	function team1_name1_point()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name1_point_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1135,6 +1155,12 @@
 	} 
 	function team1_name1_mistake()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name1_mistake_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1144,6 +1170,12 @@
 	} 
 	function team1_name1_receive()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name1_receive_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1153,6 +1185,12 @@
 	} 
 	function team1_name1_receive_s()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name1_receive_s_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1162,6 +1200,12 @@
 	} 
 	function team1_name1_toss()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return
+		}
+		
 		var div = document.getElementById("team1_name1_toss_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1171,6 +1215,12 @@
 	} 
 	function team1_name1_toss_s()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name1_toss_s_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1180,6 +1230,12 @@
 	} 
 	function team1_name1_serve()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name1_serve_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1189,6 +1245,12 @@
 	} 
 	function team1_name1_serve_s()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name1_serve_s_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1200,6 +1262,12 @@
 	// 팀1플레이어2
 	function team1_name2_attack()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return
+		}
+		
 		var div = document.getElementById("team1_name2_attack_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1209,6 +1277,12 @@
 	} 
 	function team1_name2_point()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name2_point_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1218,6 +1292,12 @@
 	} 
 	function team1_name2_mistake()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name2_mistake_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1227,6 +1307,12 @@
 	} 
 	function team1_name2_receive()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name2_receive_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1236,6 +1322,12 @@
 	} 
 	function team1_name2_receive_s()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name2_receive_s_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1245,6 +1337,12 @@
 	} 
 	function team1_name2_toss()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name2_toss_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1254,6 +1352,12 @@
 	} 
 	function team1_name2_toss_s()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name2_toss_s_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1263,6 +1367,12 @@
 	} 
 	function team1_name2_serve()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name2_serve_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1272,6 +1382,12 @@
 	} 
 	function team1_name2_serve_s()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name2_serve_s_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1282,6 +1398,12 @@
 
 	function team1_name2_toss_fail()
 	{	
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name2_toss_fail").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1293,6 +1415,12 @@
 	// 팀1플레이어3
 	function team1_name3_attack()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name3_attack_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1302,6 +1430,12 @@
 	} 
 	function team1_name3_point()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name3_point_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1311,6 +1445,12 @@
 	} 
 	function team1_name3_mistake()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name3_mistake_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1320,6 +1460,12 @@
 	} 
 	function team1_name3_receive()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name3_receive_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1329,6 +1475,12 @@
 	} 
 	function team1_name3_receive_s()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name3_receive_s_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1338,6 +1490,12 @@
 	} 
 	function team1_name3_toss()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name3_toss_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1347,6 +1505,12 @@
 	} 
 	function team1_name3_toss_s()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name3_toss_s_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1356,6 +1520,12 @@
 	} 
 	function team1_name3_serve()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name3_serve_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1365,6 +1535,12 @@
 	} 
 	function team1_name3_serve_s()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name3_serve_s_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1375,6 +1551,12 @@
 
 	function team1_name3_receive_fail()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name3_receive_fail").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1386,6 +1568,12 @@
 	// 팀1플레이어4
 	function team1_name4_attack()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name4_attack_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1395,6 +1583,12 @@
 	} 
 	function team1_name4_point()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name4_point_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1404,6 +1598,12 @@
 	} 
 	function team1_name4_mistake()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name4_mistake_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1413,6 +1613,12 @@
 	} 
 	function team1_name4_receive()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name4_receive_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1422,6 +1628,12 @@
 	} 
 	function team1_name4_receive_s()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name4_receive_s_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1431,6 +1643,12 @@
 	} 
 	function team1_name4_toss()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name4_toss_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1440,6 +1658,12 @@
 	} 
 	function team1_name4_toss_s()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name4_toss_s_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1449,6 +1673,12 @@
 	} 
 	function team1_name4_serve()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name4_serve_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1458,6 +1688,12 @@
 	} 
 	function team1_name4_serve_s()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name4_serve_s_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1468,6 +1704,12 @@
 
 	function team1_name4_receive_fail()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name4_receive_fail").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1479,6 +1721,12 @@
 	// 팀1플레이어4
 	function team1_name5_attack()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name5_attack_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1488,6 +1736,12 @@
 	} 
 	function team1_name5_point()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name5_point_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1497,6 +1751,12 @@
 	} 
 	function team1_name5_mistake()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name5_mistake_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1506,6 +1766,12 @@
 	} 
 	function team1_name5_receive()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name5_receive_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1515,6 +1781,12 @@
 	} 
 	function team1_name5_receive_s()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name5_receive_s_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1524,6 +1796,12 @@
 	} 
 	function team1_name5_toss()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name5_toss_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1533,6 +1811,12 @@
 	} 
 	function team1_name5_toss_s()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name5_toss_s_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1542,6 +1826,12 @@
 	} 
 	function team1_name5_serve()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name5_serve_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1551,6 +1841,12 @@
 	} 
 	function team1_name5_serve_s()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name5_serve_s_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1561,6 +1857,11 @@
 
 	function team1_name5_receive_fail()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
 		var div = document.getElementById("team1_name5_receive_fail").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1572,6 +1873,12 @@
 	//팀2플레이어1
 	function team2_name1_attack()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_name1_attack_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1581,6 +1888,12 @@
 	} 
 	function team2_name1_point()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_name1_point_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1590,6 +1903,11 @@
 	} 
 	function team2_name1_mistake()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
 		var div = document.getElementById("team2_name1_mistake_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1599,6 +1917,12 @@
 	} 
 	function team2_name1_receive()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_name1_receive_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1608,6 +1932,11 @@
 	} 
 	function team2_name1_receive_s()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
 		var div = document.getElementById("team2_name1_receive_s_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1617,6 +1946,11 @@
 	} 
 	function team2_name1_toss()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
 		var div = document.getElementById("team2_name1_toss_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1626,6 +1960,12 @@
 	} 
 	function team2_name1_toss_s()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_name1_toss_s_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1635,6 +1975,12 @@
 	} 
 	function team2_name1_serve()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_name1_serve_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1644,6 +1990,12 @@
 	} 
 	function team2_name1_serve_s()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_name1_serve_s_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1655,6 +2007,11 @@
 	// 팀2플레이어2
 	function team2_name2_attack()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
 		var div = document.getElementById("team2_name2_attack_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1664,6 +2021,11 @@
 	} 
 	function team2_name2_point()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
 		var div = document.getElementById("team2_name2_point_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1673,6 +2035,11 @@
 	} 
 	function team2_name2_mistake()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
 		var div = document.getElementById("team2_name2_mistake_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1682,6 +2049,11 @@
 	} 
 	function team2_name2_receive()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
 		var div = document.getElementById("team2_name2_receive_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1691,6 +2063,13 @@
 	} 
 	function team2_name2_receive_s()
 	{
+	
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_name2_receive_s_info").innerHTML;
 
 		
@@ -1702,6 +2081,12 @@
 	} 
 	function team2_name2_toss()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_name2_toss_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1711,6 +2096,12 @@
 	} 
 	function team2_name2_toss_s()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_name2_toss_s_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1720,6 +2111,12 @@
 	} 
 	function team2_name2_serve()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_name2_serve_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1729,6 +2126,11 @@
 	} 
 	function team2_name2_serve_s()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
 		var div = document.getElementById("team2_name2_serve_s_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1739,6 +2141,11 @@
 
 	function team2_name2_toss_fail()
 	{	
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
 		var div = document.getElementById("team2_name2_toss_fail").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1750,6 +2157,12 @@
 	// 팀2플레이어3
 	function team2_name3_attack()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_name3_attack_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1759,6 +2172,12 @@
 	} 
 	function team2_name3_point()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_name3_point_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1768,6 +2187,11 @@
 	} 
 	function team2_name3_mistake()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
 		var div = document.getElementById("team2_name3_mistake_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1777,6 +2201,11 @@
 	} 
 	function team2_name3_receive()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
 		var div = document.getElementById("team2_name3_receive_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1786,6 +2215,11 @@
 	} 
 	function team2_name3_receive_s()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
 		var div = document.getElementById("team2_name3_receive_s_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1795,6 +2229,11 @@
 	} 
 	function team2_name3_toss()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
 		var div = document.getElementById("team2_name3_toss_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1804,6 +2243,11 @@
 	} 
 	function team2_name3_toss_s()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
 		var div = document.getElementById("team2_name3_toss_s_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1813,6 +2257,11 @@
 	} 
 	function team2_name3_serve()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
 		var div = document.getElementById("team2_name3_serve_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1822,6 +2271,11 @@
 	} 
 	function team2_name3_serve_s()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
 		var div = document.getElementById("team2_name3_serve_s_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1832,6 +2286,11 @@
 
 	function team2_name3_receive_fail()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
 		var div = document.getElementById("team2_name3_receive_fail").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1843,6 +2302,11 @@
 	// 팀2플레이어4
 	function team2_name4_attack()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
 		var div = document.getElementById("team2_name4_attack_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1852,6 +2316,12 @@
 	} 
 	function team2_name4_point()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_name4_point_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1861,6 +2331,12 @@
 	} 
 	function team2_name4_mistake()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_name4_mistake_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1870,6 +2346,11 @@
 	} 
 	function team2_name4_receive()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
 		var div = document.getElementById("team2_name4_receive_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1879,6 +2360,11 @@
 	} 
 	function team2_name4_receive_s()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
 		var div = document.getElementById("team2_name4_receive_s_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1888,6 +2374,11 @@
 	} 
 	function team2_name4_toss()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
 		var div = document.getElementById("team2_name4_toss_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1897,6 +2388,12 @@
 	} 
 	function team2_name4_toss_s()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_name4_toss_s_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1906,6 +2403,12 @@
 	} 
 	function team2_name4_serve()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_name4_serve_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1915,6 +2418,12 @@
 	} 
 	function team2_name4_serve_s()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_name4_serve_s_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1925,6 +2434,11 @@
 
 	function team2_name4_receive_fail()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
 		var div = document.getElementById("team2_name4_receive_fail").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1936,6 +2450,12 @@
 	// 팀2플레이어4
 	function team2_name5_attack()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_name5_attack_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1945,6 +2465,12 @@
 	} 
 	function team2_name5_point()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_name5_point_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1954,6 +2480,12 @@
 	} 
 	function team2_name5_mistake()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_name5_mistake_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1963,6 +2495,12 @@
 	} 
 	function team2_name5_receive()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_name5_receive_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1972,6 +2510,12 @@
 	} 
 	function team2_name5_receive_s()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_name5_receive_s_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1981,6 +2525,12 @@
 	} 
 	function team2_name5_toss()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_name5_toss_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1990,6 +2540,12 @@
 	} 
 	function team2_name5_toss_s()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_name5_toss_s_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -1999,6 +2555,12 @@
 	} 
 	function team2_name5_serve()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_name5_serve_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -2008,6 +2570,12 @@
 	} 
 	function team2_name5_serve_s()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_name5_serve_s_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -2018,6 +2586,12 @@
 
 	function team2_name5_receive_fail()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_name5_receive_fail").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -2028,6 +2602,12 @@
 
 	function team1_name1_hustle()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name1_hustle_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -2038,6 +2618,12 @@
 
 	function team2_name1_hustle()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_name1_hustle_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -2048,6 +2634,12 @@
 
 	function team1_name2_hustle()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name2_hustle_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -2058,6 +2650,12 @@
 
 	function team2_name2_hustle()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_name2_hustle_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -2069,6 +2667,11 @@
 
 	function team1_name3_hustle()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
 		var div = document.getElementById("team1_name3_hustle_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -2079,6 +2682,12 @@
 
 	function team2_name3_hustle()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_name3_hustle_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -2090,6 +2699,12 @@
 
 	function team1_name4_hustle()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name4_hustle_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -2100,6 +2715,12 @@
 
 	function team2_name4_hustle()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_name4_hustle_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -2110,6 +2731,12 @@
 
 	function team1_name5_hustle()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_name5_hustle_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -2120,6 +2747,12 @@
 
 	function team2_name5_hustle()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_name5_hustle_info").innerHTML;  
 		div = Number(div);
 		div+=1;
@@ -2130,6 +2763,12 @@
 
 	function plusTeam1Set1()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_score_1").value;  
 		div = Number(div);
 		div+=1;
@@ -2140,6 +2779,12 @@
 	
 	function minusTeam1Set1()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_score_1").value;  
 		div = Number(div);
 		div-=1;
@@ -2150,6 +2795,12 @@
 
 	function plusTeam2Set1()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_score_1").value;  
 		div = Number(div);
 		div+=1;
@@ -2160,6 +2811,12 @@
 	
 	function minusTeam2Set1()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_score_1").value;  
 		div = Number(div);
 		div-=1;
@@ -2170,6 +2827,12 @@
 	
 	function plusTeam1Set2()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_score_2").value;  
 		div = Number(div);
 		div+=1;
@@ -2180,6 +2843,12 @@
 	
 	function minusTeam1Set2()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_score_2").value;  
 		div = Number(div);
 		div-=1;
@@ -2190,6 +2859,18 @@
 
 	function plusTeam2Set2()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_score_2").value;  
 		div = Number(div);
 		div+=1;
@@ -2200,6 +2881,12 @@
 	
 	function minusTeam2Set2()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_score_2").value;  
 		div = Number(div);
 		div-=1;
@@ -2210,6 +2897,12 @@
 	
 	function plusTeam1Set3()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_score_3").value;  
 		div = Number(div);
 		div+=1;
@@ -2220,6 +2913,12 @@
 	
 	function minusTeam1Set3()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team1_score_3").value;  
 		div = Number(div);
 		div-=1;
@@ -2230,6 +2929,13 @@
 
 	function plusTeam2Set3()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
+		
 		var div = document.getElementById("team2_score_3").value;  
 		div = Number(div);
 		div+=1;
@@ -2240,6 +2946,12 @@
 	
 	function minusTeam2Set3()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		var div = document.getElementById("team2_score_3").value;  
 		div = Number(div);
 		div-=1;
@@ -2250,6 +2962,12 @@
 
 	function save()
 	{
+		if(g_IsGameStarted != 1)
+		{
+			alert('게임이 시작 되어야 합니다!');
+			return;
+		}
+		
 		updateGame();
 
 		//경기이름
@@ -2408,12 +3126,19 @@
 		document.getElementById("team2_score_2").value = "0";
 		document.getElementById("team2_score_3").value = "0";
 		
+		g_IsGameStarted = 0 ;
+		
 	}
 	
 	function selectEventTeam1(selectObj) 
-{
+	{
 	//alert(selectObj.value + "가 선택 되었습니다.");
-	
+		if(g_IsGameStarted != 0)
+		{
+			alert('게임 시작전에만 선택이 가능 합니다!');
+			return;
+		}
+		
 	if(selectObj.value == "MJ")
 	{
 		document.getElementById("team1_name1").value="MJ";
@@ -2529,6 +3254,11 @@
 function selectEventTeam2(selectObj) 
 {
 	//alert(selectObj.value + "가 선택 되었습니다.");
+	if(g_IsGameStarted != 0)
+	{
+		alert('게임 시작전에만 선택이 가능 합니다!');
+		return;
+	}
 	
 	if(selectObj.value == "MJ")
 	{
